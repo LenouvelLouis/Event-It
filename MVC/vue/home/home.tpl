@@ -9,12 +9,7 @@
                integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
        </head>
-
        <body>
-       <div class="imgtest">
-       <img  src="./vue/img/test.png" alt="test">
-       </div>
-
-       <h1>Oppenheimer >>>></h1>
+       <?php require("./vue/navbar/nav.tpl"); ?>
        </body>
 </html>

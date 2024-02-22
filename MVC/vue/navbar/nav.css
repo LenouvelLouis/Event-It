@@ -1,0 +1,26 @@
+.img-nav{
+    display: flex;
+    justify-content: center;
+
+}
+.nav{
+    background-color: #242c34;
+    padding: 5px;
+}
+.centered-list {
+    text-align: center;
+}
+
+.centered-list li {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-right: 30px;
+}
+.centered-list li a {
+    text-decoration: none;
+    color: #2C94A4;
+    &:hover {
+        transition: 0.5s;
+        color: #EFEFEF;
+    }
+}
