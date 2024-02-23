@@ -1,0 +1,21 @@
+.links{
+    display: flex;
+    background-color: #242c34;
+    color: #2C94A4;
+}
+
+.links img {
+    margin-right: 10px;
+}
+
+.links-info{
+    margin-right: 40px;
+}
+
+.links-cgu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #FFFFFF;
+    background-color: #000000;
+}

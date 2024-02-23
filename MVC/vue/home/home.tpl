@@ -11,5 +11,6 @@
        </head>
        <body>
        <?php require("./vue/navbar/nav.tpl"); ?>
+       <?php require("./vue/footer/footer.tpl"); ?>
        </body>
 </html>
