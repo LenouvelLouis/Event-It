@@ -1,4 +1,5 @@
 <head>
+    <title>Event-It</title>
     <link rel="stylesheet" href="./vue/navbar/nav.css">
 </head>
 <div class="nav">
