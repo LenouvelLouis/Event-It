@@ -34,3 +34,7 @@
         color: #EFEFEF;
     }
 }
+
+body {
+    margin: 0;
+}

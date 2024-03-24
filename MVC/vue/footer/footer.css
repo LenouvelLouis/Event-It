@@ -12,10 +12,29 @@
     margin-right: 40px;
 }
 
+.links-info a {
+    color: #2C94A4;
+}
+
 .links-cgu{
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: #FFFFFF;
+    text-decoration: none;
+    color: #FFFFFF ;
     background-color: #000000;
+}
+.links-page{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none
+}
+
+.links-page a {
+    color: #2C94A4;
+}
+
+.links-cgu a {
+    color: #FFFFFF !important;
 }

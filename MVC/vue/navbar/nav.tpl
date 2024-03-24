@@ -8,11 +8,11 @@
 </div>
 <nav>
     <ul class="centered-list">
-        <li><a href="./index.php">Accueil</a></li>
-        <li><a href="index.php?page=about">Forum</a></li>
-        <li><a href="index.php?page=contact">Cinéma</a></li>
-        <li><a href="index.php?page=gallery">Film</a></li>
-        <li><a href="index.php?page=blog">Contact</a></li>
+        <li><a href="./index.php?action=accueil&controle=pages/accueil">Accueil</a></li>
+        <li><a href="./index.php?action=forum&controle=pages/forum">Forum</a></li>
+        <li><a href="./index.php?action=cinema&controle=pages/cinema">Cinéma</a></li>
+        <li><a href="./index.php?action=film&controle=pages/film">Film</a></li>
+        <li><a href="./index.php?action=contact&controle=pages/contact">Contact</a></li>
         <li><a onclick="openModal()">Connexion</a></li>
     </ul>
 </nav>
