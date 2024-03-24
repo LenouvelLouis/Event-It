@@ -6,7 +6,7 @@ function inscription(){
     $password = isset($_POST['password'])?($_POST['password']):'';
 	$_SESSION['email']=$email;
     require('./modele/utilisateurBD.php');
-    signIn($name,$email,$phone,$password);
+    signUp($name,$email,$phone,$password);
     $msgAcc = "Compte créé, vous pouvez vous connecter";
     $_SESSION['msgAcc'] = $msgAcc;
     //require('./vue/home/home.tpl');
@@ -17,6 +17,4 @@ function inscription(){
 	//pour préparer des requêtes et les exécuter qu'elles rendent OU PAS des lignes
 
 }
-
-
 ?>

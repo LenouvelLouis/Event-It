@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="./vue/footer/footer.css">
 <div class="links">
-    <img src="./vue/img/eventIt" alt="eventIt">
+    <img src="./vue/img/eventIt.png" alt="eventIt">
     <div class="links-info">
         <p>Event-IT </p>
         <p>10 Rue de Vanves</p>

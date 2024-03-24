@@ -34,10 +34,7 @@ function register(){
         url: "./index.php?controle=inscription&action=inscription",
         data: user,
         success: function (response) {
-            console.log(response);
+            document.getElementById('myModal').style.display = 'none';
         },
-        error: function (response) {
-            console.log(response);
-        }
     });
 }

@@ -4,7 +4,7 @@
 </head>
 <div class="nav">
 <div class="img-nav">
-    <img src="./vue/img/eventIt" alt="eventIt">
+    <img src="./vue/img/eventIt.png" alt="eventIt">
 </div>
 <nav>
     <ul class="centered-list">
@@ -13,7 +13,7 @@
         <li><a href="index.php?page=contact">Cinéma</a></li>
         <li><a href="index.php?page=gallery">Film</a></li>
         <li><a href="index.php?page=blog">Contact</a></li>
-        <li><button onclick="openModal()">Connexion</button></li>
+        <li><a onclick="openModal()">Connexion</a></li>
     </ul>
 </nav>
 </div>
