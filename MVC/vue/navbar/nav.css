@@ -3,7 +3,7 @@
     justify-content: center;
 }
 .nav{
-    background-color: #242c34;
+    background-color: var(--black-blue);
     padding: 5px;
     display: block !important;
 }
@@ -18,20 +18,20 @@
 }
 .centered-list li a {
     text-decoration: none;
-    color: #2C94A4;
+    color: var(--green-blue);
     &:hover {
         transition: 0.5s;
-        color: #EFEFEF;
+        color: var(--grey);
     }
 }
 .centered-list li button {
     font-size: 1.3rem;
     border: 0;
     background-color: transparent;
-    color: #2C94A4;
+    color: var(--black-blue);
     &:hover {
         transition: 0.5s;
-        color: #EFEFEF;
+        color: var(--grey);
     }
 }
 

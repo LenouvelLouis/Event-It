@@ -1,0 +1,17 @@
+.cine-info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 250px;
+}
+
+.grey{
+    background-color: #D9D9D9;
+}
+
+.cine-info img{
+    width: 300px;
+}
+.cine-info-text{
+    width: 400px;
+}
