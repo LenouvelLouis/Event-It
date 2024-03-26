@@ -6,7 +6,7 @@
 }
 
 .grey{
-    background-color: #D9D9D9;
+    background-color: var(--grey);
 }
 
 .cine-info img{
@@ -14,4 +14,17 @@
 }
 .cine-info-text{
     width: 400px;
+}
+
+@media screen and (max-width: 750px){
+    .cine-info{
+        flex-direction: column;
+        height: 500px;
+    }
+    .cine-info img{
+        width: 200px;
+    }
+    .cine-info-text{
+        width: 300px;
+    }
 }
