@@ -33,6 +33,22 @@
               </div>
               <img src="./vue/img/infocineclassique.png">
        </div>
+       <div class="info-site">
+              <div class="info-site-text">
+                     <img src="./vue/img/securite.png">
+                     <h4>Sécurité</h4>
+                     <h5>Pas de regroupement de foule</h5>
+              </div>
+              <div class="info-site-text">
+                     <img src="./vue/img/utilisation.png">
+                     <h4>Facilité d'installation</h4>
+                     <h5>Juste besoin d'un emplacement <br>Juste besoin d'électricité</h5>
+              </div>
+              <div class="info-site-text">
+                     <img class="sound" src="./vue/img/son.png">
+                     <h4>Le son de qualité</h4>
+              </div>
+       </div>
        <?php require("./vue/footer/footer.tpl"); ?>
        </body>
 </html>

@@ -16,6 +16,22 @@
     width: 400px;
 }
 
+.info-site{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 350px;
+    text-align: center;
+}
+
+.info-site img{
+    width: 200px;
+}
+
+.info-site-text{
+    height: 250px;
+}
+
 @media screen and (max-width: 750px){
     .cine-info{
         flex-direction: column;
@@ -26,5 +42,9 @@
     }
     .cine-info-text{
         width: 300px;
+    }
+    .info-site{
+        flex-direction: column;
+        height: 1000px;
     }
 }
