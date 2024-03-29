@@ -8,6 +8,9 @@
 <body>
 <?php require("./vue/navbar/nav.tpl"); ?>
 
+<h1 class="Titre_CGU"> Conditions Générales d'Utilisation </h1>
+<h2 class="Titre_secondaire_CGU"> Informations Générales </h2>
+
 <?php require("./vue/footer/footer.tpl"); ?>
 </body>
 </html>

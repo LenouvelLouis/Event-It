@@ -1,3 +1,9 @@
-body {
-    background-color: lightblue;
+.Titre_CGU{
+    background-color: #242C34;
+    color: #2C94A4;
+    text-align: center;
+}
+
+.Titre_secondaire_CGU {
+    margin: 50px;
 }
