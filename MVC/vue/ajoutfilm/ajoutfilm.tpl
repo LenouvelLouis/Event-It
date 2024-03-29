@@ -3,10 +3,11 @@
 <meta charset="UTF-8">
 
 <head>
-    <link rel="stylesheet" href="./vue/statseance/statseance.css">
+    <link rel="stylesheet" href="./vue/statseance/ajoutfilm.css">
 </head>
 <body>
 <?php require("./vue/navbar/nav.tpl"); ?>
-<?php require("./vue/footer/footer.tpl"); ?>
+<p> test</p>
+<?php require("./vue/footer/footer.tpl"); ?> 
 </body>
 </html>
