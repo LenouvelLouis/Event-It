@@ -12,7 +12,7 @@
         <div class="justify-content-center">
             <div class="text-center align-self-center">
                 <div class="section text-center">
-                    <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                    <h6 class="mb-0 pb-3"><span>Connexion</span><span>Inscription</span></h6>
                     <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
                     <label for="reg-log"></label>
                     <div class="card-3d-wrap mx-auto">
@@ -20,7 +20,7 @@
                             <div class="card-front">
                                 <div class="center-wrap">
                                     <div class="section text-center">
-                                        <h4 class="mb-4 pb-3">Log In</h4>
+                                        <h4 class="mb-4 pb-3 title-modal">Connexion</h4>
                                         <div class="form-group">
                                             <input id="emailLogin" type="email" class="form-style" placeholder="Email">
                                             <i class="input-icon uil uil-at"></i>
@@ -29,15 +29,15 @@
                                             <input id="passwordLogin" type="password" class="form-style" placeholder="Password">
                                             <i class="input-icon uil uil-lock-alt"></i>
                                         </div>
-                                        <a onclick="login()" class="btn mt-4">Login</a>
-                                        <p class="mb-0 mt-4 text-center"><a  class="link">Forgot your password?</a></p>
+                                        <a onclick="login()" class="btn mt-4">se connecter</a>
+                                        <p class="mb-0 mt-4 text-center"><a  class="link_modal">Vous avez oublié votre mot de passe ?</a></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-back">
                                 <div class="center-wrap">
                                     <div class="section text-center">
-                                        <h4 class="mb-3 pb-3">Sign Up</h4>
+                                        <h4 class="mb-3 pb-3 title-modal">Inscription</h4>
                                         <div class="form-group">
                                             <input id="nameRegister" type="text" class="form-style" placeholder="Full Name">
                                             <i class="input-icon uil uil-user"></i>
@@ -54,7 +54,7 @@
                                             <input id="passwordRegister" type="password" class="form-style" placeholder="Password">
                                             <i class="input-icon uil uil-lock-alt"></i>
                                         </div>
-                                        <a onclick="register()" class="btn mt-4">Register</a>
+                                        <a onclick="register()" class="btn mt-4">S'inscrire</a>
                                     </div>
                                 </div>
                             </div>

@@ -7,7 +7,22 @@
        </head>
        <body>
        <?php require("./vue/navbar/nav.tpl"); ?>
-       <img src="./vue/img/cinepleinair.png">
+       <div class="slider">
+              <div class="slide">
+                     <img src="https://via.placeholder.com/2048x700" alt="Image 1">
+                     <h3>Titre de l'image 1</h3>
+              </div>
+              <div class="slide">
+                     <img src="https://via.placeholder.com/2048x700" alt="Image 2">
+                     <h3>Titre de l'image 2</h3>
+              </div>
+              <div class="slide">
+                     <img src="https://via.placeholder.com/2048x700" alt="Image 3">
+                     <h3>Titre de l'image 3</h3>
+              </div>
+              <button class="prev" onclick="prevSlide()"><i class="fa-solid fa-angle-left"></i></button>
+              <button class="next" onclick="nextSlide()"><i class="fa-solid fa-angle-right"></i></button>
+       </div>
        <div class="cine-info grey">
               <div class="cine-info-text">
                      <h1>Cinéma Drive-in :</h1>
@@ -51,4 +66,5 @@
        </div>
        <?php require("./vue/footer/footer.tpl"); ?>
        </body>
+<script src="./vue/home/home.js"></script>
 </html>

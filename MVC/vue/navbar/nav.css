@@ -4,16 +4,16 @@
 }
 .nav{
     background-color: var(--black-blue);
-    padding: 5px;
+    padding-bottom: 5px;
     display: block !important;
-    width: 100vw;
-    position: fixed;
+    width: 100%;
 }
 .nav-list {
     text-align: center;
 }
 .close{
     width: 30px;
+    margin-right: auto;
 }
 #navTel{
     display: none;
@@ -43,6 +43,10 @@
         transition: 0.5s;
         color: var(--grey);
     }
+}
+.nav-list li button:active,
+.nav-list li button:focus{
+    outline: 0;
 }
 
 body {

@@ -3,6 +3,7 @@
     justify-content: space-evenly;
     align-items: center;
     height: 250px;
+    margin-top: 10px;
 }
 
 .grey{
@@ -30,6 +31,55 @@
 
 .info-site-text{
     height: 250px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    width: auto;
+    margin-top: -22px;
+    background-color: transparent;
+    font-size: 4rem;
+    border: 0;
+}
+.next:active,
+.next:focus,
+.prev:active,
+.prev:focus{
+    outline: 0;
+}
+
+.next {
+    right: 0;
+}
+.slide {
+    text-align: center;
+}
+.slide h3{
+    font-size: 2rem;
+    margin-top: -50px;
+}
+
+.slide img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1400px){
+    .prev, .next {
+        top: 50%;
+    }
+}
+@media screen and (max-width: 1200px){
+    .next, .prev {
+        font-size: 3rem;
+        top: 40%;
+    }
+}
+@media screen and (max-width: 1000px){
+    .next, .prev {
+        font-size: 2rem;
+    }
+
 }
 
 @media screen and (max-width: 750px){
