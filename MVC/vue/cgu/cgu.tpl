@@ -12,18 +12,18 @@
 <p class="corps_CGU"> Bienvenue sur Events-IT ! Veuillez lire attentivement ces Conditions Générales d'Utilisation avant d'utiliser <mark> https://events-it.go.yo.fr/ </mark> . En accédant ou en utilisant le Site, vous acceptez d'être lié par ces CGU. Si vous n'acceptez pas toutes les modalités et conditions de ces CGU, veuillez ne pas utiliser le Site. </p>
 
 <h2 class="Titre_secondaire_CGU"> 1. Utilisation du Site </h2>
-<p class="corps_CGU"> 1.1.Vous êtes responsable de toute activité qui se produit sous votre nom d'utilisateur ou votre compte.
+<p class="corps_CGU"> 1.1.Vous êtes responsable de toute activité qui se produit sous votre nom d'utilisateur ou votre compte. <br>
 1.2. Vous acceptez de ne pas utiliser le Site à des fins illégales ou non autorisées. </p>
 
 <h2 class="Titre_secondaire_CGU"> 2. Contenu du Site </h2>
 <p class="corps_CGU"> 2.1 Nous nous réservons le droit de modifier, suspendre ou interrompre tout aspect du Site à tout moment, y compris l'accès à certaines fonctionnalités, bases de données ou contenu.</p>
 
 <h2 class="Titre_secondaire_CGU"> 3. Propriété intellectuelle </h2>
-<p class="corps_CGU"> 3.1. Le contenu du Site, y compris mais sans s'y limiter, le texte, les graphiques, les images, les vidéos, les logos et les icônes, sont la propriété d'Events-IT ou de ses concédants de licence et sont protégés par les lois sur le droit d'auteur et autres lois applicables en matière de propriété intellectuelle.
+<p class="corps_CGU"> 3.1. Le contenu du Site, y compris mais sans s'y limiter, le texte, les graphiques, les images, les vidéos, les logos et les icônes, sont la propriété d'Events-IT ou de ses concédants de licence et sont protégés par les lois sur le droit d'auteur et autres lois applicables en matière de propriété intellectuelle. <br>
 3.2. Vous acceptez de ne pas reproduire, distribuer, modifier, afficher publiquement, exécuter publiquement ou créer des œuvres dérivées du contenu du Site sans l'autorisation préalable écrite de Events-IT. </p>
 
 <h2 class="Titre_secondaire_CGU"> 4. Liens vers des sites tiers </h2>
-<p class="corps_CGU"> 4.1. Le Site peut contenir des liens vers des sites tiers ou des services qui ne sont pas détenus ou contrôlés par Events-IT.
+<p class="corps_CGU"> 4.1. Le Site peut contenir des liens vers des sites tiers ou des services qui ne sont pas détenus ou contrôlés par Events-IT. <br>
 4.2. Events-IT n'a aucun contrôle sur ces sites tiers et n'assume aucune responsabilité quant à leur contenu, politiques de confidentialité ou pratiques. Nous vous encourageons à consulter les CGU et politiques de confidentialité de tout site tiers que vous visitez. </p>
 
 <h2 class="Titre_secondaire_CGU"> 5. Limitation de responsabilité </h2>
