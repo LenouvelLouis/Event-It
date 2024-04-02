@@ -8,8 +8,7 @@
 <body>
 <?php require("./vue/navbar/nav.tpl"); ?>
 
-<h1 class="Titre_statseance> Statistiques Séances
-</h1>
+<h1 class="Titre_statseance"> Statistiques Séances</h1>
 
 <p> Voici les statistiques des séances de cinéma </p>
 
