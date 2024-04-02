@@ -17,38 +17,47 @@
     color: var(--grey);
 }
 
-.containercinema {
-    width: 80%;
-    margin: auto;
-  }
-  .cinema {
-    border: 1px solid #ddd;
-    margin-bottom: 15px;
-    padding: 10px;
+.cinema-card {
     display: flex;
-    justify-content: space-around;
+    align-items: center; /* Centre les enfants horizontalement */
+    justify-content: center; /* Centre les enfants verticalement */
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-  .cinema-image {
-    flex: 0 0 150px; /* taille fixe pour les images */
-    margin-right: 15px;
+
+  .cinema-card img {
+    margin-bottom: 20px; /* ajoute de l'espace entre l'image et le texte */
+
   }
-  .cinema-image img {
-    width: 100%; /* rend l'image responsive */
-    height: auto;
+
+  .cinema-info {
+    text-align: left; 
   }
-  .cinema-details {
-    flex: 1; /* utilise l'espace restant */
+
+  .cinema-info h2 {
+    font-size: 24px;
+    margin-top: 10px;
   }
-  .cinema-details h2 {
+
+  .cinema-info p {
     margin: 0;
-    color: #333;
+    color: #666;
   }
-  .cinema-details p {
-    margin: 5px 0;
+
+  .icons {
+    display: flex;
+    justify-content: left; /* Centre les icônes horizontalement */
+    width: 100%; /* Assure que le flex container des icônes prend toute la largeur */
   }
-  .cinema-details .films {
-    color: #555;
+
+  .icons img {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 24px; /* Taille des icônes */
+    height: 24px;
   }
-  .cinema-details .address {
-    color: #777;
+
+  .grey {
+    background-color: var(--grey);
   }
