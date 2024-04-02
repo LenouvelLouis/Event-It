@@ -1,7 +1,6 @@
 <head>
     <title>Event-It</title>
     <link rel="stylesheet" href="./vue/navbar/nav.css">
-    <link rel="stylesheet" href="./vue/style/style.css">
 </head>
 <div class="nav">
 <div class="img-nav">
