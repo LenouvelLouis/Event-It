@@ -16,7 +16,7 @@
         <div class="contact-header">
             <h1>Contacter Events-IT</h1>
         </div>
-        <div class="form-container">
+        <div class="form-containercontact">
             <form action="#" method="POST">
                 <div class="input-group">
                     <label for="name">Nom <span class="required-asterisk">*</span></label>

@@ -1,0 +1,54 @@
+.navbarcinema {
+    background-color: var(--green-blue);
+    display: flex;
+    padding: 10px;
+    text-align: left;
+    color: var(--grey);
+}
+
+.navbarcinema a {
+    text-decoration: none;
+    color: var(--grey);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbarcinema a:hover {
+    color: var(--grey);
+}
+
+.containercinema {
+    width: 80%;
+    margin: auto;
+  }
+  .cinema {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .cinema-image {
+    flex: 0 0 150px; /* taille fixe pour les images */
+    margin-right: 15px;
+  }
+  .cinema-image img {
+    width: 100%; /* rend l'image responsive */
+    height: auto;
+  }
+  .cinema-details {
+    flex: 1; /* utilise l'espace restant */
+  }
+  .cinema-details h2 {
+    margin: 0;
+    color: #333;
+  }
+  .cinema-details p {
+    margin: 5px 0;
+  }
+  .cinema-details .films {
+    color: #555;
+  }
+  .cinema-details .address {
+    color: #777;
+  }

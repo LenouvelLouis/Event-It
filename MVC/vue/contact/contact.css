@@ -17,7 +17,7 @@
     color: var(--grey);
 }
 
-.container {
+.containercontact {
     width: 80%;
     margin: 30px auto;
     background: white;
@@ -72,7 +72,7 @@
 }
 
 #character-count {
-    color: #333;
+    color: black;
     font-size: 0.85em;
 }
 
