@@ -21,6 +21,7 @@ h4 {
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 20px;
 }
 .modal-content{
     padding: 20px;
@@ -182,7 +183,7 @@ h6 span{
 }
 .btn:hover{
     background-color: #000000;
-    color: var(--green-blue);
+    color: var(--green-blue) !important;
     box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 
