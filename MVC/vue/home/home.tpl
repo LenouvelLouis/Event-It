@@ -42,7 +42,7 @@
        </div>
        <div class="cine-info grey">
               <div class="cine-info-text">
-                     <h1>Cinéma Classique :</h1>
+                     <h1>Cinéma Drive-in :</h1>
                      <p>
                             Le cinéma classique invite à redécouvrir les chefs-d'œuvre du septième art dans une salle au charme nostalgique. C'est une plongée dans le patrimoine cinématographique, permettant de vivre ou revivre les moments iconiques qui ont marqué l'histoire du cinéma.                     </p>
               </div>
