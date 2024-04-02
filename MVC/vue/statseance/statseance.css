@@ -3,5 +3,12 @@
     color: #2C94A4;
     background-color: #242C34;
     padding: 50px;
-    margin: 50px;
+}
+
+.path_statseance{
+    color: white;
+    background-color: #2FD7CC;
+    padding: 20px;
+    margin-bottom: 50px;
+
 }
