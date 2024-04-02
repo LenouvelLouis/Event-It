@@ -4,6 +4,7 @@
 
 <head>
     <link rel="stylesheet" href="./vue/cinema/cinema.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
 <?php require("./vue/navbar/nav.tpl"); ?>
@@ -11,6 +12,12 @@
         <a href="./index.php?action=cinema&controle=pages/cinema">Accueil</a> /
         <a>Cinéma</a>
     </div>
+
+<div class="search-bar">
+    <input type="text" placeholder="Rechercher un cinéma" name="search" class="search-input">
+    <button class="search-button"><i class="fa fa-search"></i></button>
+</div>
+
 <div class="cinema-card grey">
   <img src="chemin-vers-votre-image-cinema-1.jpg" alt="UGC GRAND NORMANDIE" width="300">
     <div class="cinema-info">

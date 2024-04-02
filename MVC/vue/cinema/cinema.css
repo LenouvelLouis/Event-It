@@ -17,6 +17,43 @@
     color: var(--grey);
 }
 
+.search-bar {
+    display: flex;
+    align-items: left;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: #fff;
+    padding: 5px 10px;
+    max-width: 250px;
+    margin-left: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    flex-grow: 1;
+}
+
+.search-button {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+.search-button i {
+    font-size: 18px;
+    color: #333;
+    margin-right: 10px;
+}
+
 .cinema-card {
     display: flex;
     align-items: center; /* Centre les enfants horizontalement */
