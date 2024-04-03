@@ -4,9 +4,10 @@ function inscription(){
     $email = isset($_POST['email'])?($_POST['email']):'';
     $phone = isset($_POST['phone'])?($_POST['phone']):'';
     $password = isset($_POST['password'])?($_POST['password']):'';
+    $salt = isset($_POST['salt'])?($_POST['salt']):'';
 	$_SESSION['email']=$email;
     require('./modele/utilisateurBD.php');
-    signUp($name,$email,$phone,$password);
+    signUp($name,$email,$phone,$password,$salt);
     $msgAcc = "Compte créé, vous pouvez vous connecter";
     $_SESSION['msgAcc'] = $msgAcc;
     //require('./vue/home/home.tpl');

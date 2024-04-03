@@ -1,5 +1,6 @@
 <head>
     <title>Event-It</title>
+    <link rel="icon" href="./vue/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="./vue/navbar/nav.css">
     <link rel="stylesheet" href="./vue/style/style.css">
     <script src="https://kit.fontawesome.com/0ef5e8cca6.js" crossorigin="anonymous"></script>
