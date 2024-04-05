@@ -17,7 +17,16 @@
         <li><a href="./index.php?action=cinema&controle=pages/cinema">Cinéma</a></li>
         <li><a href="./index.php?action=film&controle=pages/film">Film</a></li>
         <li><a href="./index.php?action=contact&controle=pages/contact">Contact</a></li>
-        <li><button onclick="openModal()">Connexion</button></li>
+        <?php
+            if(isset($_SESSION['name']) && isset($_SESSION['name'])!=NULL)
+            echo("<li><a href='./index.php?action=profile&controle=pages/profile'> ".$_SESSION['name']."</a></li>");
+        else
+            echo(" <li><button onclick='openModal()'>Connexion</button></li>");
+        ?>
+        <?php
+            if(isset($_SESSION['name']) && isset($_SESSION['name'])!=NULL)
+            echo("<li><a class='btn-signOut' href='./index.php?action=deconnexion&controle=logout'>Deconnexion</a></li>");
+        ?>
     </ul>
 </nav>
     <nav id="navTel">
@@ -27,10 +36,21 @@
             <li><a href="./index.php?action=cinema&controle=pages/cinema">Cinéma</a></li>
             <li><a href="./index.php?action=film&controle=pages/film">Film</a></li>
             <li><a href="./index.php?action=contact&controle=pages/contact">Contact</a></li>
-            <li><button onclick="openModal()">Connexion</button></li>
+            <?php
+            if(isset($_SESSION['name']) && isset($_SESSION['name'])!=NULL)
+            echo("<li><a href='./index.php?action=profile&controle=pages/profile'> ".$_SESSION['name']."</a></li>");
+            else
+            echo(" <li><button onclick='openModal()'>Connexion</button></li>");
+            ?>
+            <?php
+            if(isset($_SESSION['name']) && isset($_SESSION['name'])!=NULL)
+            echo("<li><a href='./index.php?action=deconnexion&controle=logout'>Deconnexion</a></li>");
+            ?>
         </ul>
     </nav>
+
 </div>
+
 <div id="myModal" class="modal">
     <div class="modal-content">
         <button class="close" onclick="closeModal()"><i class="fa-solid fa-x"></i></button>
