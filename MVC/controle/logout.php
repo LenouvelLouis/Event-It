@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Fonction de déconnexion
+ * @return void
+ */
 function deconnexion(){
     session_destroy();
     $defaultUrl = "./index.php?controle=pages/accueil&action=accueil";

@@ -1,4 +1,8 @@
 <?php
+/**
+ * Fonction de connexion
+ * @return void
+ */
 function login(){
     $email = isset($_POST['emailLogin'])?($_POST['emailLogin']):'';
     $password = isset($_POST['passwordLogin'])?($_POST['passwordLogin']):'';
@@ -23,6 +27,12 @@ function login(){
     header("Location:" . $url);
 }
 
+/**
+ * Fonction de génération de mot de passe crypté
+ * @param $password
+ * @param $salt
+ * @return string
+ */
 function custom_password_hash($password,$salt): string
 {
     $prefix = sprintf("$2y$%02d$", 10);

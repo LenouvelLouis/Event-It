@@ -1,4 +1,8 @@
 <?php
+/**
+ * Fonction d'inscription
+ * @return void
+ */
 function inscription(){
     $name = isset($_POST['nameRegister'])?($_POST['nameRegister']):'';
     $email = isset($_POST['emailRegister'])?($_POST['emailRegister']):'';
@@ -7,8 +11,6 @@ function inscription(){
     $status = getStatus($email);
     $salt = generateSalt();
     $password = custom_password_hash($password,$salt);
-    /*require './controle/utilisateur.php';
-    closedNotifier();*/
     require('./modele/utilisateurBD.php');
     if(emailExist($email)){
         $msgErr = "Cet email est déjà utilisé";
@@ -28,7 +30,10 @@ function inscription(){
 	//pour préparer des requêtes et les exécuter qu'elles rendent OU PAS des lignes
 
 }
-
+/**
+ * Fonction de génération de sel
+ * @return string
+ */
 function generateSalt(): string
 {
     try {
@@ -37,13 +42,23 @@ function generateSalt(): string
     }
 
 }
+/**
+ * Fonction de génération de mot de passe crypté
+ * @param $password
+ * @param $salt
+ * @return string
+ */
 function custom_password_hash($password,$salt): string
 {
     $prefix = sprintf("$2y$%02d$", 10);
     return crypt($password, $prefix . $salt);
 }
 
-
+/**
+ * Fonction de récupération du status
+ * @param $email
+ * @return string
+ */
 function getStatus($email): string
 {
     //$index_at = strpos($email, "@");
