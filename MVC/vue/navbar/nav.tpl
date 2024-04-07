@@ -33,28 +33,6 @@
         ?>
     </ul>
 </nav>
-    <nav id="navTel">
-        <ul class="nav-list">
-            <li><a href="./index.php?action=accueil&controle=pages/accueil">Accueil</a></li>
-            <li><a href="./index.php?action=forum&controle=pages/forum">Forum</a></li>
-            <li><a href="./index.php?action=cinema&controle=pages/cinema">Cinéma</a></li>
-            <li><a href="./index.php?action=film&controle=pages/film">Film</a></li>
-            <li><a href="./index.php?action=contact&controle=pages/contact">Contact</a></li>
-            <?php
-                if(isset($_SESSION['id']) && isset($_SESSION['id'])!=NULL) {
-                    echo("<li class='dropdown'>
-            <span class='dropBtn'>".$_SESSION['name']."</span>
-            <div class='dropdown-content'>
-                <a href='./index.php?action=profile&controle=pages/profile'>Mon profil</a>
-                <a href='./index.php?action=deconnexion&controle=logout'>Deconnexion</a>
-            </div>
-            </li>");
-            } else {
-            echo(" <li><button onclick='openModal()'>Connexion</button></li>");
-            }
-            ?>
-        </ul>
-    </nav>
 
 </div>
 

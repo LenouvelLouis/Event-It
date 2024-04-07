@@ -58,11 +58,6 @@
 }
 
 
-#navTel{
-    display: none;
-    width: 100vw;
-    height: 100vh;
-}
 .nav-list li {
     font-size: 1.5rem;
     display: inline-block;
@@ -118,9 +113,6 @@ body {
 }
 
 @media screen and (min-width: 500px) {
-    #navTel{
-        display: none!important;
-    }
     .btn-nav{
         display: none;
     }
@@ -129,6 +121,8 @@ body {
 @media screen and (max-width: 500px) {
     #navPc{
         display: none;
+        width: 100vw;
+        height: 100vh;
     }
     .nav-list {
         display: flex;

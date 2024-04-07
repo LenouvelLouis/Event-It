@@ -63,7 +63,9 @@
 .slide img {
     width: 100%;
 }
-
+.hidden {
+    display: none !important;
+}
 @media screen and (max-width: 1400px){
     .prev, .next {
         top: 50%;
