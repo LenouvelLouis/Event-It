@@ -3,12 +3,44 @@
     color: #2C94A4;
     background-color: #242C34;
     padding: 50px;
+    margin: 0px;
+    border: none;
 }
 
 .path_statseance{
-    color: white;
+    color: #EFEFEF;
     background-color: #2FD7CC;
     padding: 20px;
     margin-bottom: 50px;
+    margin-top: 0px;
+    border: none;
 
 }
+
+.container_statseance{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-evenly;
+}
+
+.column_statseance {
+    float: left;
+    width: 50%;
+    padding: 15px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column_statseance {
+      width: 100%;
+    }
+  }
+  
