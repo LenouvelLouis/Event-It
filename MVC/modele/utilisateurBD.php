@@ -32,4 +32,19 @@ function signIn($email, $password){
         die();
     }
 }
+function emailExist($email){
+    require('./modele/connectSQL.php');
+    $sql = "SELECT * FROM `user` WHERE email = :email";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':email', $email);
+        $commande->execute();
+        $result = $commande->fetch();
+        return $result;
+    } catch (PDOException $e) {
+        echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
+        die();
+    }
+
+}
 ?>
