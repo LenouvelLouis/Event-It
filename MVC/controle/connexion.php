@@ -6,6 +6,8 @@
 function login(){
     $email = isset($_POST['emailLogin'])?($_POST['emailLogin']):'';
     $password = isset($_POST['passwordLogin'])?($_POST['passwordLogin']):'';
+    require './controle/utilisateur.php';
+    closedNotifier();
     require('./modele/utilisateurBD.php');
     $salt = getSalt($email);
     $password = custom_password_hash($password,$salt);

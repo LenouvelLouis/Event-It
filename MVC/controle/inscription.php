@@ -11,6 +11,8 @@ function inscription(){
     $status = getStatus($email);
     $salt = generateSalt();
     $password = custom_password_hash($password,$salt);
+    require './controle/utilisateur.php';
+    closedNotifier();
     require('./modele/utilisateurBD.php');
     if(emailExist($email)){
         $msgErr = "Cet email est déjà utilisé";
