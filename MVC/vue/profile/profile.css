@@ -54,4 +54,32 @@
     margin-left: 70px;
     margin-right: 70px;
   }
+
+.form-flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left-group,
+
+.right-group {
+    flex-basis: 48%;
+}
+.left-group label,
+.left-group input,
+.right-group label,
+.right-group input {
+    width: 75%;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+.btn-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 90px;
+}
   

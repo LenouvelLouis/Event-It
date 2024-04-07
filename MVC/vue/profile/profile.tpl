@@ -5,46 +5,16 @@
 <head>
 <link rel="stylesheet" href="./vue/profile/profile.css">
 </head>
-<style>
-  .form-flexbox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .left-group,
-
-  .right-group {
-    flex-basis: 48%;
-  }
-  .left-group label,
-  .left-group input,
-  .right-group label,
-  .right-group input {
-    width: 75%;
-    margin-top: 10px; 
-    margin-left: 40px;
-    margin-right: 50px; 
-    margin-bottom: 10px;
-  }
-  .btn-container {
-    width: 100%;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 90px;
-  }
-</style>
-
 <body>
 
 <?php require("./vue/navbar/nav.tpl"); ?>
 
 <div class="barre">
   <a href="./index.php?action=accueil&controle=pages/accueil">Accueil</a>/
-  <a href="./index.php?action=accueil&controle=pages/profile">Profile</a>
+  <a href="./index.php?action=profile&controle=pages/profile">Profile</a>
 </div>
 
-  <center>
+<center>
     <h2>Utilisateurs</h2>
     <hr class="ligne-noire">
   </center>
