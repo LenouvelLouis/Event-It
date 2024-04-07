@@ -1,7 +1,7 @@
 <head>
     <link rel="stylesheet" href="./vue/notifier/notifier.css">
 </head>
-<div id="notification" onclick="closeNotifier()"  class="notification <?php echo (isset($_SESSION['msgType']) && strlen($_SESSION['msgType']) > 0) ? 'show' : '' ?>">
+<div id="notification" onclick="closeNotifier()"  class="notification <?php echo (isset($_SESSION['msgType']) && !empty($_SESSION['msgType'])) ? 'show' : '' ?>">
     <div class="align-notif">
         <?php
           if (isset($_SESSION['msgType']) && $_SESSION['msgType'] == 'error') {

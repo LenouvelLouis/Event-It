@@ -5,38 +5,46 @@ function inscription(){
     $phone = isset($_POST['phoneRegister'])?($_POST['phoneRegister']):'';
     $password = isset($_POST['passwordRegister'])?($_POST['passwordRegister']):'';
     $status = getStatus($email);
+    $salt = generateSalt();
+    $password = custom_password_hash($password,$salt);
+    /*require './controle/utilisateur.php';
+    closedNotifier();*/
     require('./modele/utilisateurBD.php');
-    if(userExist($email)){
+    if(emailExist($email)){
         $msgErr = "Cet email est déjà utilisé";
         $_SESSION['msgErr'] = $msgErr;
         $_SESSION['msgType'] = 'error';
     }
     else{
-        signUp($name,$email,$phone,$password,$status);
+        signUp($name,$email,$phone,$password,$status,$salt);
         $msgAcc = "Compte créé, vous pouvez vous connecter";
         $_SESSION['msgAcc'] = $msgAcc;
         $_SESSION['msgType'] = 'success';
     }
     $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./index.php?controle=pages/accueil&action=accueil";
     header("Location:" . $url);
-
-    //require('./vue/home/home.tpl');
-	//var_dump($login );
-	//var_dump($email);
 	// IMPORTANT Rappel PDO
 	//PDOStatement::prepare() et PDOStatement::execute()
 	//pour préparer des requêtes et les exécuter qu'elles rendent OU PAS des lignes
 
 }
 
-function userExist($email)
+function generateSalt(): string
 {
-    return emailExist($email);
+    try {
+        return base64_encode(random_bytes(22));
+    } catch (\Random\RandomException $e) {
+    }
+
+}
+function custom_password_hash($password,$salt): string
+{
+    $prefix = sprintf("$2y$%02d$", 10);
+    return crypt($password, $prefix . $salt);
 }
 
 
-
-function getStatus($email)
+function getStatus($email): string
 {
     //$index_at = strpos($email, "@");
     //$domaine = substr($email, $index_at+1);
