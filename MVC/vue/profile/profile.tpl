@@ -3,8 +3,7 @@
 <meta charset="UTF-8">
 
 <head>
-  <link rel="stylesheet" href="./vue/profile/profile.css">
-  
+<link rel="stylesheet" href="./vue/profile/profile.css">
 </head>
 <style>
   .form-flexbox {
