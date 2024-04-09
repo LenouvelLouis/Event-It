@@ -2,19 +2,9 @@
     text-align: center;
     color: #2C94A4;
     background-color: #242C34;
-    padding: 50px;
-    margin: 0px;
-    border: none;
-}
-
-.path_statseance{
-    color: #EFEFEF;
-    background-color: #2FD7CC;
-    padding: 20px;
+    padding: 10px 50px 50px 50px;
     margin-bottom: 50px;
-    margin-top: 0px;
     border: none;
-
 }
 
 .container_statseance{
@@ -28,14 +18,26 @@
 
 .column_statseance {
     float: left;
-    width: 50%;
-    padding: 15px;
+    width: 45%;
+    padding: 10px;
+    margin: 15px;
+    border-color: #242C34;
+    border-style: solid;
+    border-radius: 5px;
+    min-height: 300px;
+    background-color: #2C94A4;
   }
   
-  .row:after {
+  .row_after_column_statseance {
     content: "";
     display: table;
     clear: both;
+    padding: 25px;
+    margin: 50px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #242C34;
+    background-color: #2C94A4;
   }
   
   @media screen and (max-width: 600px) {
@@ -44,3 +46,11 @@
     }
   }
   
+body {
+  background-image: url("ondes-noir.jpg");
+  background-attachment: fixed;
+}
+
+p, h2 {
+  color: #EFEFEF;
+}
