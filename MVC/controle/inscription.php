@@ -10,7 +10,8 @@ function inscription(){
     $password = isset($_POST['passwordRegister'])?($_POST['passwordRegister']):'';
     $status = getStatus($email);
     $salt = generateSalt();
-    $password = custom_password_hash($password,$salt);
+    require './service/hashService.php';
+    $password = hashPassword($password,$salt);
     require './controle/utilisateur.php';
     closedNotifier();
     require('./modele/utilisateurBD.php');
@@ -43,17 +44,6 @@ function generateSalt(): string
     } catch (\Random\RandomException $e) {
     }
 
-}
-/**
- * Fonction de génération de mot de passe crypté
- * @param $password
- * @param $salt
- * @return string
- */
-function custom_password_hash($password,$salt): string
-{
-    $prefix = sprintf("$2y$%02d$", 10);
-    return crypt($password, $prefix . $salt);
 }
 
 /**
