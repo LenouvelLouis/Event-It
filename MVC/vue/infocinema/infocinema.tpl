@@ -1,127 +1,95 @@
-<!DOCTYPE HTML>
-<html lang="fr">
-<meta charset="UTF-8">
+    <!DOCTYPE HTML>
+    <html lang="fr">
+    <meta charset="UTF-8">
 
-<head>
-    <link rel="stylesheet" href="./vue/infocinema/infocinema.css">
-</head>
-<body>
-<?php require("./vue/navbar/nav.tpl"); ?>
-<center>
-<h2>Informations sur votre Cinéma</h2>
-<figure class="table" style="width:46.78%;">
-    <table class="ck-table-resized">
-        <colgroup>
-            <col style="width:43.44%;">
-            <col style="width:56.56%;">
-        </colgroup>
-        <tbody>
-            <tr>
-                <td rowspan="4">
-                    <figure class="image"><img src="https://www.legrandrex.com/mobile/images/histoire/histoire18.jpg" width=100% height=auto></figure>
-                </td>
-                <td>Nom :&nbsp;</td>
-            </tr>
-            <tr>
-                <td>Adresse :&nbsp;</td>
-            </tr>
-            <tr>
-                <td>Numéro de téléphone :&nbsp;</td>
-            </tr>
-            <tr>
-                <td>Adresse mail de contact :&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <table style="border-color:white;">
-    <tr style="border-color:white;">
-        <td style="border-color:white;"><img src="https://mediakwest.com/wp-content/uploads/2019/07/1_Beaugrenelle.ONYX-c-Fr%C3%A9d%C3%A9ric-Berthet.HD_.006.jpg" style="max-width: 100%; height: auto; display: block;" alt="Image 1"></td>
-        <td style="border-color:white;"><img src="https://www.baucine.fr/wp-content/uploads/2023/02/BAU-vox-confiserie-1024x683.jpg" style="max-width: 100%; height: auto; display: block;" alt="Image 3"></td>
-    </tr>
-    <!-- Vous pouvez ajouter plus de lignes selon vos besoins -->
-</table>
-                </td>
-                <td>N° de SIRET :&nbsp;</td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p style="text-align:center;">Horaires d'ouvertures</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <ul>
-                        <li>Lundi - Vendredi<br>10h00 - 00h00</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Samedi - Dimanche<br>10h00 - 02h00</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p style="text-align:center;">Services disponibles</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <ul>
-                        <li>Service 1</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Service 2</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <ul>
-                        <li>Service 3</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Service 3</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p style="text-align:center;">Langues</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <ul>
-                        <li>Langue 1</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Langue 2</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <ul>
-                        <li>Langue 3</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Langue 4</li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</figure>
-</center>
-<?php require("./vue/footer/footer.tpl"); ?>
-</body>
-</html>
+    <head>
+        <link rel="stylesheet" href="./vue/infocinema/infocinema.css">
+        <link href="Leaflet.Weather.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <?php require("./vue/navbar/nav.tpl"); ?>
+        <center>
+            <h1 id="titre_global">Cinéma des platanes</h1>
+            <table id="table">
+                <tbody>
+                    <tr>
+                        <td class="td_1">
+                            <p><img id="image_cinema" src="https://www.chemille-en-anjou.fr/medias/2022/02/Cinema-en-plein-air.jpg"/>&nbsp;</p>
+                            <h3>Informations</h3>
+                            <p>Cin&eacute;ma des platanes</p>
+                            <p>10 rue de vanves, 92130 Issy les Moulineaux</p>
+                            <p>SIREN : 383 987 864 00030</p>
+                            <p>Téléphone : 01 80 15 42 42</p>
+                            <p>Mél : cinema.platane@issy.com</p>
+                        </td>
+                        <td class="td_1">
+                            <h3>Horaires d'ouvertures :</h3>
+                            <p>- Lundi - Jeudi : 18h00 - 00h00</p>
+                            <p>- Samedi : 17h00 - 02h00</p>
+                            <p>- Dimanche : 17h00 - 03h00</p>
+                            <h3>Langues parl&eacute;s :</h3>
+                            <p>- Fran&ccedil;ais</p>
+                            <p>- Anglais</p>
+                            <p>- Espagnol</p>
+                            <h3>&nbsp;</h3>
+                        </td>
+                        <td class="td_1">
+                            <h3>Accessibilit&eacute; :&nbsp;</h3>
+                            <p>- PMR</p>
+                            <p>- Malentendant</p>
+                            <p>- Syst&egrave;me d'audio description</p>
+                            <h3>Services disponibles :&nbsp;</h3>
+                            <p>- Vente de nouriture</p>
+                            <p>- Vente de boisson (sans alcool)</p>
+                            <p>- Anniversaire</p>
+                            <p>- Annimation</p>
+                            <p>- Cin&eacute;gout&eacute;</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <table id="table">
+                <tbody>
+                    <tr>
+                        <td class="td_3">
+                            <h3>Informations complémentaires</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <center>
+                        <td class="td_2"><iframe id="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.7616134560744!2d2.2773399753126453!3d48.82460970308475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e670797935962f%3A0xa2a4098b11eb5c09!2s10%20Rue%20de%20Vanves%2C%2092170%20Issy-les-Moulineaux!5e0!3m2!1sfr!2sfr!4v1713004630545!5m2!1sfr!2sfr" width="400" height="300" allowfullscreen=""frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td>
+                        <td class="td_3"><iframe id="meteo"src="https://api.wo-cloud.com/content/widget/?geoObjectKey=5350008&language=fr&region=FR&timeFormat=HH:mm&windUnit=kmh&systemOfMeasurement=metric&temperatureUnit=celsius" name="CW2" scrolling="no" width="290" height="318" frameborder="0" ></iframe></td>
+                    </center>
+                    </tr>
+                </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td class="td_3">
+                            <h3>A l'affiche :&nbsp;</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_3">
+                            <img src="https://www.affiche-cine.com/images/thumb-1200x1600/33/affiche-cine-84784.jpg" id="image_film" >
+                            <img id="image_film" src="https://www.affiche-cine.com/images/thumb-1200x1600/33/affiche-cine-84456.jpg">
+                            <img id="image_film" src="https://www.affiche-cine.com/images/thumb-1200x1600/33/affiche-cine-83703.jpg">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+        <?php require("./vue/footer/footer.tpl"); ?>
+    </body>
+    </html>

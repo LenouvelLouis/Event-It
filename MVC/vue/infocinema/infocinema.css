@@ -1,0 +1,57 @@
+.titre_global{
+
+}
+
+.table{
+    width: 95%; 
+    height: auto; 
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.td_1{
+   width: 30%; 
+   height: auto; 
+   text-align: center;
+   padding: 15px;
+   border: 1px solid #ccc;
+}
+
+.td_2{
+   width: 50%; 
+   height: auto; 
+   text-align: center;
+   padding: 6px;
+}
+
+.td_3{
+   width: 90%; 
+   height: auto; 
+   text-align: center;
+   padding: 6px;
+}
+
+.image_cinema{
+    width:148px;
+    height:98px;
+}
+
+.google_maps{
+    width : 400px;
+    height : 300px;
+    border:0;
+    padding: 6px;
+}
+
+.meteo{
+    width : 290px;
+    height : 318px;
+    border: 1px solid #00537F;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+#image_film{
+    width:30%;
+    height:auto;
+}
