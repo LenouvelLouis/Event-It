@@ -45,7 +45,7 @@
         <label> Récapitulatif : </label>
 
         <ul class="info-liste">
-            <li>Film : xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+            <li>Film : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
             <li>Lieu : xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
             <li>Heure de début : xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
             <li>Heure de fin (prévisionnelle) : xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
