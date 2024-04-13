@@ -8,12 +8,12 @@
 <body>
 <?php require("./vue/navbar/nav.tpl"); ?>
 
-<p class="Chemin_page"><a> Aceuil / Ajout de film <a/></p>
+<p class="Chemin_page"><a> Acceuil / Ajout de film <a/></p>
 
 <div class="container_ajout_film">
 
     <div class="container_affiche_film">
-        <label> Affiche du film * </label>
+        <label> Affiche du film <span class="highlight">*</span> </label>
         <div class="image-container">
             <img src="./vue/img/Image_test.png" alt="Image du film">
         </div>
@@ -50,7 +50,6 @@
         <button type="button">Ajout du film</button>
     </div>
 
-    
 </div>
 
 <?php require("./vue/footer/footer.tpl"); ?> 
