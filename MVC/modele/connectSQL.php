@@ -1,7 +1,7 @@
 <?php
 	//$hostname = "vs-wamp";
 	$hostname = "localhost";
-	$base= "event-it";
+	$base= "events-it";
 	$loginBD= "root";
 	$passBD="";
 	try {

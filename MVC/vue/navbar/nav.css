@@ -3,38 +3,149 @@
     justify-content: center;
 }
 .nav{
-    background-color: #242c34;
-    padding: 5px;
+    background-color: var(--black-blue);
+    padding-bottom: 5px;
     display: block !important;
+    width: 100%;
 }
-.centered-list {
+.nav-list {
     text-align: center;
 }
+.close{
+    width: 30px;
+    margin-right: auto;
+}
 
-.centered-list li {
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--green-blue);
+    color: var(--black-blue);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropBtn {
+    color: var(--green-blue);
+    border: none;
+    cursor: pointer;
+    &:hover {
+        transition: 0.5s;
+        color: var(--grey);
+    }
+}
+
+
+.nav-list li {
     font-size: 1.5rem;
     display: inline-block;
     margin-right: 30px;
 }
-.centered-list li a {
+.nav-list li a {
     text-decoration: none;
-    color: #2C94A4;
+    color: var(--green-blue);
+    cursor: pointer;
     &:hover {
         transition: 0.5s;
-        color: #EFEFEF;
+        color: var(--grey);
     }
 }
-.centered-list li button {
-    font-size: 1.3rem;
+.nav-list li button {
+    font-size: 1.6rem;
     border: 0;
     background-color: transparent;
-    color: #2C94A4;
+    color: var(--green-blue);
     &:hover {
         transition: 0.5s;
-        color: #EFEFEF;
+        color: var(--grey);
     }
+}
+.nav-list li button:active,
+.nav-list li button:focus{
+    outline: 0;
 }
 
 body {
     margin: 0;
+}
+
+.btn-nav{
+    display: none;
+}
+.btn-nav:focus,
+.btn-nav:active {
+    outline: 0;
+}
+
+@media screen and (max-width: 550px) {
+    .nav-list li {
+        font-size: 1.2rem;
+        margin-right: 20px;
+    }
+    .nav-list li a {
+        font-size: 1.2rem;
+    }
+    .nav-list li button {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .btn-nav{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #navPc{
+        display: none;
+        width: 100vw;
+        height: 100vh;
+    }
+    .nav-list {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 0;
+    }
+    .nav-list li {
+        font-size: 2rem;
+    }
+    .nav-list li a {
+        font-size: 2rem;
+    }
+    .nav-list li button {
+        font-size: 2rem;
+    }
+    .btn-nav{
+        display: block;
+        background-color: var(--black-blue);
+        color: var(--green-blue);
+        border: 0;
+        font-size: 2rem;
+        padding: 10px;
+        cursor: pointer;
+    }
 }
