@@ -22,18 +22,26 @@
             Ici on verra les statistiques capteur par capteur.</p>
             
             <canvas id="sonore_capt1" style="width:100%;max-width:700px"></canvas>
-            <script> var xyValues = [
-                {x:50, y:7},
-                {x:60, y:8},
-                {x:70, y:8},
-                {x:80, y:9},
-                {x:90, y:9},
-                {x:100, y:9},
-                {x:110, y:10},
-                {x:120, y:11},
-                {x:130, y:14},
-                {x:140, y:14},
-                {x:150, y:15}
+            <script>
+                var xyValues = [
+                    {x:10, y:51},
+                    {x:20, y:56},
+                    {x:30, y:49},
+                    {x:40, y:63},
+                    {x:50, y:73},
+                    {x:60, y:44},
+                    {x:70, y:48},
+                    {x:80, y:58},
+                    {x:90, y:67},
+                    {x:100, y:79},
+                    {x:110, y:80},
+                    {x:120, y:81},
+                    {x:130, y:53},
+                    {x:140, y:78},
+                    {x:150, y:76},
+                    {x:160, y:65},
+                    {x:170, y:56}
+
                 ];
                 new Chart("sonore_capt1", {
                     type: "scatter",
@@ -41,14 +49,14 @@
                         datasets: [{
                             pointRadius: 2,
                             pointBackgroundColor: "rgb(0,0,255)",
-                            data: xyValue
+                            data: xyValues
                         }]
                     },
                     options: {
                         legend: {display: false},
                         scales: {
-                            xAxes: [{ticks: {min: 40, max:160}}],
-                            yAxes: [{ticks: {min: 6, max:16}}],
+                            xAxes: [{ticks: {min: 0, max:180}}],
+                            yAxes: [{ticks: {min: 0, max:100}}],
                         }
                     }
                 });
@@ -62,6 +70,47 @@
             <p> (Ici je mettrais aussi le graphique avec les statistiques des capteurs de températures quand j'aurais compris comment le faire, 
             comme pour les capteurs sonores, en attendant je finis la mise en page du reste des statistiques des séances) </br></br>
             Ici on verra les statistiques capteur par capteur.</p>
+                        
+            <canvas id="sonore_temp1" style="width:100%;max-width:700px"></canvas>
+            <script>
+                var xyValues = [
+                    {x:10, y:51},
+                    {x:20, y:56},
+                    {x:30, y:49},
+                    {x:40, y:63},
+                    {x:50, y:73},
+                    {x:60, y:44},
+                    {x:70, y:48},
+                    {x:80, y:58},
+                    {x:90, y:67},
+                    {x:100, y:79},
+                    {x:110, y:80},
+                    {x:120, y:81},
+                    {x:130, y:53},
+                    {x:140, y:78},
+                    {x:150, y:76},
+                    {x:160, y:65},
+                    {x:170, y:56}
+
+                ];
+                new Chart("sonore_temp1", {
+                    type: "scatter",
+                    data: {
+                        datasets: [{
+                            pointRadius: 2,
+                            pointBackgroundColor: "rgb(0,0,255)",
+                            data: xyValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        scales: {
+                            xAxes: [{ticks: {min: 0, max:180}}],
+                            yAxes: [{ticks: {min: 0, max:100}}],
+                        }
+                    }
+                });
+            </script>
         </div>
 
         <div class="row_after_column_statseance">
