@@ -5,6 +5,7 @@
 <head>
     <link rel="stylesheet" href="./vue/statseance/statseance.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="./vue/statseance/statseance_code.js"></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
             </div>
 
             <p> Ici on verra les statistiques capteur par capteur.</p>
-            <canvas id="sonore_capt1" style="width:100%;max-width:700px"></canvas>
+            <canvas class="stat_graph" id="sonore_capt1" style="width:100%;max-width:700px"></canvas>
             <script>
                 var xyValues = [
                     {x:10, y:51},
@@ -67,6 +68,88 @@
                     }
                 });
             </script>
+            
+            <canvas class="stat_graph" id="sonore_capt2" style="width:100%;max-width:700px"></canvas>
+            <script>
+                var xyValues = [
+                    {x:10, y:30},
+                    {x:20, y:35},
+                    {x:30, y:30},
+                    {x:40, y:35},
+                    {x:50, y:30},
+                    {x:60, y:35},
+                    {x:70, y:30},
+                    {x:80, y:35},
+                    {x:90, y:30},
+                    {x:100, y:35},
+                    {x:110, y:30},
+                    {x:120, y:35},
+                    {x:130, y:30},
+                    {x:140, y:35},
+                    {x:150, y:30},
+                    {x:160, y:35},
+                    {x:170, y:30}
+
+                ];
+                new Chart("sonore_capt2", {
+                    type: "scatter",
+                    data: {
+                        datasets: [{
+                            pointRadius: 2,
+                            pointBackgroundColor: "rgb(0,0,255)",
+                            data: xyValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        scales: {
+                            xAxes: [{ticks: {min: 0, max:180}}],
+                            yAxes: [{ticks: {min: 0, max:100}}],
+                        }
+                    }
+                });
+            </script>
+
+            <canvas class="stat_graph" id="sonore_capt3" style="width:100%;max-width:700px"></canvas>
+            <script>
+                var xyValues = [
+                    {x:10, y:5},
+                    {x:20, y:10},
+                    {x:30, y:15},
+                    {x:40, y:20},
+                    {x:50, y:25},
+                    {x:60, y:30},
+                    {x:70, y:35},
+                    {x:80, y:40},
+                    {x:90, y:45},
+                    {x:100, y:50},
+                    {x:110, y:55},
+                    {x:120, y:60},
+                    {x:130, y:65},
+                    {x:140, y:70},
+                    {x:150, y:75},
+                    {x:160, y:80},
+                    {x:170, y:85}
+
+                ];
+                new Chart("sonore_capt3", {
+                    type: "scatter",
+                    data: {
+                        datasets: [{
+                            pointRadius: 2,
+                            pointBackgroundColor: "rgb(0,0,255)",
+                            data: xyValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        scales: {
+                            xAxes: [{ticks: {min: 0, max:180}}],
+                            yAxes: [{ticks: {min: 0, max:100}}],
+                        }
+                    }
+                });
+            </script>
         </div>
 
         <div class="column_statseance">
@@ -83,7 +166,7 @@
             </div>
 
             <p>Ici on verra les statistiques capteur par capteur.</p>
-            <canvas id="sonore_temp1" style="width:100%;max-width:700px"></canvas>
+            <canvas class="stat_graph" id="sonore_temp1" style="width:100%;max-width:700px"></canvas>
             <script>
                 var xyValues = [
                     {x:10, y:51},
@@ -123,14 +206,102 @@
                     }
                 });
             </script>
+
+            <canvas class="stat_graph" id="sonore_temp2" style="width:100%;max-width:700px"></canvas>
+            <script>
+                var xyValues = [
+                    {x:10, y:30},
+                    {x:20, y:35},
+                    {x:30, y:30},
+                    {x:40, y:35},
+                    {x:50, y:30},
+                    {x:60, y:35},
+                    {x:70, y:30},
+                    {x:80, y:35},
+                    {x:90, y:30},
+                    {x:100, y:35},
+                    {x:110, y:30},
+                    {x:120, y:35},
+                    {x:130, y:30},
+                    {x:140, y:35},
+                    {x:150, y:30},
+                    {x:160, y:35},
+                    {x:170, y:30}
+
+                ];
+                new Chart("sonore_temp2", {
+                    type: "scatter",
+                    data: {
+                        datasets: [{
+                            pointRadius: 2,
+                            pointBackgroundColor: "rgb(0,0,255)",
+                            data: xyValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        scales: {
+                            xAxes: [{ticks: {min: 0, max:180}}],
+                            yAxes: [{ticks: {min: 0, max:100}}],
+                        }
+                    }
+                });
+            </script>
+
+            <canvas class="stat_graph" id="sonore_temp3" style="width:100%;max-width:700px"></canvas>
+            <script>
+                var xyValues = [
+                    {x:10, y:5},
+                    {x:20, y:10},
+                    {x:30, y:15},
+                    {x:40, y:20},
+                    {x:50, y:25},
+                    {x:60, y:30},
+                    {x:70, y:35},
+                    {x:80, y:40},
+                    {x:90, y:45},
+                    {x:100, y:50},
+                    {x:110, y:55},
+                    {x:120, y:60},
+                    {x:130, y:65},
+                    {x:140, y:70},
+                    {x:150, y:75},
+                    {x:160, y:80},
+                    {x:170, y:85}
+
+                ];
+                new Chart("sonore_temp3", {
+                    type: "scatter",
+                    data: {
+                        datasets: [{
+                            pointRadius: 2,
+                            pointBackgroundColor: "rgb(0,0,255)",
+                            data: xyValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        scales: {
+                            xAxes: [{ticks: {min: 0, max:180}}],
+                            yAxes: [{ticks: {min: 0, max:100}}],
+                        }
+                    }
+                });
+            </script>
         </div>
 
         <div class="row_after_column_statseance">
             <h2> Données globales</h2>
-            <p> Les statistiques moyennes de chaque séance sont montrées ici </br> 
-            Moyenne : </br>
-            Médiane : </br>
-            Valeur absolue : </p>
+            <p> Les statistiques moyennes de chaque séance sont montrées ici </p> 
+            <p> Moyenne : </p>
+            <p> Médiane : </p> <div id="mediane_sonore_result"></div>
+
+            <script> const mediane_sonore = [99,86,87,88,86,103,87,94,78,77,85,86];
+            let median = math.median(mediane_sonore);
+            document.getElementById("mediane_sonore_result").innerHTML = median;
+            </script>
+
+            <p> Valeur absolue : </p>
             <p> Vous trouverez dans cette section les indicateurs de santé liés aux données prélevées, 
             ainsi que la carte de la salle où les mesures ont été faites.</p>
         </div>

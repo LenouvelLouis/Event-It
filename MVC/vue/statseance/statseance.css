@@ -48,13 +48,7 @@
     border-color: #242C34;
     background-color: #EFEFEF;
   }
-  
-  @media screen and (max-width: 600px) {
-    .column_statseance {
-      width: 100%;
-    }
-  }
-  
+
 body {
   background-image: url("ondes-noir.jpg");
   background-attachment: fixed;
@@ -78,12 +72,15 @@ p, h2 {
 }
 
 
-.sonore1:clicked{
-  display: sonore_capt1;
-  display: hiden(sonore_capt2, sonore_capt3);
+@media screen and (max-width: 400px) {
+  .column_statseance {
+    width: 100%;
+  }
+  .espace_bouton{
+    flex-direction: column;
+  }
 }
 
-.sonore1:clicked{
-  display: sonore_capt2;
-  display: hiden(sonore_capt1, sonore_capt3);
+canvas.stat_graph{
+  display: none;
 }
