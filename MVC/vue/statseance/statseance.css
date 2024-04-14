@@ -8,7 +8,7 @@
 }
 
 .container_statseance{
-    display: flex;
+  display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -26,6 +26,15 @@
     border-radius: 5px;
     min-height: 300px;
     background-color: #EFEFEF;
+  }
+
+  .espace_bouton{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-evenly;
   }
   
   .row_after_column_statseance {
@@ -53,4 +62,28 @@ body {
 
 p, h2 {
   color: #242C34;
+}
+
+.capteur{
+  border-color: #2C94A4;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.1s;
+  margin: 5px 10px 5px 10px;
+}
+
+.capteur:hover{
+  transform: scale(1.2);
+}
+
+
+.sonore1:clicked{
+  display: sonore_capt1;
+  display: hiden(sonore_capt2, sonore_capt3);
+}
+
+.sonore1:clicked{
+  display: sonore_capt2;
+  display: hiden(sonore_capt1, sonore_capt3);
 }

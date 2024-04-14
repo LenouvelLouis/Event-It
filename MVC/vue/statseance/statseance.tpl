@@ -18,9 +18,15 @@
             <h2> Statistiques des capteurs sonores</h2>
             <p> Voici les statistiques des séances de cinéma </p>
             <p> (Ici je mettrais le graphique avec les statistiques des capteurs sonores quand j'aurais compris comment le faire, 
-            en attendant je finis la mise en page du reste des statistiques des séances) </br></br>
-            Ici on verra les statistiques capteur par capteur.</p>
-            
+            en attendant je finis la mise en page du reste des statistiques des séances) </br></p>
+
+            <div class="espace_bouton">
+                <button class="capteur sonore1">Capteur sonore 1</button>
+                <button class="capteur sonore2">Capteur sonore 2</button>
+                <button class="capteur sonore3">Capteur sonore 3</button>
+            </div>
+
+            <p> Ici on verra les statistiques capteur par capteur.</p>
             <canvas id="sonore_capt1" style="width:100%;max-width:700px"></canvas>
             <script>
                 var xyValues = [
@@ -68,9 +74,15 @@
             <p> Ici nous avons les données recueillies de chaque séance par les capteurs de température, 
             ainsi que les statistiques qui découlent de ces données </p>
             <p> (Ici je mettrais aussi le graphique avec les statistiques des capteurs de températures quand j'aurais compris comment le faire, 
-            comme pour les capteurs sonores, en attendant je finis la mise en page du reste des statistiques des séances) </br></br>
-            Ici on verra les statistiques capteur par capteur.</p>
-                        
+            comme pour les capteurs sonores, en attendant je finis la mise en page du reste des statistiques des séances) </br></p>
+
+            <div class="espace_bouton">
+                <button class="capteur">Capteur température 1</button>
+                <button class="capteur">Capteur température 2</button>
+                <button class="capteur">Capteur température 3</button>
+            </div>
+
+            <p>Ici on verra les statistiques capteur par capteur.</p>
             <canvas id="sonore_temp1" style="width:100%;max-width:700px"></canvas>
             <script>
                 var xyValues = [
