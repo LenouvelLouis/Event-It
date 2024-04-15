@@ -1,18 +1,24 @@
-.Titre_CGU{
-    background-color: #242C34;
-    color: #2C94A4;
-    text-align: center;
-    padding-bottom: 50px;
-    margin-bottom: 50px;
-}
-
 .Titre_secondaire_CGU {
-    margin: 10px 150px 10px 150px;
+    margin-bottom: 30px;
     color: #74777C;
 }
 
-.corps_CGU {
-    margin-right: 75px;
-    margin-left: 75px;
-    margin-bottom: 30px;
+.body-cgu{
+	display: block;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    max-width: 50%;
+    margin: 30px 250px 30px 250px;
+    min-width: auto;
+}
+
+.corps_CGU{
+    display: block;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    margin: 10px;  
 }
