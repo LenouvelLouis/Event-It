@@ -9,8 +9,9 @@ function inscription(){
     $phone = isset($_POST['phoneRegister'])?($_POST['phoneRegister']):'';
     $password = isset($_POST['passwordRegister'])?($_POST['passwordRegister']):'';
     $status = getStatus($email);
+    require './service/hashService.php';
     $salt = generateSalt();
-    $password = custom_password_hash($password,$salt);
+    $password = hashPassword($password,$salt);
     require './controle/utilisateur.php';
     closedNotifier();
     require('./modele/utilisateurBD.php');
@@ -32,29 +33,7 @@ function inscription(){
 	//pour préparer des requêtes et les exécuter qu'elles rendent OU PAS des lignes
 
 }
-/**
- * Fonction de génération de sel
- * @return string
- */
-function generateSalt(): string
-{
-    try {
-        return base64_encode(random_bytes(22));
-    } catch (\Random\RandomException $e) {
-    }
 
-}
-/**
- * Fonction de génération de mot de passe crypté
- * @param $password
- * @param $salt
- * @return string
- */
-function custom_password_hash($password,$salt): string
-{
-    $prefix = sprintf("$2y$%02d$", 10);
-    return crypt($password, $prefix . $salt);
-}
 
 /**
  * Fonction de récupération du status

@@ -23,7 +23,7 @@
                     echo("<li class='dropdown'>
         <span  class='dropBtn'>".$_SESSION['name']."</span>
         <div class='dropdown-content'>
-            <a href='./index.php?action=profile&controle=pages/profile'>Mon profil</a>
+            <a href='./index.php?action=profile&controle=pages/profile'>Mon profile</a>
             <a href='./index.php?action=deconnexion&controle=logout'>Deconnexion</a>
         </div>
         </li>");

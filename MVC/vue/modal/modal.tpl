@@ -29,7 +29,7 @@
                                             </div>
                                             <div class="form-group mt-2">
                                                 <input id="passwordLogin" name="passwordLogin" type="password" autocomplete="current-password" class="form-style" placeholder="Password">
-                                                <i class="input-icon uil uil-lock-alt"></i>
+                                                <i onclick="showPassword()" class="input-icon uil uil-lock-alt"></i>
                                             </div>
                                             <button type="submit" class="btn mt-4">Se connecter</button>
                                         </form>
@@ -57,7 +57,7 @@
                                         </div>
                                         <div class="form-group mt-2">
                                             <input id="passwordRegister" name="passwordRegister"  autocomplete="current-password" type="password" class="form-style" placeholder="Password">
-                                            <i class="input-icon uil uil-lock-alt"></i>
+                                            <i onclick="showPassword()" class="input-icon uil uil-lock-alt"></i>
                                         </div>
                                             <button type="submit" class="btn mt-4">S'inscrire</button>
                                         </form>
@@ -71,3 +71,4 @@
         </div>
     </div>
 </div>
+<script src="./vue/modal/modal.js"></script>
