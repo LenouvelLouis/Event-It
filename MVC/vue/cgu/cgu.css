@@ -1,5 +1,4 @@
 .Titre_secondaire_CGU {
-    margin-bottom: 30px;
     color: #74777C;
 }
 
@@ -10,15 +9,11 @@
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-    max-width: 50%;
-    margin: 30px 250px 30px 250px;
+    max-width: 70%;
+    margin: 30px 15% 30px 15%;
     min-width: auto;
 }
 
 .corps_CGU{
-    display: block;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-    margin: 10px;  
+    margin: 25px 0px 25px 0px;  
 }
