@@ -13,7 +13,7 @@ function closedNotifier(){
  * Fonction de récupération des informations de l'utilisateur
  * @return void
  */
-function getInfoUser(): void
+function getInfoUser()
 {
     require('./modele/utilisateurBD.php');
     getUser($_SESSION['id']);
