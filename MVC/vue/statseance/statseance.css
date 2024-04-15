@@ -49,15 +49,6 @@
     background-color: #EFEFEF;
   }
 
-body {
-  background-image: url("ondes-noir.jpg");
-  background-attachment: fixed;
-}
-
-p, h2 {
-  color: #242C34;
-}
-
 .capteur{
   border-color: #2C94A4;
   border-radius: 5px;
@@ -72,9 +63,10 @@ p, h2 {
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .column_statseance {
     width: 100%;
+    margin: 20px 0px 20px 0px;
   }
   .espace_bouton{
     flex-direction: column;
