@@ -24,10 +24,10 @@ function updateuser()
     $emailPost = $_POST['email'];
     $phone = $_POST['phone'];
     $id = $_SESSION['id'];
-    $password = $_POST['password'];
-    $confirmPassword = $_POST['confirm_password'];
+    $password = isset($_POST['password']) ? $_POST['password'] : null;
+    $confirmPassword = isset($_POST['confirm_password']) ? $_POST['confirm_password'] : null;
     $username = $_POST['username'];
-    if ($password != $confirmPassword) {
+    if ($password!= null && $password !== $confirmPassword) {
         $_SESSION['msgErr'] = "Les mots de passe ne correspondent pas";
         $_SESSION['msgType'] = "error";
         header('Location: ./?action=profile&controle=pages/profile');
@@ -41,10 +41,13 @@ function updateuser()
         header('Location: ./?action=profile&controle=pages/profile');
         exit();
     }
-    $salt = getSalt($emailPost);
-    require './service/hashService.php';
-    $password = hashPassword($password, $salt);
-    updateInfoUser($id, $emailPost, $phone, $password, $username);
+    $salt = '';
+    if ($password != null) {
+        require './service/hashService.php';
+        $salt = generateSalt();
+        $password = hashPassword($password, $salt);
+    }
+    updateInfoUser($id, $emailPost, $phone, $password, $username, $salt);
     $_SESSION['name'] = $username;
     $_SESSION['msgAcc'] = "Informations mises à jour avec succès";
     $_SESSION['msgType'] = "success";

@@ -75,7 +75,7 @@ function emailExist($email){
  * @param $email
  * @return string
  */
-function getSalt($email)
+function getSalt($email): string
 {
     require('./modele/connectSQL.php');
     $sql = "SELECT salt FROM `user` WHERE email = :email";
@@ -111,9 +111,10 @@ function getUser($id): void
         die();
     }
 }
+
 /**
  * Fonction de récupération du mot de passe crypté
- * @param $email
+ * @param string $email
  * @return string
  */
 function getHashPassword(string $email): string{
@@ -131,15 +132,31 @@ function getHashPassword(string $email): string{
     }
 }
 
-function updateInfoUser(mixed $id, mixed $email, mixed $phone, string $password, string $username)
+/**
+ * Fonction de mise à jour des informations de l'utilisateur
+ * @param mixed $id
+ * @param mixed $email
+ * @param mixed $phone
+ * @param string|null $password
+ * @param string $username
+ * @return void
+ */
+function updateInfoUser(mixed $id, mixed $email, mixed $phone, ?string $password, string $username, string $salt)
 {
     require('./modele/connectSQL.php');
-    $sql = "UPDATE `user` SET email = :email, phone = :phone, password = :password, name = :username WHERE id = :id";
+    if ($password != null) {
+        $sql = "UPDATE `user` SET email = :email, phone = :phone, password = :password, name = :username, salt = :salt WHERE id = :id";
+    } else {
+        $sql = "UPDATE `user` SET email = :email, phone = :phone, name = :username WHERE id = :id";
+    }
     try {
         $commande = $pdo->prepare($sql);
         $commande->bindParam(':email', $email);
         $commande->bindParam(':phone', $phone);
-        $commande->bindParam(':password', $password);
+        if ($password != null) {
+            $commande->bindParam(':password', $password);
+            $commande->bindParam(':salt', $salt);
+        }
         $commande->bindParam(':id', $id);
         $commande->bindParam(':username', $username);
         $commande->execute();
@@ -148,7 +165,11 @@ function updateInfoUser(mixed $id, mixed $email, mixed $phone, string $password,
         die();
     }
 }
-
+/**
+ * Fonction de récupération de l'email
+ * @param mixed $id
+ * @return string
+ */
 function getEmail(mixed $id): string
 {
     require('./modele/connectSQL.php');
