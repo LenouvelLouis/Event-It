@@ -4,7 +4,6 @@
 
     <head>
         <link rel="stylesheet" href="./vue/infocinema/infocinema.css">
-        <link href="Leaflet.Weather.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -70,14 +69,6 @@
         </tr>
     </tbody>
 </table>
-            <p>&nbsp;</p>
-            <table id="table">
-                <tbody>
-                    <tr>
-                        <td>&nbsp;</td>
-                    </tr>
-                </tbody>
-            </table>
         </center>
         <?php require("./vue/footer/footer.tpl"); ?>
     </body>
