@@ -21,7 +21,7 @@
    width: 50%; 
    height: auto; 
    text-align: center;
-   padding: 6px;
+   padding: 10px;
 }
 
 .td_3{
@@ -47,11 +47,19 @@
     width : 290px;
     height : 318px;
     border: 1px solid #00537F;
-    border-radius: 8px;
+    border-radius: 0px;
     padding: 6px;
 }
 
 #image_film{
     width:30%;
     height:auto;
+}
+
+#table_2{
+    border-spacing: 10px;
+}
+
+.langue{
+    padding:50px;
 }
