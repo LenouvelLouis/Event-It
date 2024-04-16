@@ -1,0 +1,79 @@
+.navbarcontact {
+    background-color: var(--green-blue);
+    display: flex;
+    padding: 10px;
+    text-align: left;
+    color: var(--grey);
+}
+
+.navbarcontact a {
+    text-decoration: none;
+    color: var(--grey);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbarcontact a:hover {
+    color: var(--grey);
+}
+
+.containercontact {
+    width: 80%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-header h1 {
+    color: black;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.required-asterisk {
+    color: red; 
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.input-group button {
+    padding: 10px 20px;
+    background-color: var(--black-blue);
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.input-group button:hover {
+    background-color: White;
+    border-color: var(--black-blue);
+    color : var(--black-blue)
+}
+
+.required {
+    color: black;
+    font-size: .85em;
+}
+
+#character-count {
+    color: black;
+    font-size: 0.85em;
+}
+
