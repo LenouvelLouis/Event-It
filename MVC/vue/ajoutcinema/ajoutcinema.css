@@ -1,0 +1,26 @@
+.contenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gauche,
+.droite {
+    flex: 1;
+}
+
+.milieu {
+    flex: 2;
+    text-align: center;
+}
+
+.box-messagerie {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.milieu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
