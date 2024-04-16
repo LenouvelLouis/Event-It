@@ -13,9 +13,14 @@
         <a>Cinéma</a>
     </div>
 
-<div class="search-bar">
-    <input type="text" placeholder="Rechercher un cinéma" name="search" class="search-input">
-    <button class="search-button"><i class="fa fa-search"></i></button>
+<div class="top-bar">
+    <div class="search-bar">
+        <input type="text" placeholder="Rechercher un cinéma" name="search" class="search-input">
+        <button class="search-button"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="search-image">
+        <img src="path-to-your-image.png" alt="Your Image" width="50" height="50">
+    </div>
 </div>
 
 <div class="cinema-card grey">

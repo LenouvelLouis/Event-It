@@ -17,24 +17,40 @@
     color: var(--grey);
 }
 
+.top-bar {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .search-bar {
     display: flex;
     align-items: left;
-    border: 1px solid #ccc;
+    border: 1px solid grey;
     border-radius: 20px;
-    background: #fff;
+    background: white;
     padding: 5px 10px;
     max-width: 250px;
     margin-left: 150px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+}
+
+.search-image {
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin-left: 300px;
+}
+
+.search-image img {
+  width: 15px; 
+  height: 15px; 
+
 }
 
 .search-input {
     border: none;
     outline: none;
     padding: 10px;
-    margin-right: 10px;
     border-radius: 20px;
     flex-grow: 1;
 }
@@ -45,26 +61,33 @@
     padding: 10px;
     cursor: pointer;
     outline: none;
-    
+}
+
+.search-button:active, .search-button:focus{
+  outline: none;
+
 }
 
 .search-button i {
     font-size: 18px;
-    color: #333;
+    color: black;
     margin-right: 10px;
 }
 
 .cinema-card {
     display: flex;
-    align-items: center; /* Centre les enfants horizontalement */
-    justify-content: center; /* Centre les enfants verticalement */
+    align-items: center; 
+    justify-content: center; 
     background: #fff;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
   .cinema-card img {
-    margin-bottom: 20px; /* ajoute de l'espace entre l'image et le texte */
+    margin-right: 15px;
+    width: 150px; 
+    height: 150px; 
+    border: 1px solid black;
 
   }
 
@@ -84,15 +107,16 @@
 
   .icons {
     display: flex;
-    justify-content: left; /* Centre les icônes horizontalement */
-    width: 100%; /* Assure que le flex container des icônes prend toute la largeur */
+    justify-content: left; 
+    width: 100%;
   }
 
   .icons img {
     margin-top: 20px;
     margin-left: 10px;
-    width: 24px; /* Taille des icônes */
+    width: 24px; 
     height: 24px;
+    border: 1px solid black;
   }
 
   .grey {
