@@ -5,24 +5,33 @@
 	justify-content: center;
 	align-items: center;
 	align-content: space-evenly;
+  width: 100%;
 }
 
+.column_statseance, .column_graph_statseance{
+  float: left;
+  min-height: 300px;
+  margin: 10px 5% 10px 5%;
+}
 .column_statseance {
-    float: left;
-    width: 40%;
-    padding: 10%;
-    margin: 15px;
-    min-height: 300px;
-  }
+  width: 30%;
+}
+.column_graph_statseance{
+  width: 40%;
+}
 
-  .espace_bouton{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: space-evenly;
-  }
+.menu_deroulant_statseance{
+  margin-left: auto;
+  margin-right: auto;
+}
+.espace_bouton{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+}
   
   .row_after_column_statseance {
     content: "";
@@ -65,4 +74,5 @@ canvas.stat_graph{
 .container1-stat{
   background-color: #EFEFEF;
   padding-top: 30px;
+  width: 100%;
 }

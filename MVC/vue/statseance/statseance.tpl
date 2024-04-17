@@ -18,6 +18,12 @@
                 <p> (Ici je mettrais le graphique avec les statistiques des capteurs sonores quand j'aurais compris comment le faire, 
                 en attendant je finis la mise en page du reste des statistiques des séances) </br></p>
 
+                <select class="menu_deroulant_statseance" name="cinemas" id="sceance_lieu">
+                    <option value="bouton-son-1">Capteur sonore 1</option>
+                    <option value="bouton-son-2">Capteur sonore 2</option>
+                    <option value="bouton-son-3">Capteur sonore 3</option>
+                </select>
+
                 <div class="espace_bouton">
                     <button id="bouton-son-1" class="capteur sonore1">Capteur sonore 1</button>
                     <button id="bouton-son-2" class="capteur sonore2">Capteur sonore 2</button>
@@ -25,7 +31,7 @@
                 </div>
             </div>
 
-            <div class="column_statseance">
+            <div class="column_graph_statseance">
                 <p> Ici on verra les statistiques capteur par capteur.</p>
                 <canvas class="stat_graph" id="sonore_capt1" style="width:100%;max-width:700px"></canvas>
                 <script>
@@ -164,7 +170,7 @@
                 </div>
             </div>
 
-            <div class="column_statseance">
+            <div class="column_graph_statseance">
                 <p>Ici on verra les statistiques capteur par capteur.</p>
                 <canvas class="stat_graph" id="sonore_temp1" style="width:100%;max-width:700px"></canvas>
                 <script>
