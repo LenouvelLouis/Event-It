@@ -1,17 +1,37 @@
-statseance.tpl.querySelector('bouton-son-1').addEventListener('click', function() {
-    statseance.tpl.getElementById('sonore_capt1').style.display = 'block';
-    statseance.tpl.getElementById('sonore_capt2').style.display = 'none';
-    statseance.tpl.getElementById('sonore_capt3').style.display = 'none';
-});
+// Dans votre fichier statseance_code.js
 
-statseance.tpl.querySelector('bouton-son-2').addEventListener('click', function() {
-    statseance.tpl.getElementById('sonore_capt1').style.display = 'none';
-    statseance.tpl.getElementById('sonore_capt2').style.display = 'block';
-    statseance.tpl.getElementById('sonore_capt3').style.display = 'none';
-});
+google.charts.load('current', {'packages':['corechart']});
 
-statseance.tpl.querySelector('bouton-son-3').addEventListener('click', function() {
-    statseance.tpl.getElementById('sonore_capt1').style.display = 'none';
-    statseance.tpl.getElementById('sonore_capt2').style.display = 'none';
-    statseance.tpl.getElementById('sonore_capt3').style.display = 'block';
-});
+// Fonction pour dessiner le graphique des statistiques des capteurs sonores
+function drawSoundSensorChart() {
+    // Définir les données du graphique
+    var data = google.visualization.arrayToDataTable([
+        ['X', 'Y'],
+        [1, 2],
+        [2, 3],
+        [3, 5],
+        [1, 2],
+        [2, 3],
+        [3, 5],
+        [1, 2],
+        [2, 3],
+        [3, 5],
+        [1, 2],
+        [2, 3],
+        [3, 5],
+        // Ajoutez vos données ici...
+    ]);
+
+    // Configuration du graphique avec Google Charts
+    var options = {
+        title: 'Statistiques des capteurs sonores',
+        hAxis: {title: 'X'},
+        vAxis: {title: 'Y'},
+        legend: 'none'
+        // Ajoutez d'autres options selon vos besoins...
+    };
+
+    // Dessiner le graphique
+    var chart = new google.visualization.LineChart(document.getElementById('myChart'));
+    chart.draw(data, options);
+}
