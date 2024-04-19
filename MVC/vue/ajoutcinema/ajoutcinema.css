@@ -1,26 +1,101 @@
-.contenu {
+.form-flexbox {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.gauche,
-.droite {
-    flex: 1;
+.info{
+    display: flex;
+    justify-content: space-around; /* Aligner les éléments vers le haut */
+    align-items: flex-start; /* Aligner les éléments à droite */
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.droite{
+    display: flex;
+    flex-direction: column;
 }
 
-.milieu {
-    flex: 2;
-    text-align: center;
+.input{
+    background-color: var(--grey);
+    border: 0px;
+    border-radius: 10px;
+    width: 200px ;
+    height: 40px ;
 }
 
-.box-messagerie {
-    border: 1px solid #ccc;
+.lieu_cinema{
+    margin-top: 40px;
+}
+.gauche img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Ajustez la taille maximale de l'image selon vos besoins */
+}
+.droite button{
+    margin-top: 70px;
+}
+.droite button {
+    color: var(--green-blue);
+    background-color: var(--black-blue);
+    border-radius: 10px;
+    width: 200px ;
+    height: 40px ;
+}
+
+.droite textarea{
+    resize: none;
+    width: 350px;
+    height: 180px;
+    border-radius: 10px;
+    border: none;
+    background-color: #d9d9d9;
+}
+
+.milieu input{
+    resize: none;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #d9d9d9;
+}
+
+.barre {
+    background-color: var(--green-blue);
+    display: flex;
     padding: 10px;
-    margin-bottom: 10px;
+    text-align: left;
+    color: var(--grey);
 }
-.milieu {
+
+.barre a {
+    text-decoration: none;
+    color: var(--grey);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.barre a:hover {
+    color: var(--grey);
+}
+
+.highlight {
+    color: red;
+}
+
+.image-container {
+    width: 260px; /* ou une largeur fixe, par exemple 500px */
+    height: 260px; /* Hauteur fixe pour le conteneur */
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    overflow: hidden;
+  }
+  
+  .image-container img {
+      width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: 100%; /* L'image prend toute la hauteur du conteneur */
+    object-fit: cover;
+  }
