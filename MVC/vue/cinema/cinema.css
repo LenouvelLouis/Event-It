@@ -35,16 +35,16 @@
 }
 
 .search-image {
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  margin-left: 300px;
+  margin-left: 325px;
 }
 
-.search-image img {
-  width: 15px; 
-  height: 15px; 
+.plus {
+  font-size: 2rem;
+  color :var(--green-blue);
+}
 
+.plus:hover {
+  color :var(--green-blue);
 }
 
 .search-input {
@@ -81,7 +81,7 @@
     background: #fff;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
+}
 
   .cinema-card img {
     margin-right: 15px;
@@ -93,6 +93,14 @@
 
   .cinema-info {
     text-align: left; 
+  }
+
+  .cinema-info a {
+    color: black;
+  }
+
+  .cinema-info a:hover {
+    color: black;
   }
 
   .cinema-info h2 {
@@ -107,16 +115,16 @@
 
   .icons {
     display: flex;
-    justify-content: left; 
-    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
   }
 
-  .icons img {
-    margin-top: 20px;
-    margin-left: 10px;
-    width: 24px; 
-    height: 24px;
-    border: 1px solid black;
+  .icons i {
+    margin-right: 20px;
+  }
+  
+  .icons i:last-child {
+    margin-right: 0; 
   }
 
   .grey {
