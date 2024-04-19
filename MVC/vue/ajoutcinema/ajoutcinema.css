@@ -36,15 +36,13 @@
     height: auto;
     max-width: 200px; /* Ajustez la taille maximale de l'image selon vos besoins */
 }
-.droite button{
-    margin-top: 70px;
-}
 .droite button {
     color: var(--green-blue);
     background-color: var(--black-blue);
     border-radius: 10px;
     width: 200px ;
     height: 40px ;
+    margin-top: 70px;
 }
 
 .droite textarea{
