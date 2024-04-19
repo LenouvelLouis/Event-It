@@ -16,7 +16,10 @@
     display: flex;
     flex-direction: column;
 }
+.block{
+    display: block !important;
 
+}
 .input{
     background-color: var(--grey);
     border: 0px;
@@ -105,4 +108,22 @@
     margin-bottom: 40px;
     margin-left: 70px;
     margin-right: 70px;
+  }
+
+  .checkbox_access{
+    display: flex;
+    align-items: baseline;
+    
+  }
+
+  .checkbox_access input{
+    margin-right: 20px;
+  }
+
+  @media (max-width: 900px) {
+    .info{
+        flex-direction:column;
+        align-items: center;
+    }
+    
   }

@@ -22,6 +22,7 @@
 </center>
 
 <div class="info">
+
   <div class="gauche">
     <center>
     <label>Image du cinéma</label><br></center>
@@ -33,21 +34,40 @@
   <div class="milieu">
     <label>Nom de cinéma<span class = "highlight">*</span></label><br>
     <input type="text" id="nom_cinema" name="nom_cinema" placeholder="Entrez le nom du cinéma"><br>
-    <label class="lieu_cinema" >Lieu de cinéma<span class = "highlight">*</span></label><br>
+    <label class="lieu_cinema" >Adresse du cinéma<span class = "highlight">*</span></label><br>
     <input type="text" id="lieu_cinema" name="lieu_cinema" placeholder="Entrez le lieu du cinéma">
   </div>
 
   <div class="droite">
-    <label>Messagerie</label>
-    <textarea id="message" name="message" placeholder="Entrez votre message"></textarea>
+    <label>Accessibilité</label><br>
+
+    <div class="checkbox_access">
+      <input type="checkbox" id="Handicapé" class="block" name="Handicapé" value="Handicapé">
+      <label for="Handicapé"> Handicapé</label>
+    </div>
+
+    
+    <div class="checkbox_access">
+      <input type="checkbox" id="Sourd" class="block" name="Sourd" value="Sourd">
+      <label for="Sourd"> Sourd</label>
+    </div>
+
+
+    <div class="checkbox_access">
+      <input type="checkbox" id="Malvoyant" class="block" name="Malvoyant" value="Malvoyant">
+      <label for="Malvoyant"> Malvoyant</label>
+    </div>
+
     <center>
     <button>Ajouter cinéma</button>
     </center>
+
   </div>
+  
 </div>
 
 <?php require("./vue/footer/footer.tpl"); ?>
 
 </body>
-<script src="./vue/profile/profile.js"></script>
+
 </html>
