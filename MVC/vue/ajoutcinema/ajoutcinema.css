@@ -99,3 +99,10 @@
     height: 100%; /* L'image prend toute la hauteur du conteneur */
     object-fit: cover;
   }
+
+  .ligne-noire {
+    border: 1px solid black; /* couleur de la ligne noire */
+    margin-bottom: 40px;
+    margin-left: 70px;
+    margin-right: 70px;
+  }

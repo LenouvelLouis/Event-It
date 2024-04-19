@@ -1,9 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="fr">
 <head>
+
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./vue/ajoutcinema/ajoutcinema.css">
-    <title>Ajout de cinéma</title>
+
 </head>
 <body>
 
@@ -15,10 +16,10 @@
 </div>
 
 <center>
-  <?php
-  echo "<h2>" .$_SESSION['name'] . "</h2>";
-  ?>
-  </center>
+    <br>
+    <h2>Ajout de cinéma</h2>
+    <hr class="ligne-noire">
+</center>
 
 <div class="info">
   <div class="gauche">
