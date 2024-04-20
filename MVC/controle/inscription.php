@@ -26,7 +26,7 @@ function inscription(){
         $_SESSION['msgAcc'] = $msgAcc;
         $_SESSION['msgType'] = 'success';
     }
-    $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./index.php?controle=pages/accueil&action=accueil";
+    $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./?path=pages/accueil";
     header("Location:" . $url);
 	// IMPORTANT Rappel PDO
 	//PDOStatement::prepare() et PDOStatement::execute()

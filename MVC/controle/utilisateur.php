@@ -30,7 +30,7 @@ function updateuser()
     if ($password!= null && $password !== $confirmPassword) {
         $_SESSION['msgErr'] = "Les mots de passe ne correspondent pas";
         $_SESSION['msgType'] = "error";
-        header('Location: ./?action=profile&controle=pages/profile');
+        header('Location: ./?path=pages/profile');
         exit();
     }
     require('./modele/utilisateurBD.php');
@@ -38,7 +38,7 @@ function updateuser()
     if($emailPost != $email && emailExist($emailPost)){
         $_SESSION['msgErr'] = "Cet email existe déjà";
         $_SESSION['msgType'] = "error";
-        header('Location: ./?action=profile&controle=pages/profile');
+        header('Location: ./?path=pages/profile');
         exit();
     }
     $salt = '';
@@ -51,7 +51,7 @@ function updateuser()
     $_SESSION['name'] = $username;
     $_SESSION['msgAcc'] = "Informations mises à jour avec succès";
     $_SESSION['msgType'] = "success";
-    header('Location: ./?action=profile&controle=pages/profile');
+    header('Location: ./?path=pages/profile');
 }
 
 

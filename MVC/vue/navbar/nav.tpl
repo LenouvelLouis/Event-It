@@ -13,18 +13,18 @@
     <button onclick="openNavTel()" class="btn-nav"><i class="fa-solid fa-bars"></i></button>
 <nav id="navPc">
     <ul class="nav-list">
-        <li><a href="./index.php?pages/accueil">Accueil</a></li>
-        <li><a href="./index.php?pages/forum">Forum</a></li>
-        <li><a href="./index.php?pages/cinema">Cinéma</a></li>
-        <li><a href="./index.php?pages/film">Film</a></li>
-        <li><a href="./index.php?pages/contact">Contact</a></li>
+        <li><a href="./?path=pages/accueil">Accueil</a></li>
+        <li><a href="./?path=pages/forum">Forum</a></li>
+        <li><a href="./?path=pages/cinema">Cinéma</a></li>
+        <li><a href="./?path=pages/film">Film</a></li>
+        <li><a href="./?path=pages/contact">Contact</a></li>
         <?php
                 if(isset($_SESSION['name']) && isset($_SESSION['name'])!=NULL) {
                     echo("<li class='dropdown'>
         <span  class='dropBtn'>".$_SESSION['name']."</span>
         <div class='dropdown-content'>
-            <a href='./index.php?pages/profile'>Mon profile</a>
-            <a href='./index.php?logout/deconnexion'>Deconnexion</a>
+            <a href='./?path=pages/profile'>Mon profile</a>
+            <a href='./?path=logout/deconnexion'>Deconnexion</a>
         </div>
         </li>");
         } else {
