@@ -1,44 +1,46 @@
-var data = [
-    { y: '2014', a: 50, b: 90},
-    { y: '2015', a: 65,  b: 75},
-    { y: '2016', a: 50,  b: 50},
-    { y: '2017', a: 75,  b: 60},
-    { y: '2018', a: 80,  b: 65},
-    { y: '2019', a: 90,  b: 70},
-    { y: '2020', a: 100, b: 75},
-    { y: '2021', a: 115, b: 75},
-    { y: '2022', a: 120, b: 85},
-    { y: '2023', a: 145, b: 85},
-    { y: '2024', a: 160, b: 95}
-  ],
-  config = {
-    data: data,
-    xkey: 'y',
-    ykeys: ['a', 'b'],
-    labels: ['Total Income', 'Total Outcome'],
-    fillOpacity: 0.6,
-    hideHover: 'auto',
-    behaveLikeLine: true,
-    resize: true,
-    pointFillColors:['#ffffff'],
-    pointStrokeColors: ['black'],
-    lineColors:['gray','red']
-};
-config.element = 'area-chart';
-Morris.Area(config);
-config.element = 'line-chart';
-Morris.Line(config);
-config.element = 'bar-chart';
-Morris.Bar(config);
-config.element = 'stacked';
-config.stacked = true;
-Morris.Bar(config);
-Morris.Donut({
-element: 'pie-chart',
-data: [
-  {label: "Friends", value: 30},
-  {label: "Allies", value: 15},
-  {label: "Enemies", value: 45},
-  {label: "Neutral", value: 10}
-]
-});
+function GlobalSon(selectElement) {
+    const xArray1 = [50,60,70,80,90,100,110,120,130,140,150]; 
+    const yArray1 = [10,20,30,40,50,60,70,80,90,80,70]; 
+    const yArray2 = [70,80,90,80,70,60,50,40,30,20,10]; 
+    const yArray3 = [50,60,50,60,50,60,50,60,50,60,50];
+
+    const data0 = [
+        { x: xArray1, y: yArray1, mode: "lines", name: "Capteur 1" },
+        { x: xArray1, y: yArray2, mode: "lines", name: "Capteur 2" },
+        { x: xArray1, y: yArray3, mode: "lines", name: "Capteur 3" }
+    ];
+
+    const data1 = [
+        { x: xArray1, y: yArray1, mode: "lines", name: "Capteur 1" },
+    ];
+
+    const data2 = [
+        { x: xArray1, y: yArray2, mode: "lines", name: "Capteur 2" },
+    ];
+
+    const data3 = [
+        { x: xArray1, y: yArray3, mode: "lines", name: "Capteur 3" }
+    ];
+
+    const layout1 = {
+        xaxis: {range: [40, 160], title: "Temps (min)"},
+        yaxis: {range: [0, 90], title: "Puissance du son (dB)"},  
+        title: "Evolution du son pendant la séance"
+    };
+
+    const selectedSensor = selectElement.value;
+    if (selectedSensor === "bouton-global-1") {
+        Plotly.restyle("myPlot1", data0);
+    } 
+    else if (selectedSensor === "bouton-son-1") {
+        Plotly.restyle("myPlot1", data1);
+    } 
+    else if (selectedSensor === "bouton-son-2") {
+        Plotly.restyle("myPlot1", data2);
+    } 
+    else if (selectedSensor === "bouton-son-3") {
+        Plotly.restyle("myPlot1", data3);
+    } else {
+        Plotly.restyle("myPlot1", data0);
+    }
+}

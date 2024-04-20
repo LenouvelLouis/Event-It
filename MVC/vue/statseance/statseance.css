@@ -1,3 +1,22 @@
+.container1-stat{
+  background-color: #EFEFEF;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.stat-globales{
+  font-size: 20px;
+  color: #2C94A4;
+}
+
+h2 {
+  text-align: center;
+}
+
+p{
+  text-align: justify;
+}
+
 .container_statseance{
   display: flex;
 	flex-direction: row;
@@ -6,11 +25,11 @@
 	align-items: center;
 	align-content: space-evenly;
   width: 100%;
+  padding: 30px auto 30px auto;
 }
 
 .column_statseance, .column_graph_statseance{
   float: left;
-  min-height: 300px;
   margin: 10px 5% 10px 5%;
 }
 .column_statseance {
@@ -20,10 +39,6 @@
   width: 40%;
 }
 
-.menu_deroulant_statseance{
-  margin-left: auto;
-  margin-right: auto;
-}
 .espace_bouton{
   display: flex;
   flex-direction: column;
@@ -33,46 +48,53 @@
   align-content: space-evenly;
 }
   
-  .row_after_column_statseance {
-    content: "";
-    display: table;
-    clear: both;
-    width: 100%;
-    padding: 30px 20% 30px 20%;
+.row_after_column_statseance {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  align-content: space-evenly;
+  width: 100%;
+  padding: 30px 20% 30px 20%;
+  background-color: #EFEFEF;
+}
+
+.graph{
+  width: 100%;
+  max-width: 700px;
+}
+
+@media only screen and (max-width: 900px) {
+  *{
+    max-width: 100%;
+    margin: 0;
+  }
+  body{
     background-color: #EFEFEF;
   }
-
-.capteur{
-  border-color: #2C94A4;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.1s;
-  margin: 5px 10px 5px 10px;
-}
-
-.capteur:hover{
-  transform: scale(1.2);
-}
-
-
-@media screen and (max-width: 600px) {
   .column_statseance {
     width: 100%;
-    margin: 20px 0px 20px 0px;
+    float: none;
+  }
+  .column_graph_statseance {
+    width: 100%;
     float: none;
   }
   .espace_bouton{
     flex-direction: column;
   }
-}
-
-canvas.stat_graph{
-  display: none;
-}
-
-.container1-stat{
-  background-color: #EFEFEF;
-  padding-top: 30px;
-  width: 100%;
+  .graph{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container1-stat{
+    width: 100%;
+    padding: 20px 40px 20px 40px;
+  }
+  .container2-stat{
+    width: 100%;
+    padding: 20px 40px 20px 40px;
+  }
 }
