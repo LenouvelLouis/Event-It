@@ -115,6 +115,25 @@
                             title: "Evolution de la température pendant la séance"
                         };
                         Plotly.newPlot("myPlot2", data4, layout2);
+
+                        function GlobalSon(selectElement) {
+                            const selectedSensor = selectElement;
+                            if (selectedSensor === "bouton-global-1") {
+                                Plotly.restyle("myPlot1", data0);
+                            } 
+                            else if (selectedSensor === "bouton-son-1") {
+                                Plotly.restyle("myPlot1", data1);
+                            } 
+                            else if (selectedSensor === "bouton-son-2") {
+                                Plotly.restyle("myPlot1", data2);
+                            } 
+                            else if (selectedSensor === "bouton-son-3") {
+                                Plotly.restyle("myPlot1", data3);
+                            } 
+                            else {
+                                Plotly.restyle("myPlot1", data0);
+                            }
+                        }
                     </script>
                 </div>
             </div>
