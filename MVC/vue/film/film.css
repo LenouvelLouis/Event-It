@@ -1,0 +1,100 @@
+.Chemin_page
+{
+    background-color: var(--green-blue);
+    color: white;
+    padding: 10px;
+}
+
+.container_liste_cinema
+{
+	display: flex;
+	flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.container_recherche_film
+{
+    margin-top: 50px;
+    display: flex;
+}
+
+.container_recherche_film textarea
+{
+    resize: none;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid black;
+    margin-left: 150px ;
+}
+
+.container_film_nouveaux
+{
+    display: flex;
+	flex-direction: column;
+    margin-top: 50px;
+    background-color:#D9D9D9;
+
+}
+
+.container_film_affiche
+{
+    display: flex;
+	flex-direction: column;
+
+}
+
+.container_film_nouveaux label, .container_film_affiche label
+{
+    margin-top: 15px;
+    margin-left: 220px;
+    font-size: 25px;
+}
+
+.container_film_carrousel
+{
+    margin: 0 auto;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 75px;
+}
+
+.carousel 
+{
+    display: flex;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.image_container_nouveaux , .image_container_affiche
+{
+    width: 200px; 
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+  
+.image_container_nouveaux img , .image_container_affiche img
+{
+    width: 100%; 
+    height: 100%; 
+}
+
+.container_film_carrousel i{
+    font-size: 100px; /* Taille de l'icône */
+    transform: translateY(33%);
+}
+
+.container_recherche_film i{
+    font-size: 25px; /* Taille de l'icône */
+    margin-left: -30px;
+    transform: translateY(10%);
+}
+
