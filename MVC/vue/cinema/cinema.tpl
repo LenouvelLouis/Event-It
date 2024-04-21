@@ -9,7 +9,7 @@
 <body>
 <?php require("./vue/navbar/nav.tpl"); ?>
     <div class="navbarcinema">
-        <a href="./index.php?action=cinema&controle=pages/cinema">Accueil</a> /
+        <a href="./?path=pages/cinema">Accueil</a> /
         <a>Cinéma</a>
     </div>
 

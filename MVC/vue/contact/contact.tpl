@@ -8,7 +8,7 @@
 <body>
 <?php require("./vue/navbar/nav.tpl"); ?>
     <div class="navbarcontact">
-        <a href="./index.php?action=accueil&controle=pages/accueil">Accueil</a> /
+        <a href="./?path=pages/accueil">Accueil</a> /
         <a>Contact</a>
     </div>
     

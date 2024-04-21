@@ -11,8 +11,8 @@
 <?php require("./vue/navbar/nav.tpl"); ?>
 
 <div class="barre">
-  <a href="./index.php?action=accueil&controle=pages/accueil">Accueil</a>/
-  <a href="./index.php?action=ajoutcinema&controle=pages/ajoutcinema">Ajout de cinéma</a>
+  <a href="./?path=pages/accueil">Accueil</a>/
+  <a href="./?path=pages/ajoutcinema">Ajout de cinéma</a>
 </div>
 
 <center>
