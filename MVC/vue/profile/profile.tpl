@@ -10,19 +10,21 @@
 <?php require("./vue/navbar/nav.tpl"); ?>
 
 <div class="barre">
-  <a href="./index.php?action=accueil&controle=pages/accueil">Accueil</a>/
-  <a href="./index.php?action=profile&controle=pages/profile">Profile</a>
+  <a href="./?path=pages/accueil">Accueil</a>/
+  <a href="./?path=pages/profile">Profile</a>
 </div>
 
 <center>
   <?php
+  if(isset($_SESSION['name'])){
   echo "<h2>" .$_SESSION['name'] . "</h2>";
+  }
   ?>
     <hr class="ligne-noire">
   </center>
 
 
-<form class="form form-flexbox" action="./index.php?action=updateuser&controle=utilisateur" method="post">
+<form class="form form-flexbox" action="./?path=utilisateur/updateuser" method="post">
   <div class="left-group">
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required class="input-form">

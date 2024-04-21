@@ -5,7 +5,7 @@
  */
 function deconnexion(){
     session_destroy();
-    $defaultUrl = "./index.php?controle=pages/accueil&action=accueil";
+    $defaultUrl = "./?path=pages/accueil";
     $referrerUrl = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : $defaultUrl;
     // Liste des pages à exclure
     $excludedPages = ["profile", "ajoutfilm", "ajoutseance"];

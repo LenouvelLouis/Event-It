@@ -14,7 +14,7 @@ function login(){
         $msgErr = "Email ou mot de passe incorrect";
         $_SESSION['msgErr'] = $msgErr;
         $_SESSION['msgType'] = 'error';
-        $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./index.php?controle=pages/accueil&action=accueil";
+        $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./?path=pages/accueil";
         header("Location:" . $url);
         exit();
     }
@@ -37,7 +37,7 @@ function login(){
         $_SESSION['msgType'] = 'error';
         var_dump($_SESSION['msgErr']);
     }
-    $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./index.php?controle=pages/accueil&action=accueil";
+    $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./?path=pages/accueil";
     header("Location:" . $url);
 }
 
