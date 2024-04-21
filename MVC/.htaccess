@@ -1,7 +1,0 @@
-RewriteEngine On
-RewriteBase /Event-It/MVC/
-
-# Rediriger toutes les requêtes vers index.php sauf si le fichier ou le répertoire existe
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?path=$1 [QSA,L]
