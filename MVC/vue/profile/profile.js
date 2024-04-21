@@ -10,7 +10,7 @@ function init() {
 
 function getInfoUser() {
     $.ajax({
-        url: './index.php?action=getInfoUser&controle=utilisateur',
+        url: './?path=utilisateur/getInfoUser',
         async: false,
         method: 'GET',
         success: function (data) {

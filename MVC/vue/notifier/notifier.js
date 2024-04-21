@@ -3,7 +3,7 @@ function closeNotifier() {
     notification.style.display = 'none';
     $.ajax({
         type: 'POST',
-        url: './index.php?controle=utilisateur&action=closedNotifier',
+        url: './?path=utilisateur/closedNotifier',
         success: function (data) {}
     });
 }
