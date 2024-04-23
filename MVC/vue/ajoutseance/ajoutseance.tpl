@@ -8,8 +8,10 @@
 <body>
 <?php require("./vue/navbar/nav.tpl"); ?>
 
-<p class="Chemin_page"><a> Acceuil / Ajout de séance <a/></p>
-
+<div class="barre">
+    <a href="./?path=pages/accueil">Accueil</a>/
+    <a href="./?path=pages/ajoutseance">Ajout de séance</a>
+</div>
 <div class="container_ajout_sceance">
 
     <div class="container_sceance_gauche">

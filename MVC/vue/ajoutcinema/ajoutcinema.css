@@ -63,25 +63,6 @@
     background-color: #d9d9d9;
 }
 
-.barre {
-    background-color: var(--green-blue);
-    display: flex;
-    padding: 10px;
-    text-align: left;
-    color: var(--grey);
-}
-
-.barre a {
-    text-decoration: none;
-    color: var(--grey);
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.barre a:hover {
-    color: var(--grey);
-}
-
 .highlight {
     color: red;
 }

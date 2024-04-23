@@ -1,14 +1,3 @@
-.Chemin_page{
-    background-color: var(--green-blue);
-    color: white;
-    padding: 10px;
-}
-
-.Chemin_page a {
-    margin-left: 20px;
-}
-
-
 .container_ajout_sceance {
 	display: flex;
 	justify-content: space-evenly;

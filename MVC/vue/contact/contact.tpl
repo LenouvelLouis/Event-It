@@ -7,10 +7,10 @@
 </head>
 <body>
 <?php require("./vue/navbar/nav.tpl"); ?>
-    <div class="navbarcontact">
-        <a href="./?path=pages/accueil">Accueil</a> /
-        <a>Contact</a>
-    </div>
+<div class="barre">
+    <a href="./?path=pages/accueil">Accueil</a> /
+    <a href="./?path=pages/contact">Contact</a>
+</div>
     
     <div class="container">
         <div class="contact-header">

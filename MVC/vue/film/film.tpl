@@ -8,8 +8,9 @@
 <body>
     <?php require("./vue/navbar/nav.tpl"); ?>
 
-    <div class="navbarcinema">
-        <a href="./index.php?action=accueil&controle=pages/accueil">Accueil</a> / <a>Film</a>
+    <div class="barre">
+        <a href="./?path=pages/accueil">Accueil</a> /
+        <a href="./?path=pages/film">Film</a>
     </div>
 
     <div class="container_liste_cinema">
