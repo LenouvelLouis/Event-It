@@ -12,49 +12,55 @@
         <div class="justify-content-center">
             <div class="text-center align-self-center">
                 <div class="section text-center">
-                    <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                    <h6 class="mb-0 pb-3"><span>Connexion</span><span>Inscription</span></h6>
                     <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
                     <label for="reg-log"></label>
                     <div class="card-3d-wrap mx-auto">
                         <div class="card-3d-wrapper">
+
                             <div class="card-front">
                                 <div class="center-wrap">
                                     <div class="section text-center">
-                                        <h4 class="mb-4 pb-3">Log In</h4>
-                                        <div class="form-group">
-                                            <input id="emailLogin" type="email" class="form-style" placeholder="Email">
-                                            <i class="input-icon uil uil-at"></i>
-                                        </div>
-                                        <div class="form-group mt-2">
-                                            <input id="passwordLogin" type="password" class="form-style" placeholder="Password">
-                                            <i class="input-icon uil uil-lock-alt"></i>
-                                        </div>
-                                        <a onclick="login()" class="btn mt-4">Login</a>
-                                        <p class="mb-0 mt-4 text-center"><a  class="link">Forgot your password?</a></p>
+                                        <h4 class="mb-4 pb-3 title-modal">Connexion</h4>
+                                        <form action="./?path=connexion/login" method="post">
+                                            <div class="form-group">
+                                                <input id="emailLogin" name="emailLogin" autocomplete="username" type="email" class="form-style" placeholder="Email">
+                                                <i class="input-icon uil uil-at"></i>
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                <input id="passwordLogin" name="passwordLogin" type="password" autocomplete="current-password" class="form-style" placeholder="Password">
+                                                <i onclick="showPassword()" class="input-icon uil uil-lock-alt"></i>
+                                            </div>
+                                            <button type="submit" class="btn mt-4">Se connecter</button>
+                                        </form>
+                                        <p class="mb-0 mt-4 text-center"><a  class="link_modal">Vous avez oublié votre mot de passe ?</a></p>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="card-back">
                                 <div class="center-wrap">
                                     <div class="section text-center">
-                                        <h4 class="mb-3 pb-3">Sign Up</h4>
+                                        <h4 class="mb-3 pb-3 title-modal">Inscription</h4>
+                                        <form action="./?path=inscription/inscription" method="post">
                                         <div class="form-group">
-                                            <input id="nameRegister" type="text" class="form-style" placeholder="Full Name">
+                                            <input id="nameRegister" name="nameRegister" type="text" class="form-style" placeholder="Full Name">
                                             <i class="input-icon uil uil-user"></i>
                                         </div>
                                         <div class="form-group mt-2">
-                                            <input id="phoneRegister" type="tel" class="form-style" placeholder="Phone Number">
+                                            <input id="phoneRegister" name="phoneRegister" type="tel" class="form-style" placeholder="Phone Number">
                                             <i class="input-icon uil uil-phone"></i>
                                         </div>
                                         <div class="form-group mt-2">
-                                            <input id="emailRegister" type="email" class="form-style" placeholder="Email">
+                                            <input id="emailRegister" name="emailRegister" autocomplete="username" type="email" class="form-style" placeholder="Email">
                                             <i class="input-icon uil uil-at"></i>
                                         </div>
                                         <div class="form-group mt-2">
-                                            <input id="passwordRegister" type="password" class="form-style" placeholder="Password">
-                                            <i class="input-icon uil uil-lock-alt"></i>
+                                            <input id="passwordRegister" name="passwordRegister"  autocomplete="current-password" type="password" class="form-style" placeholder="Password">
+                                            <i onclick="showPassword()" class="input-icon uil uil-lock-alt"></i>
                                         </div>
-                                        <a onclick="register()" class="btn mt-4">Register</a>
+                                            <button type="submit" class="btn mt-4">S'inscrire</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -65,5 +71,4 @@
         </div>
     </div>
 </div>
-
 <script src="./vue/modal/modal.js"></script>
