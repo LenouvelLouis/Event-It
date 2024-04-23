@@ -3,11 +3,15 @@ const nom_film_affiche = ["Barbie", "Bob_Marley", "Dune", "Grand_Turismo", "Mada
 const cinemas = ["Cinema1", "Cinema2", "Cinema3", "Cinema4", "Cinema5", "Cinema6", "Cinema7"];
 let currentImageIndex_nouveaux= 0;
 let currentImageIndex_affiche= 0;
-const imagesPerView = 5;
+let imagesPerView = 5;
 const totalImages_nouveaux = nom_film_nouveaux.length;
 const totalImages_affiche = nom_film_affiche.length;
 const carousel_nouveaux = document.getElementById("carousel_nouveaux");
 const carousel_affiche = document.getElementById("carousel_affiche");
+
+window.onresize = adjustLayout;  // Le délai est de 250 millisecondes
+
+
 
 document.body.onload = function(){
 
@@ -103,5 +107,33 @@ function updateSlidePosition() {
         if (i < totalImages_affiche) {
             divs_affiche[i].style.display = "block";
         }
+    }
+}
+
+// Responsive
+
+function adjustLayout() {
+
+    const taille_fenetre = window.innerWidth; 
+    console.log(taille_fenetre);
+    if ( 900 < taille_fenetre && taille_fenetre< 1100) {
+        imagesPerView = 4;
+        updateSlidePosition();
+    }
+    else if(750 < taille_fenetre && taille_fenetre< 900){
+        imagesPerView = 3;
+        updateSlidePosition();
+    }
+    else if(550 < taille_fenetre && taille_fenetre < 750){
+        imagesPerView = 2;
+        updateSlidePosition();
+    }
+    else if(taille_fenetre < 550){
+        imagesPerView = 1;
+        updateSlidePosition();
+    }
+    else{
+        imagesPerView = 5;
+        updateSlidePosition();
     }
 }

@@ -8,7 +8,9 @@
 <body>
     <?php require("./vue/navbar/nav.tpl"); ?>
 
-    <p class="Chemin_page"><a> Acceuil / Ajout de séance <a/></p>
+    <div class="navbarcinema">
+        <a href="./index.php?action=accueil&controle=pages/accueil">Accueil</a> / <a>Film</a>
+    </div>
 
     <div class="container_liste_cinema">
     
