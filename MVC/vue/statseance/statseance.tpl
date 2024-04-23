@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./vue/statseance/statseance.css">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
 <body>
@@ -15,67 +16,23 @@
         <div class="container1-stat">
             <div class="column_statseance">
                 <h2> Statistiques des capteurs sonores</h2>
-                <p> Voici les statistiques des séances de cinéma </p>
+                <p> Voici les statistiques recueillies par les capteurs sonores pendant les séances de cinéma.
+                Vous pouvez voir leur évolutions en fonction du temps, aussi bien de manière gloable que précise, 
+                le graphique permettant un certain niveau de précision. </p>
 
                 <div class="espace_bouton">
-                    <select class="menu_deroulant_statseance" name="capteur-sonore" id="quel-capteur-sonore" onchange="GlobalSon()">
-                        <option onclick="GlobalSon(bouton-global-1)" value="bouton-global-1">Tous les capteurs</option>
-                        <option onclick="GlobalSon(bouton-son-1)"value="bouton-son-1">Capteur sonore 1</option>
-                        <option onclick="GlobalSon(bouton-son-2)"value="bouton-son-2">Capteur sonore 2</option>
-                        <option onclick="GlobalSon(bouton-son-3)"value="bouton-son-3">Capteur sonore 3</option>
+                    <select class="menu_deroulant_statseance" name="capteur-sonore" id="quel-capteur-sonore" onchange="updateSonGraph()">
+                        <option onclick="GlobalSon()" value="bouton-global-1">Tous les capteurs</option>
+                        <option onclick="Son1()" value="bouton-son-1">Capteur sonore 1</option>
+                        <option onclick="Son2()" value="bouton-son-2">Capteur sonore 2</option>
+                        <option onclick="Son3()" value="bouton-son-3">Capteur sonore 3</option>
                     </select>
                 </div>
             </div>
 
             <div class="column_graph_statseance">
-                <div class="graph" id="myPlot1">
-                    <script>
-                        const xArray1 = [50,60,70,80,90,100,110,120,130,140,150]; 
-                        const yArray1 = [10,20,30,40,50,60,70,80,90,80,70]; 
-                        const yArray2 = [70,80,90,80,70,60,50,40,30,20,10]; 
-                        const yArray3 = [50,60,50,60,50,60,50,60,50,60,50];
-
-                        const data0 = [
-                            { x: xArray1, y: yArray1, mode: "lines", name: "Capteur 1" },
-                            { x: xArray1, y: yArray2, mode: "lines", name: "Capteur 2" },
-                            { x: xArray1, y: yArray3, mode: "lines", name: "Capteur 3" }
-                        ];
-                        const data1 = [
-                            { x: xArray1, y: yArray1, mode: "lines", name: "Capteur 1" },
-                        ];
-                        const data2 = [
-                            { x: xArray1, y: yArray2, mode: "lines", name: "Capteur 2" },
-                        ];
-                        const data3 = [
-                            { x: xArray1, y: yArray3, mode: "lines", name: "Capteur 3" },
-                        ];
-                        const layout1 = {
-                            xaxis: {range: [40, 160], title: "Temps (min)"},
-                            yaxis: {range: [0, 90], title: "Puissance du son (dB)"},  
-                            title: "Evolution du son pendant la séance"
-                        };
-                        Plotly.newPlot("myPlot1", data0, layout1);
-                        
-                        function GlobalSon(selectElement) {
-                            const selectedSensor = selectElement;
-                            if (selectedSensor === "bouton-global-1") {
-                                Plotly.restyle("myPlot1", data0);
-                            } 
-                            else if (selectedSensor === "bouton-son-1") {
-                                Plotly.restyle("myPlot1", data1);
-                            } 
-                            else if (selectedSensor === "bouton-son-2") {
-                                Plotly.restyle("myPlot1", data2);
-                            } 
-                            else if (selectedSensor === "bouton-son-3") {
-                                Plotly.restyle("myPlot1", data3);
-                            } 
-                            else {
-                                Plotly.restyle("myPlot1", data0);
-                            }
-                        }
-                    </script>
-                </div>
+                <canvas class="graph" id="myPlot1">
+                </canvas>
             </div>
         </div>
         
@@ -86,56 +43,18 @@
                 ainsi que les statistiques qui découlent de ces données </p>
 
                 <div class="espace_bouton">
-                    <select class="menu_deroulant_statseance" name="capteur-temp" id="quel-capteur-temp">
-                        <option value="bouton-global-2">Tous les capteurs</option>
-                        <option value="bouton-temp-1">Capteur température 1</option>
-                        <option value="bouton-temp-2">Capteur température 2</option>
-                        <option value="bouton-temp-3">Capteur température 3</option>
+                    <select class="menu_deroulant_statseance" name="capteur-temp" id="quel-capteur-temp" onchange="updateTempGraph()">
+                        <option onclick="GlobalTemp"() value="bouton-global-2">Tous les capteurs</option>
+                        <option onclick="Temp1()" value="bouton-temp-1">Capteur température 1</option>
+                        <option onclick="Temp2()" value="bouton-temp-2">Capteur température 2</option>
+                        <option onclick="Temp3()" value="bouton-temp-3">Capteur température 3</option>
                     </select>
                 </div>
             </div>
 
             <div class="column_graph_statseance">
-                <div class="graph" id="myPlot2">
-                    <script>
-                        const xArray2 = [50,60,70,80,90,100,110,120,130,140,150]; 
-                        const yArray4 = [10,20,30,40,50,60,70,80,90,80,70]; 
-                        const yArray5 = [70,80,90,80,70,60,50,40,30,20,10]; 
-                        const yArray6 = [50,60,50,60,50,60,50,60,50,60,50];
-
-                        const data4 = [
-                            { x: xArray2, y: yArray4, mode: "lines", name: "Capteur 1" },
-                            { x: xArray2, y: yArray5, mode: "lines", name: "Capteur 2" },
-                            { x: xArray2, y: yArray6, mode: "lines", name: "Capteur 3" }
-                        ];
-
-                        const layout2 = {
-                            xaxis: {range: [40, 160], title: "Temps (min)"},
-                            yaxis: {range: [0, 90], title: "Température (°C)"},  
-                            title: "Evolution de la température pendant la séance"
-                        };
-                        Plotly.newPlot("myPlot2", data4, layout2);
-
-                        function GlobalSon(selectElement) {
-                            const selectedSensor = selectElement;
-                            if (selectedSensor === "bouton-global-1") {
-                                Plotly.restyle("myPlot1", data0);
-                            } 
-                            else if (selectedSensor === "bouton-son-1") {
-                                Plotly.restyle("myPlot1", data1);
-                            } 
-                            else if (selectedSensor === "bouton-son-2") {
-                                Plotly.restyle("myPlot1", data2);
-                            } 
-                            else if (selectedSensor === "bouton-son-3") {
-                                Plotly.restyle("myPlot1", data3);
-                            } 
-                            else {
-                                Plotly.restyle("myPlot1", data0);
-                            }
-                        }
-                    </script>
-                </div>
+                <canvas class="graph" id="myPlot2">
+                </canvas>
             </div>
         </div>
     </div>
@@ -223,14 +142,17 @@
                     return parseInt(mode);
                 }
             </script>
-            <p> La température d'un cinéma avoisine les 19 °C en moyenne.</p>
+            <p> La température d'un cinéma avoisine les 19 °C en moyenne.<br>
+            Faites attention à vous hydrater en permanence, et quand la température dépasse les 30 °C 
+            pendant plus d'une demi-heure prenez des précautions par rapport à la chaleur.</p>
         </div>
     </div>
 
 
     <?php require("./vue/footer/footer.tpl"); ?>
-    <script type="text/javascript" src="./vue/statseance/statseance_code.js"> </script>
+    
 </body>
+<script src="./vue/statseance/statseance.js"></script>
 </html>
 
 
