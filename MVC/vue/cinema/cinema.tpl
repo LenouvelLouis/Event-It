@@ -19,48 +19,48 @@
         <button class="search-button"><i class="fa fa-search"></i></button>
     </div>
     <div class="search-image">
-        <img src="path-to-your-image.png" alt="Your Image" width="50" height="50">
+        <a class="plus" href="./index.php?action=infocinema&controle=pages/infocinema"><i class="fa-solid fa-plus"></i></a>
     </div>
 </div>
 
 <div class="cinema-card grey">
-  <img src="chemin-vers-votre-image-cinema-1.jpg" alt="UGC GRAND NORMANDIE" width="300">
+  <a class="" href="./index.php?action=infocinema&controle=pages/infocinema"><img src="https://imgs.search.brave.com/8i2maRlIRB0UNQ8IO_tiyGEYP7ITWKDTJVUo1qUeS2o/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzE1L2Vh/Lzg3LzE1ZWE4NzAx/NzBhMjRkMzI4M2I2/MjgyYTQ2MzI2YWE1/LmpwZw" alt="UGC GRAND NORMANDIE" width="300"></a>
     <div class="cinema-info">
-        <h2>UGC GRAND NORMANDIE</h2>
-        <p>15 films</p>
-        <p>116 bis, avenue des Champs-Élysées 75008 PARIS</p>
+        <a class="" href="./index.php?action=infocinema&controle=pages/infocinema"><h2>Nom Cinéma Cinéma Cinéma Cinéma Cinéma</h2></a>
+        <p>Nombre de films</p>
+        <p>Adresse du Deuxième Cinéma</p>
         <div class="icons">
-            <img src="" alt="Accessibilité">
-            <img src="" alt="Malentendant">
-            <img src="" alt="Malvoyant">
+            <i class="fa-solid fa-wheelchair"></i>
+            <i class="fa-solid fa-ear-deaf"></i>
+            <i class="fa-regular fa-eye-slash"></i>
         </div>
     </div>
 </div>
 
 <div class="cinema-card">
-  <img src="chemin-vers-votre-image-cinema-2.jpg" alt="Nom du Deuxième Cinéma" width="300">
+  <a class="" href="./index.php?action=infocinema&controle=pages/infocinema"><img src="https://www.chemille-en-anjou.fr/medias/2022/02/Cinema-en-plein-air.jpg" alt="Nom du Deuxième Cinéma" width="300"></a>
     <div class="cinema-info">
-        <h2>Nom du Deuxième Cinéma</h2>
+        <a class="" href="./index.php?action=infocinema&controle=pages/infocinema"><h2>Nom du Deuxième Cinéma</h2></a>
         <p>Nombre de films</p>
         <p>Adresse du Deuxième Cinéma</p>
         <div class="icons">
-            <img src="" alt="Accessibilité">
-            <img src="" alt="Malentendant">
-            <img src="" alt="Malvoyant">
+            <i class="fa-solid fa-wheelchair"></i>
+            <i class="fa-solid fa-ear-deaf"></i>
+            <i class="fa-regular fa-eye-slash"></i>
         </div>
     </div>
 </div>
 
 <div class="cinema-card grey">
-  <img src="chemin-vers-votre-image-cinema-3.jpg" alt="Nom du Deuxième Cinéma" width="300">
+  <a class="" href="./index.php?action=infocinema&controle=pages/infocinema"><img src="https://www.chemille-en-anjou.fr/medias/2022/02/Cinema-en-plein-air.jpg" alt="Nom du Deuxième Cinéma" width="300"></a>
     <div class="cinema-info">
-        <h2>Nom du Deuxième Cinéma</h2>
+        <a class="" href="./index.php?action=infocinema&controle=pages/infocinema"><h2>Nom du Deuxième Cinéma</h2></a>
         <p>Nombre de films</p>
         <p>Adresse du Deuxième Cinéma</p>
         <div class="icons">
-            <img src="" alt="Accessibilité">
-            <img src="" alt="Malentendant">
-            <img src="" alt="Malvoyant">
+            <i class="fa-solid fa-wheelchair"></i>
+            <i class="fa-solid fa-ear-deaf"></i>
+            <i class="fa-regular fa-eye-slash"></i>
         </div>
     </div>
 </div>
