@@ -24,9 +24,9 @@
 </div>
 
 <div class="cinema-card grey">
-  <a class="" href="./index.php?action=infocinema&controle=pages/infocinema"><img src="https://www.chemille-en-anjou.fr/medias/2022/02/Cinema-en-plein-air.jpg" alt="UGC GRAND NORMANDIE" width="300"></a>
+  <a class="" href="./index.php?action=infocinema&controle=pages/infocinema"><img src="https://imgs.search.brave.com/8i2maRlIRB0UNQ8IO_tiyGEYP7ITWKDTJVUo1qUeS2o/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzE1L2Vh/Lzg3LzE1ZWE4NzAx/NzBhMjRkMzI4M2I2/MjgyYTQ2MzI2YWE1/LmpwZw" alt="UGC GRAND NORMANDIE" width="300"></a>
     <div class="cinema-info">
-        <a class="" href="./index.php?action=infocinema&controle=pages/infocinema"><h2>Nom du Deuxième Cinéma           </h2></a>
+        <a class="" href="./index.php?action=infocinema&controle=pages/infocinema"><h2>Nom Cinéma Cinéma Cinéma Cinéma Cinéma</h2></a>
         <p>Nombre de films</p>
         <p>Adresse du Deuxième Cinéma</p>
         <div class="icons">
