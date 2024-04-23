@@ -1,11 +1,20 @@
-.Chemin_page{
+.navbarcinema {
     background-color: var(--green-blue);
-    color: white;
+    display: flex;
     padding: 10px;
+    text-align: left;
+    color: var(--grey);
 }
 
-.Chemin_page a {
-    margin-left: 20px;
+.navbarcinema a {
+    text-decoration: none;
+    color: var(--grey);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbarcinema a:hover {
+    color: var(--grey);
 }
 
 .highlight {
@@ -103,6 +112,15 @@
     border-radius: 10px;
     border: none;
     background-color:#D9D9D9;
+}
+
+@media (max-width: 900px) {
+
+    .container_ajout_film
+    {
+        flex-direction: column;
+    }
+    
 }
 
 
