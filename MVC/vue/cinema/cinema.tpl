@@ -19,7 +19,7 @@
         <button class="search-button"><i class="fa fa-search"></i></button>
     </div>
     <div class="search-image">
-        <a class="plus" href="./?path=pages/infocinema"><i class="fa-solid fa-plus"></i></a>
+        <a class="plus" href="./?path=pages/ajoutcinema"><i class="fa-solid fa-plus"></i></a>
     </div>
 </div>
 
