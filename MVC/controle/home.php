@@ -8,6 +8,6 @@
     $mdp =  isset($_POST['comdp'])?($_POST['comdp']):'';
     $msg = '';
     $msgAcc = isset($_SESSION['msgAcc'])?($_SESSION['msgAcc']):'';
-    require ("./vue/film/film.tpl");
+    require ("./vue/home/home.tpl");
 }
 ?>

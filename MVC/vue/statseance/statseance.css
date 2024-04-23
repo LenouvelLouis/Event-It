@@ -1,0 +1,104 @@
+.container1-stat{
+  background-color: #EFEFEF;
+  padding-top: 30px;
+  width: 100%;
+}
+.container2-stat{
+  padding-top: 30px;
+  width: 100%;
+}
+
+.stat-globales{
+  font-size: 20px;
+  color: #2C94A4;
+}
+
+h2 {
+  text-align: center;
+}
+
+p{
+  text-align: justify;
+}
+
+.container_statseance{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-evenly;
+  width: 100%;
+  padding: 30px auto 30px auto;
+}
+
+.column_statseance, .column_graph_statseance{
+  float: left;
+  margin: 10px 5% 10px 5%;
+}
+.column_statseance {
+  width: 30%;
+}
+.column_graph_statseance{
+  width: 40%;
+}
+
+.espace_bouton{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+}
+  
+.row_after_column_statseance {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  align-content: space-evenly;
+  width: 100%;
+  padding: 30px 20% 30px 20%;
+  background-color: #EFEFEF;
+}
+
+.graph{
+  width: 100%;
+  max-width: 700px;
+}
+
+@media only screen and (max-width: 900px) {
+  *{
+    max-width: 100%;
+    margin: 0;
+  }
+  body{
+    background-color: #EFEFEF;
+  }
+  .column_statseance {
+    width: 100%;
+    float: none;
+  }
+  .column_graph_statseance {
+    width: 100%;
+    float: none;
+  }
+  .espace_bouton{
+    flex-direction: column;
+  }
+  .graph{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container1-stat{
+    width: 100%;
+    padding: 20px 40px 20px 40px;
+  }
+  .container2-stat{
+    width: 100%;
+    padding: 20px 40px 20px 40px;
+  }
+}
