@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d907b85b-55b0-4705-ac3e-6abccd44b1d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/MVC/vue/forum/forum.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/vue/forum/forum.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/vue/forum/forum.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/vue/forum/forum.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +69,8 @@
       <workItem from="1713279833908" duration="5500000" />
       <workItem from="1713516487904" duration="6819000" />
       <workItem from="1713733910764" duration="594000" />
+      <workItem from="1713884864936" duration="1106000" />
+      <workItem from="1713889045638" duration="599000" />
     </task>
     <servers />
   </component>
