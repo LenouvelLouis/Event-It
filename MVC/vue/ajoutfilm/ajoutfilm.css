@@ -39,7 +39,7 @@
 }
 
 .image-container img {
-    width: 100%; /* L'image prend toute la largeur du conteneur */
+  width: 100%; /* L'image prend toute la largeur du conteneur */
   height: 100%; /* L'image prend toute la hauteur du conteneur */
   object-fit: cover;
 }
