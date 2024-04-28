@@ -19,6 +19,11 @@
         <li><a href="./?path=pages/film">Film</a></li>
         <li><a href="./?path=pages/contact">Contact</a></li>
         <?php
+        if(isset($_SESSION['status']) && $_SESSION['status'] == "admin") {
+            echo("<li><a href='./?path=pages/ajoutfilm'><i class='fa-solid fa-plus'></i> Film</a></li>");
+        }
+        ?>
+        <?php
                 if(isset($_SESSION['name']) && isset($_SESSION['name'])!=NULL) {
                     echo("<li class='dropdown'>
         <span  class='dropBtn'>".$_SESSION['name']."</span>
