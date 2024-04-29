@@ -7,7 +7,6 @@
 </head>
 <body>
 <?php require("./vue/navbar/nav.tpl"); ?>
-
 <div class="barre">
     <a href="./?path=pages/accueil">Accueil</a>/
     <a href="./?path=pages/ajoutseance">Ajout de séance</a>
@@ -40,6 +39,20 @@
         <select name="cinemas" id="sceance_salle">
             <option value="">Salle</option>      
         </select>
+
+        <div>
+            <div class ="type_film">
+                <input type="checkbox" id="bp_affiche" value="Affiche" class="ckeck_box">
+                <label for="bp_affiche">A l'affiche</label>
+            </div>
+        </div>
+
+        <div>
+            <div class ="type_film">
+                <input type="checkbox" id="bp_nouveautes" value="nouveautes" class="ckeck_box">
+                <label for="bp_nouveautes">Nouveautés</label>
+            </div>
+        </div>
 
     </div>
 

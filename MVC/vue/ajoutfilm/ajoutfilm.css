@@ -95,6 +95,15 @@
     background-color:#D9D9D9;
 }
 
+@media (max-width: 900px) {
+
+    .container_ajout_film
+    {
+        flex-direction: column;
+    }
+    
+}
+
 
 
 

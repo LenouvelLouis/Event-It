@@ -48,3 +48,37 @@
     padding: 12px 40px;
     border-radius: 15px;
 }
+
+.ckeck_box{
+    display: block !important;
+    margin-bottom: 6px !important;
+    margin-right: 6px !important;
+}
+
+.type_film{
+
+    display: flex;
+}
+
+@media (max-width: 900px) {
+
+    .container_ajout_sceance
+    {
+        flex-direction: column;
+    }
+
+    .container_sceance_droit
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .container_sceance_droit button
+    {
+        margin-bottom: 20px;
+    }
+    
+}
