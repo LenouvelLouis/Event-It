@@ -14,6 +14,20 @@
     align-items: flex-start; /* Aligner les éléments à gauche */
 }
 
+#password-container{
+    display: none;
+}
+.radio-container {
+    margin: 0 auto;
+    width: 60% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.radio-container input {
+    margin-right: 10px !important;
+    width: 20% !important;
+}
 
 .input-droite {
     display: flex;
@@ -28,24 +42,6 @@
     border-radius: 10px;
     width: 200px ;
     height: 40px ;
-}
-.barre {
-    background-color: var(--green-blue);
-    display: flex;
-    padding: 10px;
-    text-align: left;
-    color: var(--grey);
-}
-
-.barre a {
-    text-decoration: none;
-    color: var(--grey);
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.barre a:hover {
-    color: var(--grey);
 }
 
 .ligne-noire {

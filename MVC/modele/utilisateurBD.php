@@ -42,8 +42,7 @@ function signIn($email, $password){
         $commande->bindParam(':email', $email);
         $commande->bindParam(':password', $password);
         $commande->execute();
-        $result = $commande->fetch();
-        return $result;
+        return $commande->fetch();
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
@@ -76,7 +75,7 @@ function emailExist($email){
  * @param $email
  * @return string
  */
-function getSalt($email)
+function getSalt($email): string
 {
     require('./modele/connectSQL.php');
     $sql = "SELECT salt FROM `user` WHERE email = :email";
@@ -91,4 +90,101 @@ function getSalt($email)
         die();
     }
 }
+
+/**
+ * Fonction de récupération de l'utilisateur
+ * @param $id
+ * @return void
+ */
+function getUser($id): void
+{
+    require('./modele/connectSQL.php');
+    $sql = "SELECT * FROM `user` WHERE id = :id";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':id', $id);
+        $commande->execute();
+        $res = $commande->fetch();
+        echo(json_encode($res));
+    } catch (PDOException $e) {
+        echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
+        die();
+    }
+}
+
+/**
+ * Fonction de récupération du mot de passe crypté
+ * @param string $email
+ * @return string
+ */
+function getHashPassword(string $email): string{
+    require('./modele/connectSQL.php');
+    $sql = "SELECT password FROM `user` WHERE email = :email";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':email', $email);
+        $commande->execute();
+        $result = $commande->fetch();
+        return $result['password'];
+    } catch (PDOException $e) {
+        echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
+        die();
+    }
+}
+
+/**
+ * Fonction de mise à jour des informations de l'utilisateur
+ * @param mixed $id
+ * @param mixed $email
+ * @param mixed $phone
+ * @param string|null $password
+ * @param string $username
+ * @return void
+ */
+function updateInfoUser(mixed $id, mixed $email, mixed $phone, ?string $password, string $username, string $salt)
+{
+    require('./modele/connectSQL.php');
+    if ($password != null) {
+        $sql = "UPDATE `user` SET email = :email, phone = :phone, password = :password, name = :username, salt = :salt WHERE id = :id";
+    } else {
+        $sql = "UPDATE `user` SET email = :email, phone = :phone, name = :username WHERE id = :id";
+    }
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':email', $email);
+        $commande->bindParam(':phone', $phone);
+        if ($password != null) {
+            $commande->bindParam(':password', $password);
+            $commande->bindParam(':salt', $salt);
+        }
+        $commande->bindParam(':id', $id);
+        $commande->bindParam(':username', $username);
+        $commande->execute();
+    } catch (PDOException $e) {
+        echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
+        die();
+    }
+}
+/**
+ * Fonction de récupération de l'email
+ * @param mixed $id
+ * @return string
+ */
+function getEmail(mixed $id): string
+{
+    require('./modele/connectSQL.php');
+    $sql = "SELECT email FROM `user` WHERE id = :id";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':id', $id);
+        $commande->execute();
+        $result = $commande->fetch();
+        return $result['email'];
+    } catch (PDOException $e) {
+        echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
+        die();
+    }
+
+}
+
 ?>

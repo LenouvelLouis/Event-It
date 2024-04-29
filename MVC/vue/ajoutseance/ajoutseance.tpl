@@ -7,11 +7,10 @@
 </head>
 <body>
 <?php require("./vue/navbar/nav.tpl"); ?>
-
-<div class="navbarcinema">
-    <a href="./index.php?action=accueil&controle=pages/accueil">Accueil</a> / <a>Ajout de scéance</a>
+<div class="barre">
+    <a href="./?path=pages/accueil">Accueil</a>/
+    <a href="./?path=pages/ajoutseance">Ajout de séance</a>
 </div>
-
 <div class="container_ajout_sceance">
 
     <div class="container_sceance_gauche">
