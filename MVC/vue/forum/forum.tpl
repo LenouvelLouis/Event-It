@@ -6,7 +6,6 @@
 </head>
 <body>
 <?php require("./vue/navbar/nav.tpl"); ?>
-
 <div class="navbarForum">
     <a href="./index.php?action=accueil&controle=pages/accueil">Accueil</a> /
     <span>Forum</span>
@@ -32,7 +31,6 @@
         </div>
     </div>
 </div>
-
 <?php require("./vue/footer/footer.tpl"); ?>
 <script src="./vue/forum/forum.js"></script>
 </body>

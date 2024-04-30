@@ -5,3 +5,22 @@
     --grey-anthracite: #74777C;
     --green-blue: #2C94A4;
 }
+
+.barre {
+    background-color: var(--green-blue);
+    display: flex;
+    padding: 10px;
+    text-align: left;
+    color: var(--grey);
+}
+
+.barre a {
+    text-decoration: none;
+    color: var(--grey);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.barre a:hover {
+    color: var(--grey);
+}
