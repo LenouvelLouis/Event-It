@@ -27,7 +27,7 @@
         <div class="question-prompt">
             <p>Votre question n'est pas dans ce Forum ?</p>
             <textarea placeholder="Posez votre question ici..."></textarea>
-            <button onclick="submitQuestion()">Ajouter un sujet</button>
+            <button class="ajout-sujet" onclick="submitQuestion()">Ajouter un sujet</button>
         </div>
     </div>
 </div>

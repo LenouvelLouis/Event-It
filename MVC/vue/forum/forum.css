@@ -46,7 +46,7 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-textarea, button {
+textarea, .ajout-sujet {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -58,7 +58,7 @@ textarea {
     resize: vertical;
 }
 
-button {
+.ajout-sujet {
     background-color: #242C34;
     color: white;
     border: none;
@@ -66,7 +66,7 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+.ajout-sujet:hover {
     background-color: #2C94A4;
 }
 

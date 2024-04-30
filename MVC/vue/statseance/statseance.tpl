@@ -11,6 +11,10 @@
 
 <body>
     <?php require("./vue/navbar/nav.tpl"); ?>
+    <div class="barre">
+        <a href="./?path=pages/accueil">Accueil</a> /
+        <a href="./?path=pages/statseance">Statistiques de séances</a>
+    </div>
 
     <div class="container_statseance">
         <div class="container1-stat">
