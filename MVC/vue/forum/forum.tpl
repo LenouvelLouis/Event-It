@@ -8,7 +8,7 @@
 <?php require("./vue/navbar/nav.tpl"); ?>
 <div class="barre">
     <a href="./?path=pages/accueil">Accueil</a> /
-    <a href="./?path=pages/accueil">Forum</a>
+    <a href="./?path=pages/forum">Forum</a>
 </div>
 
 <div class="forum-header">
