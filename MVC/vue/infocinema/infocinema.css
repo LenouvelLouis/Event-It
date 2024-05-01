@@ -1,31 +1,39 @@
-
-.table{
-    width: 95%; 
-    height: auto; 
-    border-collapse: separate;
-    border-spacing: 10px;
+.container_flex {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.td_1{
-   width: 30%; 
-   height: auto; 
-   text-align: center;
-   padding: 15px;
-   border: 1px solid #ccc;
+.display_info{
+
+    display: flex;
+	justify-content: space-around;
+
 }
 
-.td_2{
-   width: 50%; 
-   height: auto; 
-   text-align: center;
-   padding: 10px;
+.titre_cine{
+    margin-top: 20px;
 }
 
-.td_3{
-   width: 90%; 
-   height: auto; 
-   text-align: center;
-   padding: 6px;
+.container_flex p{
+    font-size: 15px;
+}
+
+.display_flex_sceance{
+
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.film{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .seance-card {
@@ -67,11 +75,6 @@
     object-fit: cover;
 }
 
-.image_cinema{
-    width:148px;
-    height:98px;
-}
-
 .google_maps{
     width : 400px;
     height : 300px;
@@ -87,19 +90,12 @@
     padding: 6px;
 }
 
-#image_film{
-    width:30%;
-    height:auto;
-}
+@media (max-width: 1200px) {
 
-#table_2{
-    border-spacing: 10px;
-}
+    .display_info, .container_flex{
 
-.langue{
-    padding:50px;
-}
-.icons{
-    font-size: 25px;
-    margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+    
+    }
 }
