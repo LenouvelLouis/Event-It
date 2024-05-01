@@ -96,7 +96,7 @@ function getSalt($email): string
  * @param $id
  * @return void
  */
-function getUser($id): void
+function getUser($id)
 {
     require('./modele/connectSQL.php');
     $sql = "SELECT * FROM `user` WHERE id = :id";

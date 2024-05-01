@@ -28,6 +28,45 @@
    padding: 6px;
 }
 
+.seance-card {
+    border-radius: 10px;
+    width: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin: 10px;
+}
+.seance {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.seance a{
+    text-decoration: none;
+    color: black;
+}
+
+.seance a:hover{
+    color: black;
+}
+.image-container {
+    width: 180px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .image_cinema{
     width:148px;
     height:98px;
@@ -59,4 +98,8 @@
 
 .langue{
     padding:50px;
+}
+.icons{
+    font-size: 25px;
+    margin-right: 10px;
 }

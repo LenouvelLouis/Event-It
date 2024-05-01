@@ -10,6 +10,7 @@
         <?php require("./vue/navbar/nav.tpl"); ?>
         <div class="barre">
             <a href="./?path=pages/accueil">Accueil</a> /
+            <a href="./?path=pages/cinema">Cinéma</a> /
             <a href="./?path=pages/infocinema">Info cinéma</a>
         </div>
         <center>
@@ -39,9 +40,9 @@
                         </td>
                         <td class="td_1">
                             <h3>Accessibilit&eacute; :&nbsp;</h3>
-                            <p><img id="langue" src="https://cdn3.iconfinder.com/data/icons/solid-amenities-icon-set/64/Wheelchair_Accessible_2-48.png" alt="Spain"><span class="texttd">PMR</span></p>
-                            <p><img id="langue" src="https://cdn0.iconfinder.com/data/icons/ikonate/48/hearing-disability-48.png" alt="Spain"><span class="texttd">Malentandant</span></p>
-                            <p><img id="langue" src="https://cdn1.iconfinder.com/data/icons/line-awesome-vol-1/32/audio-description-solid-48.png" alt="Spain"><span class="texttd">Audio description</span></p>
+                            <p><i class="fa-solid fa-wheelchair icons"></i><span class="texttd">PMR</span></p>
+                            <p><i class="fa-solid fa-ear-deaf icons"></i><span class="texttd">Malentandant</span></p>
+                            <p><i class="fa-regular fa-eye-slash icons"></i><span class="texttd">Audio description</span></p>
                             <h3>Services disponibles :&nbsp;</h3>
                             <p>- Vente de nouriture</p>
                             <p>- Vente de boisson (sans alcool)</p>
@@ -55,6 +56,87 @@
             <p>&nbsp;</p>
             <table id="table_2">
     <tbody>
+    <tr>
+        <td>
+            <h3>Listes des séances</h3>
+            <div class="film">
+                <h4>Oppenheimer</h4>
+                <div class="image-container">
+                    <img src="./vue/img/A_l'affiche/Oppenheimer.png" alt="Affiche du film">
+                </div>
+                <div class="seance">
+                    <a href="./?path=pages/statseance">
+                    <div class="seance-card">
+                        <p>Salle X</p>
+                        <p>15:50</p>
+                    </div>
+                    </a>
+                    <a href="./?path=pages/statseance">
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
+                    </a>
+                    <a href="./?path=pages/statseance">
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
+                    </a>
+                    <a href="./?path=pages/statseance">
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
+                    </a>
+                    <a href="./?path=pages/statseance">
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="film">
+                <h4>Barbie</h4>
+                <div class="image-container">
+                    <img src="./vue/img/A_l'affiche/Barbie.png" alt="Affiche du film">
+                </div>
+                <div class="seance">
+                    <a href="./?path=pages/statseance">
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
+                    </a>
+                    <a href="./?path=pages/statseance">
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
+                    </a>
+                    <a href="./?path=pages/statseance">
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
+                    </a>
+                    <a href="./?path=pages/statseance">
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
+                    </a>
+                    <a href="./?path=pages/statseance">
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </td>
+    </tr>
         <tr>
             <td>
                 <h3>Informations complémentaires</h3>
