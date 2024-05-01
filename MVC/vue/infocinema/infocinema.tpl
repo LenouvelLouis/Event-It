@@ -58,7 +58,12 @@
     <tbody>
     <tr>
         <td>
+
             <h3>Listes des séances</h3>
+            <?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire") ) {
+            echo("<div class='search-image'><a class='plus' href='./?path=pages/ajoutseance'><i class='fa-solid fa-plus'></i> Ajouter une séance</a></div>");
+            }
+            ?>
             <div class="film">
                 <h4>Oppenheimer</h4>
                 <div class="image-container">
