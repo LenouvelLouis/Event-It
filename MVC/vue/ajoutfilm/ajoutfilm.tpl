@@ -9,7 +9,7 @@
 <?php require("./vue/navbar/nav.tpl"); ?>
 <div class="barre">
     <a href="./?path=pages/accueil">Accueil</a>/
-    <a href="./?path=pages/ajoutfilm">Ajout de film</a>
+    <a id="links-film" href="./?path=pages/ajoutfilm">Ajout de film</a>
 </div>
 <form action="./?path=film/ajoutfilm" method="post" enctype="multipart/form-data">
 <div class="container_ajout_film">
@@ -45,7 +45,7 @@
     <div class="container_synopsis_film">
         <label for="synopsis"> Synopsis <span class="highlight">*</span></label>
         <textarea id="synopsis" name="synopsis" placeholder="Entrez le synopsis ici..." required></textarea>
-        <input class="button-ajout-film" type="submit">Ajout du film</input>
+        <button class="button-ajout-film" type="submit">Ajout du film</button>
     </div>
 </div>
 </form>

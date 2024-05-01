@@ -1,3 +1,30 @@
+$().ready(init);
+
+$().ready(init);
+
+function init() {
+    const currentUrl = window.location.href;
+    if (currentUrl === 'http://localhost/Event-It/MVC/?path=pages/voirfilm') {
+        const link = document.getElementById('links-film');
+        link.href = './?path=pages/voirfilm';
+        link.innerHTML = 'Informations Film';
+        const submitButton = document.querySelector('.button-ajout-film');
+        if (submitButton) {
+            submitButton.style.display = 'none';
+        }
+
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.disabled = true;
+        });
+
+        const textareas = document.querySelectorAll('textarea');
+        textareas.forEach(textarea => {
+            textarea.disabled = true;
+        });
+    }
+}
+
 function ajoutimg(e) {
     const file = e.target.files[0];
     const reader = new FileReader();
