@@ -18,7 +18,10 @@
         </center>
 
         <div class="container_flex">
-            <img src="https://www.chemille-en-anjou.fr/medias/2022/02/Cinema-en-plein-air.jpg"/>
+            <div class="image-container img-cine">
+                <img src="https://www.chemille-en-anjou.fr/medias/2022/02/Cinema-en-plein-air.jpg"/>
+            </div>
+
 
             <div>
                 <h3>Contact :</h3>
@@ -43,7 +46,10 @@
         </div>
 
         <center><h3>Listes des séances</h3></center>
-
+        <?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire") ) {
+            echo("<div class='btn-ajoutseance'><a class='plus' href='./?path=pages/ajoutseance'><i class='fa-solid fa-plus'></i> Ajouter une séance</a></div>");
+        }
+        ?>
         <div class="display_flex_sceance">
             <div class="film">
                 <div>

@@ -68,7 +68,10 @@
     overflow: hidden;
     margin-bottom: 10px;
 }
-
+.img-cine{
+    width: 400px;
+    height: 300px;
+}
 .image-container img {
     width: 100%;
     height: 100%;
@@ -96,13 +99,18 @@
 .plus:hover {
     color :var(--green-blue);
 }
+.btn-ajoutseance{
+    text-align: center;
+}
 
 @media (max-width: 1200px) {
 
     .display_info, .container_flex{
-
         display: flex;
         flex-direction: column;
-    
+    }
+
+    .display_info{
+        align-items: center;
     }
 }
