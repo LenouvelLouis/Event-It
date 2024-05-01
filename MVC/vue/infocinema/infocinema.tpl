@@ -13,7 +13,6 @@
             <a href="./?path=pages/cinema">Cinéma</a> /
             <a href="./?path=pages/infocinema">Info cinéma</a>
         </div>
-
         <center class ="titre_cine">
             <h1>Cinéma des platanes</h1>
         </center>
@@ -46,7 +45,6 @@
         <center><h3>Listes des séances</h3></center>
 
         <div class="display_flex_sceance">
-
             <div class="film">
                 <div>
                     <h4>Oppenheimer</h4>
