@@ -19,7 +19,7 @@
         <li><a href="./?path=pages/film">Film</a></li>
         <li><a href="./?path=pages/contact">Contact</a></li>
         <?php
-        if(isset($_SESSION['status']) && $_SESSION['status'] == "admin") {
+        if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire") ) {
             echo("<li><a href='./?path=pages/ajoutfilm'><i class='fa-solid fa-plus'></i> Film</a></li>");
         }
         ?>

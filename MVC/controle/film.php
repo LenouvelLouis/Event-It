@@ -11,7 +11,7 @@ function ajoutfilm(){
         $image = $_FILES['image'];
         $nomImage = $_FILES['image']['name'];
         $tmpName = $_FILES['image']['tmp_name'];
-        $directory = './vue/img/test/';
+        $directory = './vue/img/films/';
         $extension = pathinfo($nomImage, PATHINFO_EXTENSION);
         $newNomImage = str_replace(' ', '_', $titre) . '.' . $extension;
         if (!is_dir($directory)) {
