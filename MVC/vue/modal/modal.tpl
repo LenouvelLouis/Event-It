@@ -33,8 +33,6 @@
                                             </div>
                                             <button type="submit" class="btn mt-4">Se connecter</button>
                                         </form>
-                                        <p class="mb-0 mt-4 text-center"><a  class="link_modal">Vous avez oublié votre mot de passe ?</a></p>
-
                                     </div>
                                 </div>
                             </div>
