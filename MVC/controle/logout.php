@@ -8,7 +8,7 @@ function deconnexion(){
     $defaultUrl = "./?path=pages/accueil";
     $referrerUrl = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : $defaultUrl;
     // Liste des pages à exclure
-    $excludedPages = ["profile", "ajoutfilm", "ajoutseance"];
+    $excludedPages = ["profile", "ajoutfilm", "ajoutseance","statseance"];
 
     foreach ($excludedPages as $page) {
         if (strpos($referrerUrl, $page) !== false) {

@@ -62,35 +62,35 @@
                 </div>
                 <div>
                     <div class="seance">
-                        <a href="./?path=pages/statseance">
+                        <a <?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire")) { echo 'href="./?path=pages/statseance"'; } ?>>
+                            <div class="seance-card">
+                                <p>Salle X</p>
+                                <p>15:50</p>
+                            </div>
+                        </a>
+                        <a <?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire")) { echo 'href="./?path=pages/statseance"'; } ?>>
                         <div class="seance-card">
                             <p>Salle X</p>
                             <p>15:50</p>
                         </div>
                         </a>
-                        <a href="./?path=pages/statseance">
-                            <div class="seance-card">
-                                <p>Salle X</p>
-                                <p>15:50</p>
-                            </div>
+                        <a <?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire")) { echo 'href="./?path=pages/statseance"'; } ?>>
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
                         </a>
-                        <a href="./?path=pages/statseance">
-                            <div class="seance-card">
-                                <p>Salle X</p>
-                                <p>15:50</p>
-                            </div>
+                        <a <?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire")) { echo 'href="./?path=pages/statseance"'; } ?>>
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
                         </a>
-                        <a href="./?path=pages/statseance">
-                            <div class="seance-card">
-                                <p>Salle X</p>
-                                <p>15:50</p>
-                            </div>
-                        </a>
-                        <a href="./?path=pages/statseance">
-                            <div class="seance-card">
-                                <p>Salle X</p>
-                                <p>15:50</p>
-                            </div>
+                        <a <?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire")) { echo 'href="./?path=pages/statseance"'; } ?>>
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
                         </a>
                     </div>
                 </div>
@@ -107,35 +107,35 @@
                 </div>
                 <div>
                     <div class="seance">
-                        <a href="./?path=pages/statseance">
-                            <div class="seance-card">
-                                <p>Salle X</p>
-                                <p>15:50</p>
-                            </div>
+                        <a <?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire")) { echo 'href="./?path=pages/statseance"'; } ?>>
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
                         </a>
-                        <a href="./?path=pages/statseance">
-                            <div class="seance-card">
-                                <p>Salle X</p>
-                                <p>15:50</p>
-                            </div>
+                        <a <?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire")) { echo 'href="./?path=pages/statseance"'; } ?>>
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
                         </a>
-                        <a href="./?path=pages/statseance">
-                            <div class="seance-card">
-                                <p>Salle X</p>
-                                <p>15:50</p>
-                            </div>
+                        <a <?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire")) { echo 'href="./?path=pages/statseance"'; } ?>>
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
                         </a>
-                        <a href="./?path=pages/statseance">
-                            <div class="seance-card">
-                                <p>Salle X</p>
-                                <p>15:50</p>
-                            </div>
+                        <a <?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire")) { echo 'href="./?path=pages/statseance"'; } ?>>
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
                         </a>
-                        <a href="./?path=pages/statseance">
-                            <div class="seance-card">
-                                <p>Salle X</p>
-                                <p>15:50</p>
-                            </div>
+                        <a <?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire")) { echo 'href="./?path=pages/statseance"'; } ?>>
+                        <div class="seance-card">
+                            <p>Salle X</p>
+                            <p>15:50</p>
+                        </div>
                         </a>
                     </div>
                 </div>
