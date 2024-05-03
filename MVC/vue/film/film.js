@@ -26,6 +26,8 @@ document.body.onload = function(){
 
     for(i=0;i<totalImages_nouveaux;i++)
     {
+        a=document.createElement("a");
+        a.href = ".?path=pages/voirfilm&id=36";
         div = document.createElement("div");
         div.className="image_container_nouveaux";
 
@@ -37,8 +39,9 @@ document.body.onload = function(){
 
         img = document.createElement("img");
         img.src = "./vue/img/Nouveautés/" + nom_film_nouveaux[i] + ".png";
-        div.appendChild(img); 
-        carousel_nouveaux.appendChild(div);
+        div.appendChild(img);
+        a.appendChild(div);
+        carousel_nouveaux.appendChild(a);
     }
 
     for(i=0;i<totalImages_affiche;i++)

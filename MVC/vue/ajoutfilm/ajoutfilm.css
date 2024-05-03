@@ -18,14 +18,32 @@
     align-items: center;
 
 }
-
+#delete-img{
+    display: none;
+    font-size: 2rem;
+}
+#delete-img:hover,
+#delete-img:focus{
+    cursor: pointer;
+}
+.icon-modif{
+    margin-top: 20px;
+    font-size: 2rem;
+    color: var(--green-blue);
+    display: none
+}
+.icon-modif:hover{
+    color: var(--black-blue);
+}
 .image-container {
+
   width: 260px; /* ou une largeur fixe, par exemple 500px */
   height: 400px; /* Hauteur fixe pour le conteneur */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+    display: none;
 }
 
 .image-container img {
@@ -35,7 +53,6 @@
 }
 
 .container_affiche_film_bouton{
-
     margin-top: 10px;
     background-color: var(--black-blue); 
     color: var(--green-blue); 
@@ -76,7 +93,7 @@
 
 }
 
-.container_synopsis_film button{
+.button-ajout-film{
 
     margin-top: 30px;
     background-color: var(--black-blue);

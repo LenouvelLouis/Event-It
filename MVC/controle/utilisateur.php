@@ -18,6 +18,16 @@ function getInfoUser()
     require('./modele/utilisateurBD.php');
     getUser($_SESSION['id']);
 }
+
+function isAdmin(){
+    echo $_SESSION['status'] === 'admin';
+
+}
+
+/**
+ * Fonction de mise à jour des informations de l'utilisateur
+ * @return void
+ */
 function updateuser()
 {
     closedNotifier();
