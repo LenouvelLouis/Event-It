@@ -22,7 +22,19 @@
     display: none;
     font-size: 2rem;
 }
-
+#delete-img:hover,
+#delete-img:focus{
+    cursor: pointer;
+}
+.icon-modif{
+    margin-top: 20px;
+    font-size: 2rem;
+    color: var(--green-blue);
+    display: none
+}
+.icon-modif:hover{
+    color: var(--black-blue);
+}
 .image-container {
 
   width: 260px; /* ou une largeur fixe, par exemple 500px */

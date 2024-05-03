@@ -11,17 +11,17 @@
     <a href="./?path=pages/accueil">Accueil</a>/
     <a id="links-film" href="./?path=pages/ajoutfilm">Ajout de film</a>
 </div>
-<form action="./?path=film/ajoutfilm" method="post" enctype="multipart/form-data">
+<form action="./?path=film/ajoutfilm" id="form-page" method="post" enctype="multipart/form-data">
 <div class="container_ajout_film">
 
     <div class="container_affiche_film">
         <label> Affiche du film <span class="highlight">*</span> </label>
-        <span id="delete-img" onclick="deleteimg()"><i class="fa-solid fa-xmark"></i></span>
         <div class="image-container">
             <img src="" alt="Image du film">
         </div>
+        <span id="delete-img" onclick="deleteimg()"><i class="fa-solid fa-xmark"></i></span>
         <div>
-                <input type="file" id="imageChoisi" name="image" accept="image/*" class="container_affiche_film_bouton" onchange="ajoutimg(event)" required>
+                <input type="file" id="imageChoisi" name="image" accept="image/*" class="container_affiche_film_bouton" onchange="ajoutimg(event)">
         </div>
     </div>
     <div class="container_info_film" >
@@ -46,6 +46,7 @@
         <label for="synopsis"> Synopsis <span class="highlight">*</span></label>
         <textarea id="synopsis" name="synopsis" placeholder="Entrez le synopsis ici..." required></textarea>
         <button class="button-ajout-film" type="submit">Ajout du film</button>
+        <a class="icon-modif" href="./?path=pages/editfilm&id=35" ><i class="fa-solid fa-gear "></i><a>
     </div>
 </div>
 </form>

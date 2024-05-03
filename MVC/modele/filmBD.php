@@ -52,4 +52,98 @@ function filmAlreadyExist($titre){
         die();
     }
 }
+
+/**
+ * Fonction de récupération des informations d'un film
+ * @param $id
+ * @return mixed
+ */
+function getFilm($id){
+    require('./modele/connectSQL.php'); // On inclut la connexion à la base de données
+    $sql = "SELECT * FROM `film` WHERE id = :id";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':id', $id);
+        $commande->execute();
+        $result = $commande->fetch();
+        echo json_encode($result);
+    }catch (PDOException $e) {
+        echo utf8_encode("Echec de l'insert : " . $e->getMessage() . "\n");
+        die();
+    }
+}
+
+/**
+ * Fonction de récupération du nom d'un film
+ * @param $id
+ * @return mixed|void
+ */
+function getFilmName($id){
+    require('./modele/connectSQL.php'); // On inclut la connexion à la base de données
+    $sql = "SELECT titre FROM `film` WHERE id = :id";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':id', $id);
+        $commande->execute();
+        $res= $commande->fetch();
+        return $res['titre'];
+    }catch (PDOException $e) {
+        echo utf8_encode("Echec de l'insert : " . $e->getMessage() . "\n");
+        die();
+    }
+}
+
+/**
+ * Fonction de mise à jour d'un film
+ * @param $id
+ * @param string $titre
+ * @param $duree
+ * @param $realisateur
+ * @param $acteurs
+ * @param $synopsis
+ * @param $genre
+ * @param string $newNomImage
+ * @return void
+ */
+function updateFilm($id, string $titre, $duree, $realisateur, $acteurs, $synopsis, $genre, string $newNomImage){
+    require('./modele/connectSQL.php'); // On inclut la connexion à la base de données
+    $sql = "UPDATE `film` SET titre = :titre, duree = :duree, realisateur = :realisateur, acteurs = :acteurs, synopsis = :synopsis, genre = :genre, image = :image WHERE id = :id";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':titre', $titre);
+        $commande->bindParam(':duree', $duree);
+        $commande->bindParam(':realisateur', $realisateur);
+        $commande->bindParam(':acteurs', $acteurs);
+        $commande->bindParam(':synopsis', $synopsis);
+        $commande->bindParam(':genre', $genre);
+        $commande->bindParam(':image', $newNomImage);
+        $commande->bindParam(':id', $id);
+        $commande->execute();
+    }catch (PDOException $e) {
+        echo utf8_encode("Echec de l'insert : " . $e->getMessage() . "\n");
+        die();
+    }
+
+}
+
+/**
+ * Fonction de récupération du nom d'une image
+ * @param $id
+ * @return mixed|void
+ */
+function getImgmName($id){
+    require('./modele/connectSQL.php'); // On inclut la connexion à la base de données
+    $sql = "SELECT image FROM `film` WHERE id = :id";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':id', $id);
+        $commande->execute();
+        $res= $commande->fetch();
+        return $res['image'];
+    }catch (PDOException $e) {
+        echo utf8_encode("Echec de l'insert : " . $e->getMessage() . "\n");
+        die();
+    }
+
+}
 ?>
