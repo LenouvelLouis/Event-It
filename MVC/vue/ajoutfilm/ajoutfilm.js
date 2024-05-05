@@ -21,9 +21,12 @@ function pageVoirFilm() {
 
     getInfosFilm();
     if (isUserAdmin) {
-        const editlinks = document.querySelector('.icon-modif');
+        const editlinks = document.querySelector('.modif');
         editlinks.href = './?path=pages/editfilm&id='+id;
         editlinks.style.display = 'block';
+        const iconDelete = document.querySelector('.delete');
+        iconDelete.href = './?path=film/deleteFilm&id='+id;
+        iconDelete.style.display = 'block';
     }
     link.href = './?path=pages/voirfilm&id='+id;
     link.innerHTML = 'Informations Film';
@@ -48,15 +51,15 @@ function pageEditFilm() {
     const submitButton = document.querySelector('.button-ajout-film');
     submitButton.innerHTML = 'Modifier';
     submitButton.style.display = 'block';
+    const cancelButton = document.querySelector('.cancel');
+    cancelButton.href = './?path=pages/voirfilm&id='+id;
+    cancelButton.style.display = 'block';
     getInfosFilm();
     const link = document.getElementById('links-film');
     link.href = './?path=pages/editfilm&id='+id;
     link.innerHTML = 'Modifications Film';
     document.getElementById('delete-img').style.display = 'block';
     document.getElementById('form-page').action = './?path=film/editFilm&id='+id;
-    const editButton =  document.querySelector('.icon-modif i');
-    editButton.className = 'fa-solid fa-ban';
-    editButton.style.display = 'block';
 }
 
 function isAdmin() {
@@ -78,6 +81,7 @@ function getInfosFilm() {
             const infosFilm = JSON.parse(response);
             document.getElementById('titre').value = infosFilm.titre.charAt(0).toUpperCase() + infosFilm.titre.slice(1);
             document.getElementById('realisateur').value = infosFilm.realisateur;
+            document.getElementById('acteurs').value = infosFilm.acteurs;
             document.getElementById('durée').value = infosFilm.duree;
             document.getElementById('genre').value = infosFilm.genre;
             document.getElementById('synopsis').innerHTML = infosFilm.synopsis;

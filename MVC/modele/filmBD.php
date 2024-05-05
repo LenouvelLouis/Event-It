@@ -146,4 +146,26 @@ function getImgmName($id){
     }
 
 }
+
+/**
+ * Fonction de suppression d'un film
+ * @param $id
+ * @return void
+ */
+function deleteFilmBD($id)
+{
+    require('./modele/connectSQL.php'); // On inclut la connexion à la base de données
+    $sql = "DELETE FROM `film` WHERE id = :id";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':id', $id);
+        $commande->execute();
+    }catch (PDOException $e) {
+        echo utf8_encode("Echec de l'insert : " . $e->getMessage() . "\n");
+        die();
+    }
+}
+{
+
+}
 ?>
