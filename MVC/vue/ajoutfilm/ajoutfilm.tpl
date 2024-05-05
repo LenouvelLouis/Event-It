@@ -46,7 +46,10 @@
         <label for="synopsis"> Synopsis <span class="highlight">*</span></label>
         <textarea id="synopsis" name="synopsis" placeholder="Entrez le synopsis ici..." required></textarea>
         <button class="button-ajout-film" type="submit">Ajout du film</button>
-        <a class="icon-modif" href="./?path=pages/editfilm&id=35" ><i class="fa-solid fa-gear "></i><a>
+        <a class="icon modif" href="" ><i class="fa-solid fa-gear "></i><a>
+                <a class="icon delete" href="" ><i class="fa-solid fa-trash"></i><a>
+                        <a class="icon delete" href="" ><i class="fa-solid fa-trash"></i><a>
+                                <a class="icon cancel" href=""  ><i class="fa-solid fa-ban"></i><a>
     </div>
 </div>
 </form>

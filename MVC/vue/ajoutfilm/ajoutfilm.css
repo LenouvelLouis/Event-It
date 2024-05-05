@@ -26,13 +26,13 @@
 #delete-img:focus{
     cursor: pointer;
 }
-.icon-modif{
+.icon{
     margin-top: 20px;
     font-size: 2rem;
     color: var(--green-blue);
     display: none
 }
-.icon-modif:hover{
+.icon:hover{
     color: var(--black-blue);
 }
 .image-container {
