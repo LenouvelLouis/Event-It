@@ -26,36 +26,34 @@
 
             <label> Sélection du film </label>
             <select name="film" id="film">
-                <option value="">Aucun film</option>      
+                <option value="">Choisir un film</option>      
             </select>
 
-            <label> Sélection du lieu </label>
+            <label> Sélection du cinéma </label>
             <select name="cinema" id="cinema">
-                <option value="">Lieu</option>      
+                <option value="">Choisir un cinéma</option>      
             </select>
 
-            <label> Sélection de la salle </label>
-            <select name="cinemas" id="sceance_salle">
-                <option value="">Salle</option>      
-            </select>
+            <div id="affichage_salle">
+                <label> Sélection de la salle </label>
+                <br>
+                <select name="salle" id="salle">
+                <option value="">Choisir une salle</option>      
+                </select>
+            </div>
 
             <label> Heure de début du film </label>
-            <input type="text" id="Heure_debut" </input>
+            <input type="time" id="Heure_debut" </input>
 
-            <div>
-                <div class ="type_film">
-                    <input type="checkbox" id="bp_affiche" value="Affiche" class="ckeck_box">
-                    <label for="bp_affiche">A l'affiche</label>
-                </div>
+            <div class ="type_film">
+                <input type="checkbox" id="bp_affiche" value="Affiche" class="ckeck_box">
+                <label for="bp_affiche">A l'affiche</label>
             </div>
 
-            <div>
-                <div class ="type_film">
-                    <input type="checkbox" id="bp_nouveautes" value="nouveautes" class="ckeck_box">
-                    <label for="bp_nouveautes">Nouveautés</label>
-                </div>
+            <div class ="type_film">
+                <input type="checkbox" id="bp_nouveautes" value="nouveautes" class="ckeck_box">
+                <label for="bp_nouveautes">Nouveautés</label>
             </div>
-
         </div>
 
         <div class="container_sceance_droit">

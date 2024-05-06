@@ -18,7 +18,7 @@ function get_film()
 function get_cinema()
 {
     require('./modele/connectSQL.php');
-    $sql = "SELECT id, nom FROM `cinema`";
+    $sql = "SELECT id, nom, nb_salle, type_cine FROM `cinema`";
     try {
         $commande = $pdo->prepare($sql);
         $commande->execute();
