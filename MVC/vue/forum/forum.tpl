@@ -24,11 +24,26 @@
     </div>
 
     <div class="main-content">
-        <div class="question-prompt">
-            <p>Votre question n'est pas dans ce Forum ?</p>
-            <textarea placeholder="Posez votre question ici..."></textarea>
-            <button class="ajout-sujet" onclick="submitQuestion()">Ajouter un sujet</button>
+        <div class="discussion">
+            <div class="message right">
+                <div class="username">Nom d'utilisateur</div>
+                <div class="message-content">J'aime pas mohammed</div>
+                <div class="message-time">10:00</div>
+            </div>
+            <!-- Message des autres utilisateurs -->
+            <div class="message left">
+                <div class="username">Nom d'utilisateur</div>
+                <div class="message-content">Moi aussi</div>
+                <div class="message-time">10:05</div>
+            </div>
         </div>
+        <div class="question-prompt">
+            <form action="./?path=forum/ajoutdiscussion" method="post">
+            <p>Votre question n'est pas dans ce Forum ?</p>
+            <textarea name="titre" placeholder="Posez votre question ici..."></textarea>
+            <button class="ajout-sujet" type="submit">Ajouter un sujet</button>
+        </div>
+        </form>
     </div>
 </div>
 <?php require("./vue/footer/footer.tpl"); ?>

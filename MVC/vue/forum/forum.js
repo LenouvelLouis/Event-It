@@ -1,8 +1,21 @@
+$().ready(init);
+let currentUrl;
+function seeDiscussion() {
+    const urlParams = new URLSearchParams(new URL(currentUrl).search);
+    const id = urlParams.get('id');
+    const discussion = document.querySelector('.discussion');
+    discussion.style.display = 'block';
+}
 
-    function submitQuestion() {
+function init() {
+    currentUrl = window.location.href;
+    if (currentUrl.includes('id')) {
+        document.querySelector('.question-prompt').style.display = 'none';
+        seeDiscussion();
     }
+}
 
-        const questions = ["Retrouver le cinéma ?", "Problème de connexion ?", "Comment créer un compte ?"];
+const questions = ["Retrouver le cinéma ?", "Problème de connexion ?", "Comment créer un compte ?"];
 
         function searchQuestion() {
             const input = document.getElementById('searchBox');

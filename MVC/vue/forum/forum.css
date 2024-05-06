@@ -20,7 +20,7 @@
     background-color: var(--green-blue);
     color: white;
     padding: 20px;
-    width: 250px;
+    width: 500px;
 }
 .sidebar a {
     display: block;
@@ -93,4 +93,39 @@ textarea {
 
 .suggestions a:hover {
     background-color: #f0f0f0;
+}
+
+.discussion{
+    display: none;
+}
+
+.message {
+    width: 300px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.message-content {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message-time {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.right {
+    margin-left: 60%; /* Ajoute une marge à gauche pour les messages à droite */
+    background-color: #dcf8c6;
+}
+
+.left {
+    margin-left: 20%; /* Ajoute une marge à droite pour les messages à gauche */
+    background-color: #fff;
+}
+.username {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
