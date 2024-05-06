@@ -17,13 +17,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
   
 .image-container img {
     width: 100%; /* L'image prend toute la largeur du conteneur */
     height: 100%; /* L'image prend toute la hauteur du conteneur */
-    object-fit: cover;
 }
 
 .container_sceance_millieu {

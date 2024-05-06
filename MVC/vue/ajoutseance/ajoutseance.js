@@ -4,21 +4,24 @@ let film=[];
 let cinema=[];
 let nb_salle=0;
 let type_cine;
-let cine_choisi;
 
 const list_film = document.getElementById("film");
 const list_cinema = document.getElementById("cinema");
 const list_salle = document.getElementById("salle");
-const affiche_salle = document.getElementById("affichage_salle");
+const affichage_salle = document.getElementById("affichage_salle");
+const affiche_film = document.getElementById("image_film");
+const list_info = document.getElementById("recap_info");
+const element_list = list_info.getElementsByTagName("li");
+const heure = document.getElementById("heure_debut")
 
 function init() {
     getInfo();
-    update_list();
+    info_seance();
 }
 
 function getInfo() {
     $.ajax({
-        url: './?path=ajoutseance/getFilm',
+        url: './?path=seance/getFilm',
         async: false,
         method: 'GET',
         success: function (data) {
@@ -27,7 +30,7 @@ function getInfo() {
     });
 
     $.ajax({
-        url: './?path=ajoutseance/getCinema',
+        url: './?path=seance/getCinema',
         async: false,
         method: 'GET',
         success: function (data) {
@@ -36,7 +39,9 @@ function getInfo() {
     });
 }
 
-function update_list(){
+function info_seance(){
+
+    affichage_salle.style.display = "none";
 
     for(var i = 0; i < film.length; i++) {
         var option = document.createElement('option');
@@ -51,13 +56,15 @@ function update_list(){
     }
 
     list_cinema.onchange = function(){
-        cine_choisi = list_cinema.value;
+
+        element_list[1].textContent = "Cinéma : "+list_cinema.value;
+
         for(var i = 0; i < cinema.length; i++){
-            if(cine_choisi == cinema[i].nom)
+            if(list_cinema.value == cinema[i].nom)
             {
                 if(cinema[i].type_cine == 1)
                 {
-                    affiche_salle.style.display = "block";
+                    affichage_salle.style.display = "block";
                     nb_salle = cinema[i].nb_salle;
 
                     for(var i = 0; i < nb_salle; i++) {
@@ -67,11 +74,28 @@ function update_list(){
                     }
                 }
                 else{
-                    affiche_salle.style.display = "none";
+                    affichage_salle.style.display = "none";
                     nb_salle = 0;
+                    element_list[2].textContent = "Salle : -";
                 }
             }
         }
+    }
+
+    list_film.onchange = function(){
+
+        affiche_film.src="./vue/img/Nouveautés/" +list_film.value+ ".png";
+        element_list[0].textContent = "Film : "+list_film.value;
+        
+    }
+
+    list_salle.onchange = function(){
+
+        element_list[2].textContent = "Salle : "+list_salle.value;
+    }
+
+    heure.onchange = function(){
+        element_list[3].textContent = "Heure de début : "+heure.value;
     }
 
 }

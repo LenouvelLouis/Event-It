@@ -16,34 +16,43 @@
     <div class="container_ajout_sceance">
 
         <div class="container_sceance_gauche">
-            <label>Affiche film</label>
+            <label>Affiche du film</label>
             <div class="image-container">
-                <img src="./vue/img/Image_test.png" alt="Image du film">
+                <img id="image_film">
             </div>
         </div>
 
         <div class="container_sceance_millieu">
 
-            <label> Sélection du film </label>
-            <select name="film" id="film">
-                <option value="">Choisir un film</option>      
-            </select>
+            <div>
+                <label> Sélection du film </label>
+                <br>
+                <select name="film" id="film">
+                    <option value="">Choisir un film</option>      
+                </select>
+            </div>
 
-            <label> Sélection du cinéma </label>
-            <select name="cinema" id="cinema">
-                <option value="">Choisir un cinéma</option>      
-            </select>
+            <div>
+                <label> Sélection du cinéma </label>
+                <br>
+                <select name="cinema" id="cinema">
+                    <option value="">Choisir un cinéma</option>      
+                </select>
+            </div>
 
             <div id="affichage_salle">
                 <label> Sélection de la salle </label>
                 <br>
                 <select name="salle" id="salle">
-                <option value="">Choisir une salle</option>      
+                    <option value="">Choisir une salle</option>      
                 </select>
             </div>
 
-            <label> Heure de début du film </label>
-            <input type="time" id="Heure_debut" </input>
+            <div>
+                <label> Heure de début </label>
+                <br>
+                <input type="time" id="heure_debut" </input>
+            </div>
 
             <div class ="type_film">
                 <input type="checkbox" id="bp_affiche" value="Affiche" class="ckeck_box">
@@ -59,11 +68,11 @@
         <div class="container_sceance_droit">
             <label> Récapitulatif : </label>
 
-            <ul class="info-liste">
-                <li>Film : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
-                <li>Lieu : xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
-                <li>Heure de début : xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
-                <li>Salle : xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+            <ul class="info-liste" id="recap_info">
+                <li>Film : </li>
+                <li>Cinéma : </li>
+                <li>Salle : </li>
+                <li>Heure de début : </li>
             </ul>
 
             <button type="button">Ajout de séance</button>
