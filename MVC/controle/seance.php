@@ -15,4 +15,9 @@
     get_cinema();
  }
 
+ function getSalle(){
+   require('./modele/seanceBD.php');
+   get_salle();
+}
+
 ?>

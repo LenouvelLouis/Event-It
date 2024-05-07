@@ -2,6 +2,7 @@ $().ready(init);
 
 let film=[];
 let cinema=[];
+let salle=[];
 let nb_salle=0;
 let type_cine;
 
@@ -37,6 +38,15 @@ function getInfo() {
             cinema = JSON.parse(data);
         }
     });
+
+    $.ajax({
+        url: './?path=seance/getSalle',
+        async: false,
+        method: 'GET',
+        success: function (data) {
+            salle = JSON.parse(data);
+        }
+    });
 }
 
 function info_seance(){
@@ -65,12 +75,13 @@ function info_seance(){
                 if(cinema[i].type_cine == 1)
                 {
                     affichage_salle.style.display = "block";
-                    nb_salle = cinema[i].nb_salle;
-
-                    for(var i = 0; i < nb_salle; i++) {
-                        var option = document.createElement('option');
-                        option.text = "Salle "+i;
-                        list_salle.appendChild(option);
+                    list_salle.options.length=0;
+                    for(let j=0;j<salle.length;j++){
+                        if(salle[j].id_cinéma==cinema[i].id){
+                            var option = document.createElement('option');
+                            option.text = salle[j].nom;
+                            list_salle.appendChild(option);
+                        }
                     }
                 }
                 else{
