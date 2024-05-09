@@ -13,7 +13,7 @@
 
 .forum-container {
     display: flex;
-    min-height: 100vh;
+    min-height: 650px;
 }
 
 .sidebar {
@@ -29,6 +29,24 @@
     padding: 10px 0;
 }
 
+.div-list-questions{
+    max-height: 450px;
+    overflow-y: auto;
+}
+.div-list-questions ul {
+    list-style-type: none;
+}
+.div-list-questions ul li {
+    margin-bottom: 10px;
+}
+
+.question{
+    text-decoration: none;
+}
+
+.question:hover {
+    color: white;
+}
 .main-content {
     flex-grow: 1;
     background-color: #fff;
@@ -96,6 +114,10 @@ textarea {
 }
 
 .discussion{
+    max-height: 400px;
+    overflow-y: auto;
+}
+.general-discussion{
     display: none;
 }
 
@@ -104,6 +126,9 @@ textarea {
     padding: 10px;
     border-radius: 15px;
     border: 1px solid black;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: 20px
 }
 
 .message-content {
@@ -128,4 +153,49 @@ textarea {
 .username {
     font-weight: bold;
     margin-bottom: 5px;
+}
+.container-ajout-message{
+    margin-top: 20px;
+}
+.container-ajout-message textarea {
+    resize: none;
+}
+.ajout-message {
+    border-radius: 5px;
+    background-color: #242C34;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.ajout-message:hover {
+    background-color: #2C94A4;
+}
+
+.supprimer-sujet {
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none;
+}
+
+.supprimer-sujet:hover {
+    background-color: var(--grey);
+    color: red;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .sidebar {
+        width: 300px;
+    }
 }

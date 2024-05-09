@@ -89,6 +89,10 @@ function checkId($id)
     }
 }
 
+/**
+ * Fonction de modification d'un film
+ * @return void
+ */
 function editfilm()
 {
     $id = isset($_GET['id']) ? $_GET['id'] : '';
