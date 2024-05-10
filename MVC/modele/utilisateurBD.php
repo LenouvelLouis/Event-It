@@ -99,17 +99,37 @@ function getSalt($email): string
 function getUser($id)
 {
     require('./modele/connectSQL.php');
-    $sql = "SELECT * FROM `user` WHERE id = :id";
+    $sql = "SELECT id,name,phone,email FROM `user` WHERE id = :id";
     try {
         $commande = $pdo->prepare($sql);
         $commande->bindParam(':id', $id);
         $commande->execute();
         $res = $commande->fetch();
-        echo(json_encode($res));
+        return json_encode($res);
     } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
     }
+}
+
+/**
+ * Fonction de récupération du nom de l'utilisateur
+ * @return void
+ */
+function getNameUser($id){
+    require('./modele/connectSQL.php');
+    $sql = "SELECT id,name FROM `user` WHERE id = :id";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':id', $id);
+        $commande->execute();
+        $result = $commande->fetch();
+        return json_encode($result);
+    } catch (PDOException $e) {
+        echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
+        die();
+    }
+
 }
 
 /**

@@ -16,9 +16,14 @@ function closedNotifier(){
 function getInfoUser()
 {
     require('./modele/utilisateurBD.php');
-    getUser($_SESSION['id']);
+    $user =getUser($_SESSION['id']);
+    echo $user;
 }
 
+/**
+ * Fonction de vérification si l'utilisateur est admin
+ * @return void
+ */
 function isAdmin(){
     echo $_SESSION['status'] === 'admin';
 

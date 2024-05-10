@@ -20,15 +20,35 @@
         <!-- Barre de recherche -->
         <input type="text" id="searchBox" onkeyup="searchQuestion()" placeholder="Chercher une question...">
         <div id="suggestions" class="suggestions"></div>
-
+        <div class="div-list-questions">
+            <ul class="list-questions">
+            </ul>
+        </div>
     </div>
 
     <div class="main-content">
-        <div class="question-prompt">
-            <p>Votre question n'est pas dans ce Forum ?</p>
-            <textarea placeholder="Posez votre question ici..."></textarea>
-            <button class="ajout-sujet" onclick="submitQuestion()">Ajouter un sujet</button>
+        <div class="general-discussion">
+            <div class="discussion">
+            </div>
+            <form id="form-forum" action="./?path=forum/ajoutmessage" method="post">
+                <div class="container-ajout-message">
+                    <textarea name="message" placeholder="Répondre à la discussion..."></textarea>
+                    <button class="ajout-message" type="submit">Ajouter un message</button>
+                </div>
+
+            </form>
         </div>
+
+        <div class="question-prompt">
+            <form action="./?path=forum/ajoutdiscussion" method="post">
+            <p>Votre question n'est pas dans ce Forum ?</p>
+            <textarea name="titre" placeholder="Posez votre question ici..."></textarea>
+            <button class="ajout-sujet" type="submit">Ajouter un sujet</button>
+            </form>
+            <!-- Lien de suppression -->
+
+        </div>
+        <a class="supprimer-sujet" href="">Supprimer la discussion</a>
     </div>
 </div>
 <?php require("./vue/footer/footer.tpl"); ?>
