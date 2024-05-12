@@ -29,6 +29,11 @@ function inscription(){
         require './service/mailService.php';
         $title = "Bienvenue sur Events-it";
         $message = "
+<head>
+    <title>Bienvenue sur Events-it</title>
+    <meta charset='UTF-8'>
+</head>
+<body>
 <h1>Bonjour $name,</h1>
 <p>Votre compte a été créé avec succès. Vous pouvez désormais vous connecter sur notre <a href='events-it.go.yo.fr'>site</a>.</p>
 <p>Bienvenue sur <a href='events-it.go.yo.fr'>Events IT</a>, votre portail incontournable pour toutes les dernières informations sur les événements cinématographiques. Conçu pour répondre à vos besoins spécifiques, notre site vous offre un accès facile à une multitude de fonctionnalités dédiées au monde passionnant du cinéma.</p>
@@ -43,16 +48,15 @@ function inscription(){
 
 <div style='display: flex; justify-content: center; align-items: center'>
    <img src='https://i.imgur.com/niBDHGj.png' alt='liste-type-cinéma' style='width: 100%; max-width: 300px;'>
-<p style=' margin-left: 20px; text-align:center;'>Découvrez également des pages dédiées offrant des informations détaillées sur les cinémas et les films, vous permettant de trouver rapidement ce que vous cherchez. Besoin d'assistance ? Notre FAQ répondra à toutes vos questions fréquentes, tandis que notre formulaire de contact vous permettra d'entrer en communication directe avec un responsable compétent.</p>
 
 </div>
-
-
+<p style='text-align:center;'>Découvrez également des pages dédiées offrant des informations détaillées sur les cinémas et les films, vous permettant de trouver rapidement ce que vous cherchez. Besoin d'assistance ? Notre FAQ répondra à toutes vos questions fréquentes, tandis que notre formulaire de contact vous permettra d'entrer en communication directe avec un responsable compétent.</p>
 <p>Cordialement,</p>
 <div style='display: flex; align-items: center'>
     <img src='https://i.imgur.com/ISfug8A.png' alt='Logo site' style='width: 50%; max-width: 150px; margin-right:20px'>
     <h4>L'équipe Events-it</h4>
 </div>
+</body>
 ";
         sendMail($name,$email,$title,$message);
 
