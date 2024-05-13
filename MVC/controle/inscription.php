@@ -50,7 +50,7 @@ function inscription(){
    <img src='https://i.imgur.com/niBDHGj.png' alt='liste-type-cinéma' style='width: 100%; max-width: 300px;'>
 
 </div>
-<p style='text-align:center;'>Découvrez également des pages dédiées offrant des informations détaillées sur les cinémas et les films, vous permettant de trouver rapidement ce que vous cherchez. Besoin d'assistance ? Notre FAQ répondra à toutes vos questions fréquentes, tandis que notre formulaire de contact vous permettra d'entrer en communication directe avec un responsable compétent.</p>
+<p>Découvrez également des pages dédiées offrant des informations détaillées sur les cinémas et les films, vous permettant de trouver rapidement ce que vous cherchez. Besoin d'assistance ? Notre FAQ répondra à toutes vos questions fréquentes, tandis que notre formulaire de contact vous permettra d'entrer en communication directe avec un responsable compétent.</p>
 <p>Cordialement,</p>
 <div style='display: flex; align-items: center'>
     <img src='https://i.imgur.com/ISfug8A.png' alt='Logo site' style='width: 50%; max-width: 150px; margin-right:20px'>
