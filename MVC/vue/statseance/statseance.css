@@ -43,6 +43,14 @@ p{
   width: 40%;
 }
 
+.case_menu_deroulant{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
 .espace_bouton{
   display: flex;
   flex-direction: column;
@@ -50,6 +58,7 @@ p{
   justify-content: center;
   align-items: center;
   align-content: space-evenly;
+  padding: 5px;
 }
   
 .row_after_column_statseance {
