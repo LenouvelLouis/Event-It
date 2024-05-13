@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="./vue/navbar/nav.css">
     <link rel="stylesheet" href="./vue/style/style.css">
     <script src="https://kit.fontawesome.com/0ef5e8cca6.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <?php require("./vue/notifier/notifier.tpl"); ?>
 <div class="nav">
