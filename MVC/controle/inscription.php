@@ -1,5 +1,5 @@
 <?php
-
+require './service/mailService.php';
 /**
  * Fonction d'inscription
  * @return void
@@ -26,7 +26,6 @@ function inscription(){
         $msgAcc = "Compte créé, vous pouvez vous connecter";
         $_SESSION['msgAcc'] = $msgAcc;
         $_SESSION['msgType'] = 'success';
-        require './service/mailService.php';
         $title = "Bienvenue sur Events-it";
         $message = "
 <head>
@@ -77,8 +76,32 @@ function inscription(){
  */
 function getStatus($email): string
 {
-    //$index_at = strpos($email, "@");
-    //$domaine = substr($email, $index_at+1);
+    $index_at = strpos($email, "@");
+    $domaine = substr($email, $index_at + 1);
+    $title = "Demande de status";
+    $status = 'user';
+    $mail ='soundwave.soundcheck@gmail.com';
+    switch ($domaine) {
+        case "events-it.fr":
+            $status= "admin";
+            break;
+        case "grandRex.fr":
+            $status= "gestionnaire";
+            break;
+    }
+    $message = "
+<head>
+    <title>Demande de status</title>
+    <meta charset='UTF-8'>
+</head>
+<body>
+<h1>Bonjour,</h1>
+<p>Un utilisateur a demandé un status : $status , sur le site Events-it.</p>
+<p>Voici son email : $email</p>
+</body>
+";
+
+    sendMail('Louis',$mail,$title,$message);
     return "user";
 }
 
