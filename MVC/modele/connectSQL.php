@@ -3,7 +3,7 @@
 	$hostname = "localhost";
 	$base= "events-it";
 	$loginBD= "root";
-	$passBD="root";
+	$passBD="";
 	try {
 		// DSN (Data Source Name)pour se connecter à MySQL
 		$dsn = "mysql:server=$hostname ; dbname=$base";
