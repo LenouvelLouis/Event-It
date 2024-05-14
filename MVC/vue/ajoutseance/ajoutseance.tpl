@@ -12,7 +12,7 @@
     <a href="./?path=pages/ajoutseance">Ajout de séance</a>
 </div>
 
-<form action="./?path=ajoutseance/ajoutseance" method="post">
+
     <div class="container_ajout_sceance">
 
         <div class="container_sceance_gauche">
@@ -55,13 +55,13 @@
             </div>
 
             <div class ="type_film">
-                <input type="checkbox" id="bp_affiche" value="Affiche" class="ckeck_box">
-                <label for="bp_affiche">A l'affiche</label>
+                <input type="checkbox" id="chek_affiche"  name="chek_affiche" class="ckeck_box">
+                <label for="chek_affiche">A l'affiche</label>
             </div>
 
             <div class ="type_film">
-                <input type="checkbox" id="bp_nouveautes" value="nouveautes" class="ckeck_box">
-                <label for="bp_nouveautes">Nouveautés</label>
+                <input type="checkbox" id="chek_nouveautes" name="chek_nouveautes" class="ckeck_box">
+                <label for="chek_nouveautes">Nouveautés</label>
             </div>
         </div>
 
@@ -75,10 +75,10 @@
                 <li>Heure de début : </li>
             </ul>
 
-            <button type="button">Ajout de séance</button>
+            <button type="button" id= "button">Ajout de séance</button>
         </div>
     </div>
-</form>
+
 
 <?php require("./vue/footer/footer.tpl"); ?> 
 </body>

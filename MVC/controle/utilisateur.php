@@ -54,6 +54,4 @@ function updateuser()
     header('Location: ./?path=pages/profile');
 }
 
-
-
 ?>
