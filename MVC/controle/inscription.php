@@ -15,6 +15,14 @@ function inscription(){
     $password = hashPassword($password,$salt);
     require './controle/utilisateur.php';
     closedNotifier();
+    if(empty($name) || empty($email) || empty($phone) || empty($password)){
+        $msgErr = "Veuillez remplir tous les champs";
+        $_SESSION['msgErr'] = $msgErr;
+        $_SESSION['msgType'] = 'error';
+        $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./?path=pages/accueil";
+        header("Location:" . $url);
+        return;
+    }
     require('./modele/utilisateurBD.php');
     if(emailExist($email)){
         $msgErr = "Cet email est déjà utilisé";

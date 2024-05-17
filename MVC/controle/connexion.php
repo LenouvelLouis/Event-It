@@ -9,6 +9,14 @@ function login(){
     require './controle/utilisateur.php';
     closedNotifier();
     require('./modele/utilisateurBD.php');
+    if (empty($email) || empty($password)){
+        $msgErr = "Veuillez remplir tous les champs";
+        $_SESSION['msgErr'] = $msgErr;
+        $_SESSION['msgType'] = 'error';
+        $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./?path=pages/accueil";
+        header("Location:" . $url);
+        return;
+    }
     $emailExist = emailExist($email);
     if (!$emailExist){
         $msgErr = "Email ou mot de passe incorrect";
