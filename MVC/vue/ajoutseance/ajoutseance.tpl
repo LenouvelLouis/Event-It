@@ -12,7 +12,7 @@
     <a href="./?path=pages/ajoutseance">Ajout de séance</a>
 </div>
 
-
+<form action="./?path=seance/ajoutSeance" method="post">
     <div class="container_ajout_sceance">
 
         <div class="container_sceance_gauche">
@@ -51,7 +51,7 @@
             <div>
                 <label> Heure de début </label>
                 <br>
-                <input type="time" id="heure_debut" </input>
+                <input name="heure" type="time" id="heure_debut" </input>
             </div>
 
             <div class ="type_film">
@@ -75,10 +75,10 @@
                 <li>Heure de début : </li>
             </ul>
 
-            <button type="button" id= "button">Ajout de séance</button>
+            <button type="submit" id= "button">Ajout de séance</button>
         </div>
     </div>
-
+</form>
 
 <?php require("./vue/footer/footer.tpl"); ?> 
 </body>

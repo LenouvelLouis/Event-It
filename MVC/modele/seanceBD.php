@@ -3,7 +3,7 @@
 function get_film()
 {
     require('./modele/connectSQL.php');
-    $sql = "SELECT id, titre FROM `film`";
+    $sql = "SELECT id, titre, image FROM `film`";
     try {
         $commande = $pdo->prepare($sql);
         $commande->execute();
@@ -46,24 +46,21 @@ function get_salle()
 
 }
 
-function ajout_seance($cinema,$film,$salle,$affichage,$heure)
-{
+function ajout_seance($iDcinema,$iDfilm,$iDsalle,$typeFilm,$heure){
     require('./modele/connectSQL.php');
-    $sql="Insert into `seance` (horairedébut,id_cinéma,id_film,id_salle,type_affichage) values (:heure,:cinema,:film,:salle,:affichage)";
+    $sql = "INSERT INTO `seance` (`id_cinéma`, `id_film`, `id_salle`, `type_affichage`, `horairedébut`) VALUES (:id_cinema, :id_film, :id_salle, :type_affichage, :horairedebut)";
     try {
         $commande = $pdo->prepare($sql);
-        $commande->bindParam(':heure', $heure);
-        $commande->bindParam(':cinema', $cinema);
-        $commande->bindParam(':film', $film);
-        $commande->bindParam(':salle', $salle);
-        $commande->bindParam(':affichage', $affichage);
+        $commande->bindParam(':id_cinema', $iDcinema);
+        $commande->bindParam(':id_film', $iDfilm);
+        $commande->bindParam(':id_salle', $iDsalle);
+        $commande->bindParam(':type_affichage', $typeFilm);
+        $commande->bindParam(':horairedebut', $heure);
         $commande->execute();
-    }
-    catch (PDOException $e) {
+    } catch (PDOException $e) {
         echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
         die();
     }
-
 }
 
 ?>

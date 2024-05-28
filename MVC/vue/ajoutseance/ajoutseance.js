@@ -3,14 +3,7 @@ $().ready(init);
 let film=[];
 let cinema=[];
 let salle=[];
-let type_cine;
-
-let id_cinema;
-let id_film;
-let id_salle;
-let type_affichage;
-let heure_debut;
-let cine_interieur;
+let type_affichage = '';
 
 const list_film = document.getElementById("film");
 const list_cinema = document.getElementById("cinema");
@@ -64,71 +57,53 @@ function info_seance(){
 
     for(var i = 0; i < film.length; i++) {
         var option = document.createElement('option');
-        option.text = film[i].titre;
+        option.text = film[i].titre.charAt(0).toUpperCase() + film[i].titre.slice(1);
+        option.value=JSON.stringify(film[i]);
         list_film.appendChild(option);
     }
 
     for(var i = 0; i < cinema.length; i++) {
         var option = document.createElement('option');
         option.text = cinema[i].nom;
+        option.value=JSON.stringify(cinema[i]);
         list_cinema.appendChild(option);
     }
-
+}
     list_cinema.onchange = function(){
-
-        element_list[1].textContent = "Cinéma : "+list_cinema.value;
-
-        for(var i = 0; i < cinema.length; i++){
-            if (cinema[i].nom == list_cinema.value)
-            {
-                id_cinema = cinema[i].id;
+        const selectedOptionText = list_cinema.options[list_cinema.selectedIndex].text;
+        element_list[1].textContent = "Cinéma : " + selectedOptionText;
+        const cinema = JSON.parse(list_cinema.value);
+        list_salle.innerHTML = '';
+        if(cinema.type_cine == 1)
+        {
+            affichage_salle.style.display = "block";
+            for(var i = 0; i < salle.length; i++) {
+                if (salle[i].id_cinéma == cinema.id) {
+                    var option = document.createElement('option');
+                    option.text = salle[i].nom;
+                    option.value = JSON.stringify(salle[i]);
+                    list_salle.appendChild(option);
+                    
+                }
             }
         }
-
-        for(var i = 0; i < cinema.length; i++){
-            if(list_cinema.value == cinema[i].nom)
-            {
-                if(cinema[i].type_cine == 1)
-                {
-                    affichage_salle.style.display = "block";
-                    list_salle.options.length=0;
-                    cine_interieur = 1;
-                    for(let j=0;j<salle.length;j++){
-                        if(salle[j].id_cinéma==cinema[i].id){
-                            var option = document.createElement('option');
-                            option.text = salle[j].nom;
-                            list_salle.appendChild(option);
-                        }
-                    }
-                }
-                else{
-                    affichage_salle.style.display = "none";
-                    element_list[2].textContent = "Salle : -";
-                    cine_interieur = 0;
-
-                    for(var i = 0; i < cinema.length; i++){
-
-                        if(cinema[i].nom == list_cinema.value)
-                        {
-                            for(var j = 0; j < salle.length; j++){
-                                if (salle[j].id_cinéma == cinema[i].id && salle[j].nom == "Salle 01")
-                                {
-                                    id_salle = salle[j].id;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        else{
+            affichage_salle.style.display = "none";
+            element_list[2].textContent = "Salle : -";
         }
     }
 
-}
-
+/**
+ * Fonction qui permet de récupérer le film sélectionné
+ */
 list_film.onchange = function(){
-
-    affiche_film.src="./vue/img/Nouveautés/" +list_film.value+ ".png";
-    element_list[0].textContent = "Film : "+list_film.value;
+    const selectedFilmOption= list_film.options[list_film.selectedIndex];
+    if(selectedFilmOption.text == 'Choisir un film'){
+        return;
+    }
+    const selectedFilm = JSON.parse(selectedFilmOption.value);
+    affiche_film.src = "./vue/img/films/" + selectedFilm.image;
+    element_list[0].textContent = "Film : " + selectedFilm.titre.charAt(0).toUpperCase() + selectedFilm.titre.slice(1);
 
     for(var i = 0; i < film.length; i++){
         if (film[i].titre == list_film.value)
@@ -140,8 +115,8 @@ list_film.onchange = function(){
 }
 
 list_salle.onchange = function(){
-
-    element_list[2].textContent = "Salle : "+list_salle.value;
+    const selectedOptionText = list_salle.options[list_salle.selectedIndex].text;
+    element_list[2].textContent = "Salle : "+selectedOptionText;
 
     for(var i = 0; i < cinema.length; i++){
 
@@ -165,6 +140,7 @@ heure.onchange = function(){
 chek_nouv.addEventListener('change', function() {
     if (this.checked) {
         type_affichage = 'nouveautes';
+        chek_affiche.value = 0;
         chek_affiche.disabled = true;
     }
     else{
@@ -176,48 +152,8 @@ chek_affiche.addEventListener('change', function() {
     if (this.checked) {
         type_affichage = 'affiche';
         chek_nouv.disabled = true;
+        chek_nouv.value = 0;
     }else{
         chek_nouv.disabled = false;
     }
-});
-
-
-boutton.addEventListener('click', function() {
-
-
-    if(cine_interieur == 1)
-    {
-        if(list_cinema.value == "Choisir un cinéma" || list_film.value == "Choisir un film" || list_salle.value=="" || heure.value=="" || (chek_affiche.checked==0 && chek_nouv.checked==0))
-        {
-            alert("test");
-        }
-        else{
-            $.ajax({
-                url: './?path=seance/ajoutSeance',
-                async: false,
-                method: 'POST',
-                data : {cinema:id_cinema, film:id_film, salle:id_salle, affichage:type_affichage, heure:heure_debut }
-            });
-        }
-
-    }else{
-
-        if(list_cinema.value == "Choisir un cinéma" || list_film.value == "Choisir un film" || heure.value=="" || (chek_affiche.checked==0 && chek_nouv.checked==0))
-        {
-            console.log("Non");
-        }
-        else{
-            console.log("Ok");
-
-            $.ajax({
-                url: './?path=seance/ajoutSeance',
-                async: false,
-                method: 'POST',
-                data : {cinema:id_cinema, film:id_film, salle:id_salle, affichage:type_affichage, heure:heure_debut }
-            });
-        }
-
-    }
-
-
 });
