@@ -26,23 +26,21 @@
 
                 <div class="case_menu_deroulant">
                 <div class="espace_bouton">
-                    <select class="menu_deroulant_statseance" name="cinema-sonore" id="quel-cinema-sonore" onchange="updateSonCine()">
-                        <option value="cinema-global-1">Tous les cinémas</option>
+                    <select class="menu_deroulant_statseance" name="cinema-sonore" id="quel_cinema_sonore" onchange="updateSonCine()">
                         <option value="cinema-son-1">Cinéma 1</option>
                         <option value="cinema-son-2">Cinéma 2</option>
                         <option value="cinema-son-3">Cinéma 3</option>
                     </select>
                 </div>
                 <div class="espace_bouton">
-                    <select class="menu_deroulant_statseance" name="seance-sonore" id="quel-seance-sonore" onchange="updateSonSeance()">
-                        <option value="seance-global-1">Toutes les séances</option>
+                    <select class="menu_deroulant_statseance" name="seance-sonore" id="quel_seance_sonore" onchange="updateSonSeance()">
                         <option value="seance-son-1">Séance 1</option>
                         <option value="seance-son-2">Séance 2</option>
                         <option value="seance-son-3">Séance 3</option>
                     </select>
                 </div>
                 <div class="espace_bouton">
-                    <select class="menu_deroulant_statseance" name="capteur-sonore" id="quel-capteur-sonore" onchange="updateSonGraph()">
+                    <select class="menu_deroulant_statseance" name="capteur-sonore" id="quel_capteur_sonore" onchange="updateSonGraph()">
                         <option value="bouton-global-1">Tous les capteurs</option>
                         <option value="bouton-son-1">Capteur sonore 1</option>
                         <option value="bouton-son-2">Capteur sonore 2</option>
@@ -66,27 +64,25 @@
 
                 <div class="case_menu_deroulant">
                 <div class="espace_bouton">
-                    <select class="menu_deroulant_statseance" name="cinema-temp" id="quel-cinema-temp" onchange="updateTempCine()">
-                        <option value="cinema-global-2">Tous les cinémas</option>
+                    <select class="menu_deroulant_statseance" name="cinema-temp" id="quel_cinema_temp" onchange="updateTempCine()">
                         <option value="cinema-temp-1">Cinéma 1</option>
                         <option value="cinema-temp-2">Cinéma 2</option>
                         <option value="cinema-temp-3">Cinéma 3</option>
                     </select>
                 </div>
                 <div class="espace_bouton">
-                    <select class="menu_deroulant_statseance" name="seance-temp" id="quel-seance-temp" onchange="updateTempSeance()">
-                        <option value="seance-global-2">Toutes les séances</option>
+                    <select class="menu_deroulant_statseance" name="seance-temp" id="quel_seance_temp" onchange="updateTempSeance()">
                         <option value="seance-temp-1">Séance 1</option>
                         <option value="seance-temp-2">Séance 2</option>
                         <option value="seance-temp-3">Séance 3</option>
                     </select>
                 </div>
                 <div class="espace_bouton">
-                    <select class="menu_deroulant_statseance" name="capteur-temp" id="quel-capteur-temp" onchange="updateTempGraph()">
-                        <option onclick="GlobalTemp"() value="bouton-global-2">Tous les capteurs</option>
-                        <option onclick="Temp1()" value="bouton-temp-1">Capteur température 1</option>
-                        <option onclick="Temp2()" value="bouton-temp-2">Capteur température 2</option>
-                        <option onclick="Temp3()" value="bouton-temp-3">Capteur température 3</option>
+                    <select class="menu_deroulant_statseance" name="capteur-temp" id="quel_capteur_temp" onchange="updateTempGraph()">
+                        <option value="bouton-global-2">Tous les capteurs</option>
+                        <option value="bouton-temp-1">Capteur température 1</option>
+                        <option value="bouton-temp-2">Capteur température 2</option>
+                        <option value="bouton-temp-3">Capteur température 3</option>
                     </select>
                 </div>
                 </div>
