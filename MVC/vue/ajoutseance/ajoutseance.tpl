@@ -33,7 +33,7 @@
             </div>
 
             <div>
-                <label> Sélection du cinéma </label>
+                <label for="cinema"> Sélection du cinéma </label>
                 <br>
                 <select name="cinema" id="cinema">
                     <option value="">Choisir un cinéma</option>      
@@ -41,7 +41,7 @@
             </div>
 
             <div id="affichage_salle">
-                <label> Sélection de la salle </label>
+                <label for="salle" > Sélection de la salle </label>
                 <br>
                 <select name="salle" id="salle">
                     <option value="">Choisir une salle</option>      
@@ -49,7 +49,7 @@
             </div>
 
             <div>
-                <label> Heure de début </label>
+                <label for="heure_debut" > Heure de début </label>
                 <br>
                 <input name="heure" type="time" id="heure_debut" </input>
             </div>

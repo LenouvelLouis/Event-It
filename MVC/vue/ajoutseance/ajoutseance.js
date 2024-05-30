@@ -55,15 +55,15 @@ function info_seance(){
 
     affichage_salle.style.display = "none";
 
-    for(var i = 0; i < film.length; i++) {
-        var option = document.createElement('option');
+    for(let i = 0; i < film.length; i++) {
+        const option = document.createElement('option');
         option.text = film[i].titre.charAt(0).toUpperCase() + film[i].titre.slice(1);
         option.value=JSON.stringify(film[i]);
         list_film.appendChild(option);
     }
 
-    for(var i = 0; i < cinema.length; i++) {
-        var option = document.createElement('option');
+    for(let i = 0; i < cinema.length; i++) {
+        const option = document.createElement('option');
         option.text = cinema[i].nom;
         option.value=JSON.stringify(cinema[i]);
         list_cinema.appendChild(option);
@@ -77,9 +77,9 @@ function info_seance(){
         if(cinema.type_cine == 1)
         {
             affichage_salle.style.display = "block";
-            for(var i = 0; i < salle.length; i++) {
+            for(let i = 0; i < salle.length; i++) {
                 if (salle[i].id_cinéma == cinema.id) {
-                    var option = document.createElement('option');
+                    const option = document.createElement('option');
                     option.text = salle[i].nom;
                     option.value = JSON.stringify(salle[i]);
                     list_salle.appendChild(option);
@@ -90,6 +90,17 @@ function info_seance(){
         else{
             affichage_salle.style.display = "none";
             element_list[2].textContent = "Salle : -";
+            let salleCine;
+            for(let i = 0; i < salle.length; i++) {
+                if (salle[i].id_cinéma == cinema.id) {
+                    salleCine=salleCine=salle[i];
+                }
+            }
+            const option = document.createElement('option');
+            option.text = salleCine.nom;
+            option.value = JSON.stringify(salleCine);
+            option.selected = true;
+            list_salle.appendChild(option);
         }
     }
 
@@ -98,15 +109,15 @@ function info_seance(){
  */
 list_film.onchange = function(){
     const selectedFilmOption= list_film.options[list_film.selectedIndex];
-    if(selectedFilmOption.text == 'Choisir un film'){
+    if(selectedFilmOption.text === 'Choisir un film'){
         return;
     }
     const selectedFilm = JSON.parse(selectedFilmOption.value);
     affiche_film.src = "./vue/img/films/" + selectedFilm.image;
     element_list[0].textContent = "Film : " + selectedFilm.titre.charAt(0).toUpperCase() + selectedFilm.titre.slice(1);
 
-    for(var i = 0; i < film.length; i++){
-        if (film[i].titre == list_film.value)
+    for(let i = 0; i < film.length; i++){
+        if (film[i].titre === list_film.value)
         {
             id_film = film[i].id;
         }
@@ -114,16 +125,18 @@ list_film.onchange = function(){
     
 }
 
+/**
+ * Fonction qui permet de récupérer la salle sélectionnée
+ */
 list_salle.onchange = function(){
     const selectedOptionText = list_salle.options[list_salle.selectedIndex].text;
     element_list[2].textContent = "Salle : "+selectedOptionText;
 
-    for(var i = 0; i < cinema.length; i++){
-
-        if(cinema[i].nom == list_cinema.value)
+    for(let i = 0; i < cinema.length; i++){
+        if(cinema[i].nom === list_cinema.value)
         {
-            for(var j = 0; j < salle.length; j++){
-                if (salle[j].id_cinéma == cinema[i].id && salle[j].nom == list_salle.value)
+            for(let j = 0; j < salle.length; j++){
+                if (salle[j].id_cinéma === cinema[i].id && salle[j].nom === list_salle.value)
                 {
                     id_salle = salle[j].id;
                 }
