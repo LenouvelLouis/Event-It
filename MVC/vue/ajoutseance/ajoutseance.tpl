@@ -25,7 +25,7 @@
         <div class="container_sceance_millieu">
 
             <div>
-                <label> Sélection du film </label>
+                <label for="film"> Sélection du film </label>
                 <br>
                 <select name="film" id="film">
                     <option value="">Choisir un film</option>      
@@ -53,7 +53,11 @@
                 <br>
                 <input name="heure" type="time" id="heure_debut" </input>
             </div>
-
+            <div>
+                <label for="date"> Date </label>
+                <br>
+                <input name="date" type="date" id="date" </input>
+            </div>
             <div class ="type_film">
                 <input type="checkbox" id="chek_affiche"  name="chek_affiche" class="ckeck_box">
                 <label for="chek_affiche">A l'affiche</label>
