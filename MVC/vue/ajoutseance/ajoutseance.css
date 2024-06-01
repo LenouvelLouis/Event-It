@@ -18,6 +18,16 @@
     justify-content: center;
     align-items: center;
 }
+
+.icon{
+    margin-top: 20px;
+    font-size: 2rem;
+    color: var(--green-blue);
+    display: none
+}
+.icon:hover{
+    color: var(--black-blue);
+}
   
 .image-container img {
     width: 100%; /* L'image prend toute la largeur du conteneur */

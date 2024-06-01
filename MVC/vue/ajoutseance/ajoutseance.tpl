@@ -9,10 +9,10 @@
 <?php require("./vue/navbar/nav.tpl"); ?>
 <div class="barre">
     <a href="./?path=pages/accueil">Accueil</a>/
-    <a href="./?path=pages/ajoutseance">Ajout de séance</a>
+    <a id="link" href="./?path=pages/ajoutseance">Ajout de séance</a>
 </div>
 
-<form action="./?path=seance/ajoutSeance" method="post">
+<form id="form" action="./?path=seance/ajoutSeance" method="post">
     <div class="container_ajout_sceance">
 
         <div class="container_sceance_gauche">
@@ -80,6 +80,10 @@
             </ul>
 
             <button type="submit" id= "button">Ajout de séance</button>
+            <a class="icon modif" href="" ><i class="fa-solid fa-gear "></i><a>
+                    <a class="icon delete" href="" ><i class="fa-solid fa-trash"></i><a>
+                            <a class="icon delete" href="" ><i class="fa-solid fa-trash"></i><a>
+                                    <a class="icon cancel" href=""  ><i class="fa-solid fa-ban"></i><a>
         </div>
     </div>
 </form>
