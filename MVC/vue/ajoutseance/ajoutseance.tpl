@@ -9,10 +9,10 @@
 <?php require("./vue/navbar/nav.tpl"); ?>
 <div class="barre">
     <a href="./?path=pages/accueil">Accueil</a>/
-    <a href="./?path=pages/ajoutseance">Ajout de séance</a>
+    <a id="link" href="./?path=pages/ajoutseance">Ajout de séance</a>
 </div>
 
-<form action="./?path=seance/ajoutSeance" method="post">
+<form id="form" action="./?path=seance/ajoutSeance" method="post">
     <div class="container_ajout_sceance">
 
         <div class="container_sceance_gauche">
@@ -25,7 +25,7 @@
         <div class="container_sceance_millieu">
 
             <div>
-                <label> Sélection du film </label>
+                <label for="film"> Sélection du film </label>
                 <br>
                 <select name="film" id="film">
                     <option value="">Choisir un film</option>      
@@ -33,7 +33,7 @@
             </div>
 
             <div>
-                <label> Sélection du cinéma </label>
+                <label for="cinema"> Sélection du cinéma </label>
                 <br>
                 <select name="cinema" id="cinema">
                     <option value="">Choisir un cinéma</option>      
@@ -41,7 +41,7 @@
             </div>
 
             <div id="affichage_salle">
-                <label> Sélection de la salle </label>
+                <label for="salle" > Sélection de la salle </label>
                 <br>
                 <select name="salle" id="salle">
                     <option value="">Choisir une salle</option>      
@@ -49,11 +49,15 @@
             </div>
 
             <div>
-                <label> Heure de début </label>
+                <label for="heure_debut" > Heure de début </label>
                 <br>
                 <input name="heure" type="time" id="heure_debut" </input>
             </div>
-
+            <div>
+                <label for="date"> Date </label>
+                <br>
+                <input name="date" type="date" id="date" </input>
+            </div>
             <div class ="type_film">
                 <input type="checkbox" id="chek_affiche"  name="chek_affiche" class="ckeck_box">
                 <label for="chek_affiche">A l'affiche</label>
@@ -76,6 +80,10 @@
             </ul>
 
             <button type="submit" id= "button">Ajout de séance</button>
+            <a class="icon modif" href="" ><i class="fa-solid fa-gear "></i><a>
+                    <a class="icon delete" href="" ><i class="fa-solid fa-trash"></i><a>
+                            <a class="icon delete" href="" ><i class="fa-solid fa-trash"></i><a>
+                                    <a class="icon cancel" href=""  ><i class="fa-solid fa-ban"></i><a>
         </div>
     </div>
 </form>
