@@ -84,6 +84,7 @@
                     <a class="icon delete" href="" ><i class="fa-solid fa-trash"></i><a>
                             <a class="icon delete" href="" ><i class="fa-solid fa-trash"></i><a>
                                     <a class="icon cancel" href=""  ><i class="fa-solid fa-ban"></i><a>
+                                            <a class="icon stats" href=""  ><i class="fa-solid fa-chart-simple"></i><a>
         </div>
     </div>
 </form>

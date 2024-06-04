@@ -4,7 +4,7 @@ let film=[];
 let cinema=[];
 let salle=[];
 let type_affichage = '';
-
+let isUserAdmin;
 const list_film = document.getElementById("film");
 const list_cinema = document.getElementById("cinema");
 const list_salle = document.getElementById("salle");
@@ -29,8 +29,7 @@ function init() {
     getInfo();
     if (currentUrl.includes('voirseance')) {
         pageVoireSeance();
-        link.href = "./?path=pages/voirseance&id="+id;
-        link.innerHTML = "Informations de la séance";
+
     }
     if(currentUrl.includes('editseance')){
         pageEditSeance();
@@ -81,16 +80,23 @@ function pageAjoutFilm(){
     info_seance();
 }
 function pageVoireSeance() {
+    if (isUserAdmin) {
+        const editlinks = document.querySelector('.modif');
+        editlinks.href = './?path=pages/editseance&id='+id;
+        editlinks.style.display = 'block';
+        const iconDelete = document.querySelector('.delete');
+        iconDelete.href = './?path=seance/deleteSeance&id='+id;
+        iconDelete.style.display = 'block';
+        const iconstats = document.querySelector('.stats');
+        iconstats.href = './?path=pages/statseance&id='+id;
+        iconstats.style.display = 'block';
+    }
+    link.href = "./?path=pages/voirseance&id="+id;
+    link.innerHTML = "Informations de la séance";
     list_salle.innerHTML = '';
     list_film.innerHTML = '';
     list_cinema.innerHTML = '';
     getInfoSeance();
-    const editlinks = document.querySelector('.modif');
-    editlinks.href = './?path=pages/editseance&id='+id;
-    editlinks.style.display = 'block';
-    const iconDelete = document.querySelector('.delete');
-    iconDelete.href = './?path=seance/deleteSeance&id='+id;
-    iconDelete.style.display = 'block';
     disableForm();
 }
 

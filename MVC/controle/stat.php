@@ -1,11 +1,22 @@
 <?php
+/**
+ * Get the statistics of a session
+ * @return void
+ */
 function getStatSeance(){
+    require './controle/utilisateur.php';
+    closedNotifier();
     $id = $_GET['id'] ?? null;
     require('./modele/statBD.php');
     $stattemperature = getStatSeanceTemperature($id);
     $statson = getStatSeanceSon($id);
     if($stattemperature == null || $statson == null){
-        header("Location:./?path=pages/accueil");
+        $msgErr = "Aucune statistique pour cette séance";
+        $_SESSION['msgErr'] = $msgErr;
+        $_SESSION['msgType'] = 'error';
+        $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./?path=pages/accueil";
+        header("Location:" . $url);
+        return;
     }
     $valeurs = array_column($stattemperature, 'valeur');
     $valeurs = array_map('floatval', $valeurs);
@@ -26,6 +37,12 @@ function getStatSeance(){
     $stat = array('temperature' => $stattemperature, 'son' => $statson);
     echo json_encode($stat);
 }
+
+/**
+ * Calculate the median of an array
+ * @param $array
+ * @return float|int|mixed
+ */
 function calculateMedian($array) {
     sort($array);
     $count = count($array);
@@ -40,6 +57,11 @@ function calculateMedian($array) {
     return $median;
 }
 
+/**
+ * Calculate the mean of an array
+ * @param $array
+ * @return float|int
+ */
 function calculateMean($array) {
     $count = count($array);
     $sum = array_sum($array);
@@ -47,6 +69,11 @@ function calculateMean($array) {
     return $mean;
 }
 
+/**
+ * Calculate the mode of an array
+ * @param $array
+ * @return float
+ */
 function calculateMode($array) {
     // Convert float values to strings
     $array = array_map('strval', $array);
