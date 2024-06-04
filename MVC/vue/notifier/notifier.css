@@ -1,0 +1,39 @@
+.notification {
+    position: fixed;
+    right: 0;
+    top: 10%;
+    transform: translateX(100%);
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 9999;
+    width: 300px;
+    cursor: pointer;
+}
+
+.notification.show {
+    transform: translateX(0);
+    display: block;
+}
+.align-notif{
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+#notification-message {
+    font-size: 1em;
+    align-items: center;
+    margin: 0;
+    text-decoration: none;
+}
+#notification-message a:hover, #notification-message a:visited, #notification-message a:link, #notification-message a:active {
+    text-decoration: none;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}

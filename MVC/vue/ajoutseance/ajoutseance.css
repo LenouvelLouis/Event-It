@@ -1,0 +1,92 @@
+.container_ajout_sceance {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.container_sceance_gauche{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.image-container {
+    width: 260px; /* ou une largeur fixe, par exemple 500px */
+    height: 400px; /* Hauteur fixe pour le conteneur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    margin-top: 20px;
+    font-size: 2rem;
+    color: var(--green-blue);
+    display: none
+}
+.icon:hover{
+    color: var(--black-blue);
+}
+  
+.image-container img {
+    width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: 100%; /* L'image prend toute la hauteur du conteneur */
+}
+
+.container_sceance_millieu {
+    flex-direction: column;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.container_sceance_millieu select{
+    margin-bottom: 20px;
+}
+
+.container_sceance_millieu input{
+    margin-bottom: 20px;
+}
+
+.container_sceance_droit button{
+
+    margin-top: 50px;
+    background-color: var(--black-blue);
+    color:  var(--green-blue);
+    padding: 12px 40px;
+    border-radius: 15px;
+}
+
+.ckeck_box{
+    display: block !important;
+    margin-bottom: 6px !important;
+    margin-right: 6px !important;
+}
+
+.type_film{
+
+    display: flex;
+}
+
+@media (max-width: 900px) {
+
+    .container_ajout_sceance
+    {
+        flex-direction: column;
+    }
+
+    .container_sceance_droit
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .container_sceance_droit button
+    {
+        margin-bottom: 20px;
+    }
+    
+}

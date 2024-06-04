@@ -36,15 +36,13 @@
     height: auto;
     max-width: 200px; /* Ajustez la taille maximale de l'image selon vos besoins */
 }
-.droite button{
-    margin-top: 70px;
-}
 .droite button {
     color: var(--green-blue);
     background-color: var(--black-blue);
     border-radius: 10px;
     width: 200px ;
     height: 40px ;
+    margin-top: 70px;
 }
 
 .droite textarea{
@@ -64,28 +62,6 @@
     border-radius: 10px;
     border: none;
     background-color: #d9d9d9;
-}
-
-.droite #salleCinema input{
-    margin: 10px;
-}
-.barre {
-    background-color: var(--green-blue);
-    display: flex;
-    padding: 10px;
-    text-align: left;
-    color: var(--grey);
-}
-
-.barre a {
-    text-decoration: none;
-    color: var(--grey);
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.barre a:hover {
-    color: var(--grey);
 }
 
 .highlight {

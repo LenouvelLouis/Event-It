@@ -9,16 +9,16 @@
        <?php require("./vue/navbar/nav.tpl"); ?>
        <div class="slider">
               <div class="slide">
-                     <img src="https://via.placeholder.com/2048x700" alt="Image 1">
-                     <h3>Titre de l'image 1</h3>
+                     <img src="./vue/img/carousselsiegecine.jpg" alt="Image 1">
+                     <h3>Siège Cinématographique: Voyage au Coeur des Films</h3>
               </div>
               <div class="slide">
-                     <img src="https://via.placeholder.com/2048x700" alt="Image 2">
-                     <h3>Titre de l'image 2</h3>
+                     <img src="./vue/img/carousselcinema.jpg" alt="Image 2">
+                     <h3>L'Univers Cinématographique: Exploration en Profondeur</h3>
               </div>
               <div class="slide">
-                     <img src="https://via.placeholder.com/2048x700" alt="Image 3">
-                     <h3>Titre de l'image 3</h3>
+                     <img src="./vue/img/carousselcinedrivein.jpg" alt="Image 3">
+                     <h3>Drive-in Cinématographique: Sous les Étoiles du Septième Art</h3>
               </div>
               <button class="prev" onclick="prevSlide()"><i class="fa-solid fa-angle-left"></i></button>
               <button class="next" onclick="nextSlide()"><i class="fa-solid fa-angle-right"></i></button>
@@ -42,7 +42,7 @@
        </div>
        <div class="cine-info grey">
               <div class="cine-info-text">
-                     <h1>Cinéma Drive-in :</h1>
+                     <h1>Cinéma Classique :</h1>
                      <p>
                             Le cinéma classique invite à redécouvrir les chefs-d'œuvre du septième art dans une salle au charme nostalgique. C'est une plongée dans le patrimoine cinématographique, permettant de vivre ou revivre les moments iconiques qui ont marqué l'histoire du cinéma.                     </p>
               </div>

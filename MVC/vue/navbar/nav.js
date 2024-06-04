@@ -7,10 +7,20 @@ function closeModal() {
     document.getElementById('myModal').style.display = 'none';
 }
 function openNavTel() {
-    if(document.getElementById('navTel').style.display === 'block'){
-        document.getElementById('navTel').style.display = 'none';
+    const nav = document.getElementById('navPc');
+    if(nav.style.display === 'block'){
+        nav.style.display = 'none';
+        if (document.querySelector(".prev")) {
+            document.querySelector(".prev").classList.add("hidden");
+            document.querySelector(".next").classList.add("hidden");
+        }
     }
     else {
-        document.getElementById('navTel').style.display = 'block';
+        nav.style.display = 'block';
+        if(document.querySelector(".prev")){
+            document.querySelector(".prev").classList.add("hidden");
+            document.querySelector(".next").classList.add("hidden");
+        }
+
     }
 }

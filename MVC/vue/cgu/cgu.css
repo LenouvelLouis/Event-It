@@ -1,0 +1,19 @@
+.Titre_secondaire_CGU {
+    color: #74777C;
+}
+
+.body-cgu{
+	display: block;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    max-width: 70%;
+    margin: 30px 15% 30px 15%;
+    min-width: auto;
+}
+
+.corps_CGU{
+    margin: 25px 0px 25px 0px;  
+}
