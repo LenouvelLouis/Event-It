@@ -92,6 +92,44 @@ function getSalt($email): string
 }
 
 /**
+ * Fonction de récupération de tous les utilisateurs
+ * @return void
+ */
+function getAllUsers(){
+    require('./modele/connectSQL.php');
+    $sql = "SELECT id,name,phone,email,status FROM `user`";
+    try{
+        $commande = $pdo->prepare($sql);
+        $commande->execute();
+        $res = $commande->fetchAll();
+        return $res;
+    } catch (PDOException $e) {
+        echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
+        die();
+    }
+}
+
+/**
+ * Fonction de suppression de l'utilisateur
+ * @param $id
+ * @return void
+ */
+function deleteUserBD($id){
+    require('./modele/connectSQL.php');
+    $sql = "DELETE FROM `user` WHERE id = :id";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':id', $id);
+        $commande->execute();
+    } catch (PDOException $e) {
+        echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
+        die();
+    }
+
+}
+
+
+/**
  * Fonction de récupération de l'utilisateur
  * @param $id
  * @return void

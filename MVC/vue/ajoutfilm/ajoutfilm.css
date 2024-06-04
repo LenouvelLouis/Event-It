@@ -18,6 +18,11 @@
     align-items: center;
 
 }
+
+#form-page{
+    margin-bottom: 100px;
+}
+
 #delete-img{
     display: none;
     font-size: 2rem;
@@ -36,7 +41,6 @@
     color: var(--black-blue);
 }
 .image-container {
-
   width: 260px; /* ou une largeur fixe, par exemple 500px */
   height: 400px; /* Hauteur fixe pour le conteneur */
   display: flex;
@@ -110,6 +114,59 @@
     border-radius: 10px;
     border: none;
     background-color:#D9D9D9;
+}
+.display_flex_sceance{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.seance-films{
+    display: none;
+}
+
+.film{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seance-card {
+    border-radius: 10px;
+    width: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin: 10px;
+}
+.seance {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.seance a{
+    text-decoration: none;
+    color: black;
+}
+
+.seance a:hover{
+    color: black;
+}
+
+.btn-ajoutseance{
+    text-align: center;
+}
+
+.plus {
+    font-size: 1.5rem;
+    color :var(--green-blue);
+}
+.plus:hover {
+    color :var(--green-blue);
 }
 
 @media (max-width: 900px) {

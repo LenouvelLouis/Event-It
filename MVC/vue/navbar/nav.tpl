@@ -21,7 +21,7 @@
         <li><a href="./?path=pages/contact">Contact</a></li>
         <?php
         if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire") ) {
-            echo("<li><a href='./?path=pages/ajoutfilm'><i class='fa-solid fa-plus'></i> Film</a></li>");
+            echo("<li><a href='./?path=pages/ajoutfilm'><i class='fa-solid fa-plus'></i> Film</a></li> <li><a href='./?path=pages/ajoutcinema'><i class='fa-solid fa-plus'></i> Cinema</a></li> <li><a href='./?path=pages/users'>Users</a></li>");
         }
         ?>
         <?php

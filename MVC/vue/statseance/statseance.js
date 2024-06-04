@@ -35,22 +35,23 @@ function getStatSeance() {
         async: false,
         dataType: "json",
         success: function (data) {
-            stat=data;
-            for (let key in data.son) {
-                if (data.son.hasOwnProperty(key) && !isNaN(key) && !idCapteur.includes(data.son[key].id_capteur)) {
-                    idCapteur.push(data.son[key].id_capteur);
+                stat=data;
+                for (let key in data.son) {
+                    if (data.son.hasOwnProperty(key) && !isNaN(key) && !idCapteur.includes(data.son[key].id_capteur)) {
+                        idCapteur.push(data.son[key].id_capteur);
+                    }
                 }
-            }
-            displayCapteur();
-            $('#moyenne').html(data.son.mean);
-            $('#mediane').html(data.son.median);
-            $('#mode').html(data.son.mode);
-            $('#moyenne2').html(data.temperature.mean);
-            $('#mediane2').html(data.temperature.median);
-            $('#mode2').html(data.temperature.mode);
+                displayCapteur();
+                $('#moyenne').html(data.son.mean);
+                $('#mediane').html(data.son.median);
+                $('#mode').html(data.son.mode);
+                $('#moyenne2').html(data.temperature.mean);
+                $('#mediane2').html(data.temperature.median);
+                $('#mode2').html(data.temperature.mode);
+
         },
         error: function (error) {
-            console.log(error);
+            window.location.href = "./?path=pages/accueil";
         }
     });
 }

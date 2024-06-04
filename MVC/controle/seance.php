@@ -14,7 +14,7 @@
         checkId($id);
      require_once('./modele/seanceBD.php');
         $seance =get_seance($id);
-        if($seance==null){
+        if(!$seance){
             $_SESSION['msgErr'] = "Aucune séance sélectionné";
             $_SESSION['msgType'] = "error";
             header('Location: ./?path=pages/ajoutseance');
@@ -92,7 +92,11 @@ if($date<date('Y-m-d')){
     header('Location: ./?path=pages/ajoutseance');
     return;
   }
-
+     if($nouveautes=='on'){
+         $typeFilm = "nouveautes";}
+     else{
+         $typeFilm = "affiche";
+     }
 
   if(checkFilmAlreadyInTime($film['id'],$heure,$salle['id'],$film['duree'],$date)){
     $_SESSION['msgErr'] = "Un film est déjà programmé à cette heure";
@@ -102,17 +106,13 @@ if($date<date('Y-m-d')){
   }
 
   require_once('./modele/seanceBD.php');
-  if(seanceAlreadyExist($cinema['id'],$film['id'],$salle['id'],$heure)){
+  if(seanceAlreadyExist($cinema['id'],$film['id'],$salle['id'],$heure,$date,$typeFilm)){
     $_SESSION['msgErr'] = "Cette séance existe déjà";
     $_SESSION['msgType'] = "error";
     header('Location: ./?path=pages/ajoutseance');
     return;
   }
-  if($nouveautes=='on'){
-    $typeFilm = "nouveautes";}
-    else{
-    $typeFilm = "affiche";
-  }
+
     require_once('./modele/seanceBD.php');
     ajout_seance($cinema['id'],$film['id'],$salle['id'],$typeFilm,$heure,$date);
   $_SESSION['msgAcc'] = "Votre séance a bien était crée";

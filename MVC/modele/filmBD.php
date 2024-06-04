@@ -74,6 +74,29 @@ function getFilm($id){
 }
 
 /**
+ * Fonction de récupération des informations d'un film
+ * @param $id
+ * @return mixed|void
+ */
+function getSeanceFilmBD($id){
+    require('./modele/connectSQL.php');
+    $sql = "SELECT seance.horairedébut, seance.id, seance.date, salle.nom as salle_nom, cinema.nom as cinema_nom 
+            FROM seance 
+            JOIN salle ON seance.id_salle = salle.id 
+            JOIN cinema ON salle.id_cinéma = cinema.id 
+            WHERE seance.id_film = :id";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->bindParam(':id', $id);
+        $commande->execute();
+        $result = $commande->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }catch (PDOException $e) {
+        echo utf8_encode("Echec de l'insert : " . $e->getMessage() . "\n");
+        die();
+    }
+}
+/**
  * Fonction de récupération du nom d'un film
  * @param $id
  * @return mixed|void

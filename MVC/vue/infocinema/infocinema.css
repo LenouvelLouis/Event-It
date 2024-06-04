@@ -92,16 +92,8 @@
     border-radius: 0px;
     padding: 6px;
 }
-.plus {
-    font-size: 1.5rem;
-    color :var(--green-blue);
-}
-.plus:hover {
-    color :var(--green-blue);
-}
-.btn-ajoutseance{
-    text-align: center;
-}
+
+
 
 @media (max-width: 1200px) {
 

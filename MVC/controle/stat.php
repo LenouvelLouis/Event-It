@@ -4,18 +4,19 @@
  * @return void
  */
 function getStatSeance(){
+    ob_start();
     require './controle/utilisateur.php';
     closedNotifier();
-    $id = $_GET['id'] ?? null;
+    $id = isset($_GET['id']) ? $_GET['id'] : null;
     require('./modele/statBD.php');
     $stattemperature = getStatSeanceTemperature($id);
     $statson = getStatSeanceSon($id);
-    if($stattemperature == null || $statson == null){
+    if(!$stattemperature[0] || !$statson[0] || $stattemperature[0]['id'] === null || $statson[0]['id'] === null){
         $msgErr = "Aucune statistique pour cette séance";
         $_SESSION['msgErr'] = $msgErr;
         $_SESSION['msgType'] = 'error';
-        $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./?path=pages/accueil";
-        header("Location:" . $url);
+        http_response_code(401);
+        echo json_encode(array('error' => $msgErr));
         return;
     }
     $valeurs = array_column($stattemperature, 'valeur');
@@ -35,7 +36,9 @@ function getStatSeance(){
     $statson['mean'] = $mean;
     $statson['mode'] = $mode;
     $stat = array('temperature' => $stattemperature, 'son' => $statson);
+    ob_end_flush();
     echo json_encode($stat);
+
 }
 
 /**
@@ -75,13 +78,9 @@ function calculateMean($array) {
  * @return float
  */
 function calculateMode($array) {
-    // Convert float values to strings
     $array = array_map('strval', $array);
-
     $values = array_count_values($array);
     $mode = array_search(max($values), $values);
-
-    // Convert the mode back to float before returning
     return floatval($mode);
 }
 
