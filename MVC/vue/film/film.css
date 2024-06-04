@@ -90,13 +90,42 @@
     font-size: 25px; /* Taille de l'icône */
     margin-left: -30px;
     transform: translateY(10%);
+    margin-bottom: 162px;
 }
 
-@media (max-width: 900px) {
-
-    .container_film_carrousel
-    {
-
-    }
-    
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
+  
+.dropdown-content {
+    display: flex; /* Ajoutez cette ligne */
+    flex-wrap: wrap; /* Ajoutez cette ligne si vous voulez que les éléments passent à la ligne suivante lorsque l'espace est insuffisant */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow-y: auto; /* Ajoutez cette ligne */
+    max-height: 200px;
+
+}
+  
+.dropdown-content div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content div img {
+    width: 100px; /* Ajustez cette valeur pour changer la taille de l'image */
+    height: auto; /* Conserve le ratio d'aspect de l'image */
+    justify-content: center;
+}
+
+.dropdown-content span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -6,18 +6,23 @@
  */
 
  function getFilm(){
-    require('./modele/seanceBD.php');
-    get_film();
+  require('./modele/seanceBD.php');
+  get_film();
  }
 
  function getCinema(){
-    require('./modele/seanceBD.php');
-    get_cinema();
+  require('./modele/seanceBD.php');
+  get_cinema();
  }
 
+ function getSeance(){
+  require('./modele/seanceBD.php');
+  get_seance();
+}
+
  function getSalle(){
-   require('./modele/seanceBD.php');
-   get_salle();
+  require('./modele/seanceBD.php');
+  get_salle();
  }
 
  function ajoutSeance(){

@@ -23,12 +23,16 @@
 
     </div>
 
-    <div class="container_recherche_film">
-        <textarea id="recherche" placeholder="Recherchez un film"></textarea>
+    <div class="container_recherche_film" id="container_recherche_film">
+        <textarea id="recherche" placeholder="Recherchez un film" oninput="showDropdown(this)"></textarea>
         <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="dropdown">
+            <div class="dropdown-content" id="resultats"></div>
+        </div>
     </div>
+    
 
-    <div class="container_film_nouveaux">
+    <div class="container_film_nouveaux" id="container_film_nouveaux">
 
         <label>NOUVEAUTÉS</label>
 
@@ -40,11 +44,10 @@
             </div> 
 
             <i class="fa-solid fa-caret-right" onclick="moveRight_nouveaux()"></i>
-
         </div>
     </div>
 
-    <div class="container_film_affiche">
+    <div class="container_film_affiche" id="container_film_affiche">
 
         <label>A L'AFFICHE</label>
 
