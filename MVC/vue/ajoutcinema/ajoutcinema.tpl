@@ -36,11 +36,25 @@
     <input type="text" id="nom_cinema" name="nom_cinema" placeholder="Entrez le nom du cinéma"><br>
     <label class="lieu_cinema" >Adresse du cinéma<span class = "highlight">*</span></label><br>
     <input type="text" id="lieu_cinema" name="lieu_cinema" placeholder="Entrez le lieu du cinéma">
+
   </div>
 
   <div class="droite">
+  <label>Type du cinéma</label><br>
+    <div class="checkbox_access">
+      <input type="checkbox" id="Indoor" class="block" name="Indoor" value="Indoor">
+      <label for="Indoor"> Indoor</label>
+    </div>
+    <div id="salleCinema" style="display: none;">
+      <label>Nombre de salles du cinéma intérieur </label>
+      <input type="number" id="nombreSalles">
+  </div>
+    <div class="checkbox_access">
+      <input type="checkbox" id="Outdoor" class="block" name="Outdoor" value="Outdoor">
+      <label for="Outdoor"> Outdoor</label>
+    </div>
+    <br>
     <label>Accessibilité</label><br>
-
     <div class="checkbox_access">
       <input type="checkbox" id="Handicapé" class="block" name="Handicapé" value="Handicapé">
       <label for="Handicapé"> Handicapé</label>
@@ -67,7 +81,7 @@
 </div>
 
 <?php require("./vue/footer/footer.tpl"); ?>
-
+<script src="./vue/ajoutcinema/ajoutcinema.js"></script>
 </body>
 
 </html>
