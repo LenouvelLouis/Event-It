@@ -35,6 +35,7 @@ function getStatSeance() {
         async: false,
         dataType: "json",
         success: function (data) {
+            console.log(data);
                 stat=data;
                 for (let key in data.son) {
                     if (data.son.hasOwnProperty(key) && !isNaN(key) && !idCapteur.includes(data.son[key].id_capteur)) {
