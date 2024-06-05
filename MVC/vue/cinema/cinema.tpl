@@ -25,9 +25,9 @@
 </div>
 
 <div class="cinema-card grey">
-    <a href="./?path=pages/infocinema"><img src="https://www.chemille-en-anjou.fr/medias/2022/02/Cinema-en-plein-air.jpg" alt="Nom du Deuxième Cinéma" width="300"></a>
+    <a href="./?path=pages/infocinema&id=6"><img src="https://www.chemille-en-anjou.fr/medias/2022/02/Cinema-en-plein-air.jpg" alt="Nom du Deuxième Cinéma" width="300"></a>
     <div class="cinema-info">
-        <a href="./?path=pages/infocinema"><h2>Nom Cinéma Cinéma Cinéma Cinéma Cinéma</h2></a>
+        <a href="./?path=pages/infocinema&id=6"><h2>Nom Cinéma Cinéma Cinéma Cinéma Cinéma</h2></a>
         <p>Nombre de films</p>
         <p>Adresse du Deuxième Cinéma</p>
         <div class="icons">
@@ -39,9 +39,9 @@
 </div>
 
 <div class="cinema-card">
-  <a href="./?path=pages/infocinema"><img src="https://www.chemille-en-anjou.fr/medias/2022/02/Cinema-en-plein-air.jpg" alt="Nom du Deuxième Cinéma" width="300"></a>
+  <a href="./?path=pages/infocinema&id=6"><img src="https://www.chemille-en-anjou.fr/medias/2022/02/Cinema-en-plein-air.jpg" alt="Nom du Deuxième Cinéma" width="300"></a>
     <div class="cinema-info">
-        <a href="./?path=pages/infocinema"><h2>Nom du Deuxième Cinéma</h2></a>
+        <a href="./?path=pages/infocinema&id=6"><h2>Nom du Deuxième Cinéma</h2></a>
         <p>Nombre de films</p>
         <p>Adresse du Deuxième Cinéma</p>
         <div class="icons">
@@ -53,9 +53,9 @@
 </div>
 
 <div class="cinema-card grey">
-  <a href="./?path=pages/infocinema"><img src="https://www.chemille-en-anjou.fr/medias/2022/02/Cinema-en-plein-air.jpg" alt="Nom du Deuxième Cinéma" width="300"></a>
+  <a href="./?path=pages/infocinema&id=6"><img src="https://www.chemille-en-anjou.fr/medias/2022/02/Cinema-en-plein-air.jpg" alt="Nom du Deuxième Cinéma" width="300"></a>
     <div class="cinema-info">
-        <a href="./?path=pages/infocinema"><h2>Nom du Deuxième Cinéma</h2></a>
+        <a href="./?path=pages/infocinema&id=6"><h2>Nom du Deuxième Cinéma</h2></a>
         <p>Nombre de films</p>
         <p>Adresse du Deuxième Cinéma</p>
         <div class="icons">
