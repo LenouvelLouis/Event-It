@@ -21,60 +21,72 @@
     <hr class="ligne-noire">
 </center>
 
-<div class="info">
+<form action="./?path=cinema/ajoutcinema" id="form-page" method="post" enctype="multipart/form-data">
 
-  <div class="gauche">
-    <center>
-    <label>Image du cinéma</label><br></center>
-      <div class="image-container">
-            <img src="./vue/img/infocineclassique.png" alt="Image du film">
+  <div class="info">
+
+    <div class="gauche">
+      <center><label>Image du cinéma<span class = "highlight">*</span></label><br></center>
+        <div class="image-container">
+            <img src="">
         </div>
-  </div>
-
-  <div class="milieu">
-    <label>Nom de cinéma<span class = "highlight">*</span></label><br>
-    <input type="text" id="nom_cinema" name="nom_cinema" placeholder="Entrez le nom du cinéma"><br>
-    <label class="lieu_cinema" >Adresse du cinéma<span class = "highlight">*</span></label><br>
-    <input type="text" id="lieu_cinema" name="lieu_cinema" placeholder="Entrez le lieu du cinéma">
-
-  </div>
-
-  <div class="droite">
-  <label>Type du cinéma</label><br>
-    <div class="checkbox_access">
-      <input type="checkbox" id="Indoor" class="block" name="Indoor" value="Indoor">
-      <label for="Indoor"> Indoor</label>
+        <span id="delete-img" onclick="deleteimg()"><i class="fa-solid fa-xmark"></i></span>
+        <div>
+          <input type="file" id="imageChoisi" name="image" accept="image/*" class="container_image_cinema_bp" onchange="ajoutimg(event)">
+        </div>
     </div>
-    <div id="salleCinema" style="display: none;">
-      <label>Nombre de salles du cinéma intérieur </label>
-      <input type="number" id="nombreSalles">
-  </div>
+
+    <div class="milieu">
+      <label>Nom du cinéma<span class = "highlight">*</span></label><br>
+      <input type="text" id="nom_cinema" name="nom_cinema" placeholder="Entrez le nom du cinéma" required><br>
+      <label class="lieu_cinema" >Adresse du cinéma<span class = "highlight">*</span></label>
+      <small>Format : numéro de rue, nom de rue, code postal, ville</small>
+      <br>
+      <input type="text" id="lieu_cinema" name="lieu_cinema" placeholder="Entrez l'adresse du cinéma" required></br>
+      <label class="lieu_cinema" >Numéros de téléphone<span class = "highlight">*</span></label><br>
+      <input type="tel" id="telephone_cinema" name="telephone_cinema" placeholder="Entrez le numéro de téléphone" required></br>
+      <label class="lieu_cinema" >Mail<span class = "highlight">*</span></label><br>
+      <input type="text" id="mail_cinema" name="mail_cinema" placeholder="Entrez le mail" required>
+    </div>
+
+    <div class="droite">
+      <label>Type du cinéma<span class = "highlight">*</span></label><br>
+      <div class="checkbox_access">
+        <input type="checkbox" id="Indoor" class="block" name="Indoor">
+        <label for="Indoor"> Indoor</label>
+      </div>
+      <div id="salleCinema" style="display: none;">
+        <input type="number" name = "nombreSalles" id="nombreSalles">
+        <label for = "nombreSalles">Nombre de salles </label></br>
+    </div>
     <div class="checkbox_access">
-      <input type="checkbox" id="Outdoor" class="block" name="Outdoor" value="Outdoor">
+      <input type="checkbox" id="Outdoor" class="block" name="Outdoor">
       <label for="Outdoor"> Outdoor</label>
     </div>
     <br>
-    <label>Accessibilité</label><br>
+    <label>Accessibilité<span class = "highlight">*</span></label><br>
     <div class="checkbox_access">
-      <input type="checkbox" id="Handicapé" class="block" name="Handicapé" value="Handicapé">
-      <label for="Handicapé"> Handicapé</label>
+      <input type="checkbox" id="Handicape" class="block" name="Handicape">
+      <label for="Handicape"> Handicapé</label>
     </div>
 
-    
+      
     <div class="checkbox_access">
-      <input type="checkbox" id="Sourd" class="block" name="Sourd" value="Sourd">
+      <input type="checkbox" id="Sourd" class="block" name="Sourd">
       <label for="Sourd"> Sourd</label>
     </div>
 
 
     <div class="checkbox_access">
-      <input type="checkbox" id="Malvoyant" class="block" name="Malvoyant" value="Malvoyant">
+      <input type="checkbox" id="Malvoyant" class="block" name="Malvoyant">
       <label for="Malvoyant"> Malvoyant</label>
     </div>
 
     <center>
-    <button>Ajouter cinéma</button>
+      <button type="submit">Ajouter cinéma</button>
     </center>
+
+    </form>
 
   </div>
   

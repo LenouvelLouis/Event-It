@@ -31,10 +31,20 @@
 .lieu_cinema{
     margin-top: 40px;
 }
-.gauche img {
-    width: 100%;
-    height: auto;
-    max-width: 200px; /* Ajustez la taille maximale de l'image selon vos besoins */
+
+.gauche{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_image_cinema_bp {
+    margin-top: 10px;
+    background-color: var(--black-blue); 
+    color: var(--green-blue); 
+    padding: 5px 5px; 
+    border-radius: 5px; 
+    font-size: 16px;
 }
 .droite button {
     color: var(--green-blue);
@@ -69,7 +79,7 @@
 }
 
 .image-container {
-    width: 260px; /* ou une largeur fixe, par exemple 500px */
+    width: 200px; /* ou une largeur fixe, par exemple 500px */
     height: 260px; /* Hauteur fixe pour le conteneur */
     display: flex;
     justify-content: center;
@@ -78,7 +88,7 @@
   }
   
   .image-container img {
-      width: 100%; /* L'image prend toute la largeur du conteneur */
+    width: 100%; /* L'image prend toute la largeur du conteneur */
     height: 100%; /* L'image prend toute la hauteur du conteneur */
     object-fit: cover;
   }
