@@ -84,5 +84,39 @@ function ajoutcinema(){
 
 }
 
+function getInfoCinema(){
+    $id = isset($_GET['id']) ? $_GET['id'] : '';
+    require './modele/cinemaBD.php';
+    if($id == ''){
+        $msgErr = "Cinéma introuvable";
+        $_SESSION['msgErr'] = $msgErr;
+        http_response_code(401);
+        echo json_encode(array('error' => $msgErr));
+        return;
+    }
+    $cinema = getCinema($id);
+    if(!$cinema){
+        $msgErr = "Cinéma introuvable";
+        $_SESSION['msgErr'] = $msgErr;
+        $_SESSION['msgType'] = 'error';
+        http_response_code(401);
+        echo json_encode(array('error' => $msgErr));
+        return;
+    }
+    /*$apiKey = 'AIzaSyCZWKhJ6oeb5R24igcHB0b3DDvwUwkHS9k';
+
+    $address = $cinema['adresse'];
+    $url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . urlencode($address) . '&key=' . $apiKey;
+    $data = json_decode(file_get_contents($url));
+    var_dump($data);
+    if ($data->status === 'OK') {
+        $placeId = $data->results[0]->place_id;
+        $cinema['google_maps_embed_url'] = 'https://www.google.com/maps/embed/v1/place?key=' . $apiKey . '&q=place_id:' . $placeId;
+    }*/
+
+    echo json_encode($cinema);
+
+}
+
 
 ?>
