@@ -1,9 +1,8 @@
 <?php
-function ajoutcinema()
-{
+function editseance(){
     if(!isset($_SESSION['id']) || $_SESSION['status'] != "admin"){
         header("Location: ./?path=pages/accueil");
     }
-    require("./vue/ajoutcinema/ajoutcinema.tpl");
+    require("./vue/ajoutseance/ajoutseance.tpl");
 }
 ?>

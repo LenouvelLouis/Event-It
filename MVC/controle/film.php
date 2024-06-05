@@ -156,9 +156,19 @@ function deleteFilm(){
     $_SESSION['msgType'] = 'success';
     $url ="./?path=pages/accueil";
     header("Location:" . $url);
-
 }
 
+/**
+ * Fonction de récupération des séances d'un film
+ * @return void
+ */
+function getSeanceFilm(){
+    $id = $_GET['id'];
+    checkId($id);
+    require './modele/filmBD.php';
+    $seance = getSeanceFilmBD($id);
+    echo json_encode($seance);
 
+}
 
 ?>

@@ -17,7 +17,7 @@
             <h1>Contacter Events-IT</h1>
         </div>
         <div class="containercontact">
-            <form action="#" method="POST">
+            <form action="./?path=contact/sendemailcontact" method="POST">
                 <div class="input-group">
                     <label for="name">Nom <span class="required-asterisk">*</span></label>
                     <input type="text" id="name" name="name" required>

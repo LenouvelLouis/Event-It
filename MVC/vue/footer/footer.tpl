@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="./vue/footer/footer.css">
+<div class="footer">
 <div class="links">
     <img src="./vue/img/eventIt.png" alt="eventIt">
     <div class="links-info">
@@ -16,4 +17,5 @@
 <div class="links-cgu">
     <p> Plan du site | <a href="./?path=pages/cgu" >Mentions légales</a> </p>
     <p>© Event-IT 2024 - Tous droits réservés | Réalisé par SoundWaves</p>
+</div>
 </div>

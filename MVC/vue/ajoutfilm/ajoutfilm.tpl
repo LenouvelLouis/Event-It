@@ -5,7 +5,7 @@
 <head>
     <link rel="stylesheet" href="./vue/ajoutfilm/ajoutfilm.css">
 </head>
-<body>
+<div>
 <?php require("./vue/navbar/nav.tpl"); ?>
 <div class="barre">
     <a href="./?path=pages/accueil">Accueil</a>/
@@ -53,7 +53,18 @@
     </div>
 </div>
 </form>
-<?php require("./vue/footer/footer.tpl"); ?> 
+<div class="seance-films">
+<center><h3>Listes des séances</h3></center>
+<?php if(isset($_SESSION['status']) && ($_SESSION['status'] == "admin" || $_SESSION['status'] == "gestionnaire") ) {
+            echo("<div class='btn-ajoutseance'><a class='plus' href='./?path=pages/ajoutseance'><i class='fa-solid fa-plus'></i> Ajouter une séance</a></div>");
+}
+?>
+<div class="display_flex_sceance">
+    <!-- Placeholder for the films and their sessions -->
+    <div id="films-container"></div>
+</div>
+</div>
+<?php require("./vue/footer/footer.tpl"); ?>
 </body>
 <script src="./vue/ajoutfilm/ajoutfilm.js"></script>
 </html>

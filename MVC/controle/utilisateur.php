@@ -10,6 +10,17 @@ function closedNotifier(){
 }
 
 /**
+ * Fonction de récupération des utilisateurs
+ * @return void
+ */
+function getUsers(){
+    require('./modele/utilisateurBD.php');
+    $users = getAllUsers();
+    echo json_encode($users);
+
+}
+
+/**
  * Fonction de récupération des informations de l'utilisateur
  * @return void
  */
@@ -27,6 +38,22 @@ function getInfoUser()
 function isAdmin(){
     echo $_SESSION['status'] === 'admin';
 
+}
+
+/**
+ * Fonction de suppression de l'utilisateur
+ * @return void
+ */
+function deleteUser(){
+    $id = isset($_GET['id'])?$_GET['id']:'';
+    require('./modele/utilisateurBD.php');
+    deleteUserBD($id);
+    if($id == $_SESSION['id']){
+        require './controle/logout.php';
+        deconnexion();
+        header('Location: ./?path=pages/accueil');
+    }
+    header('Location: ./?path=pages/users');
 }
 
 /**

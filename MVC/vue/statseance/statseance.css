@@ -12,7 +12,6 @@
   font-size: 20px;
   color: #2C94A4;
 }
-
 h2 {
   text-align: center;
 }
@@ -43,6 +42,14 @@ p{
   width: 40%;
 }
 
+.case_menu_deroulant{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
 .espace_bouton{
   display: flex;
   flex-direction: column;
@@ -50,6 +57,7 @@ p{
   justify-content: center;
   align-items: center;
   align-content: space-evenly;
+  padding: 5px;
 }
   
 .row_after_column_statseance {
@@ -65,29 +73,29 @@ p{
 }
 
 .graph{
-  width: 100%;
-  max-width: 700px;
+  width: 100% !important;
 }
 
-@media only screen and (max-width: 900px) {
-  *{
-    max-width: 100%;
-    margin: 0;
-  }
-  body{
-    background-color: #EFEFEF;
+
+@media screen and (max-width: 1150px){
+  .graph{
+    height: 400px !important;
   }
   .column_statseance {
-    width: 100%;
+    width: 80%;
+    height: 80%;
     float: none;
   }
   .column_graph_statseance {
-    width: 100%;
+    width: 80%;
+
     float: none;
   }
-  .espace_bouton{
-    flex-direction: column;
-  }
+}
+
+@media  screen and (max-width: 900px) {
+
+
   .graph{
     width: 400px;
     margin-left: auto;
