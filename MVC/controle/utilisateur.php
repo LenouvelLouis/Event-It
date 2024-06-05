@@ -52,7 +52,6 @@ function deleteUser(){
         require './controle/logout.php';
         deconnexion();
     }
-    header('Location: ./?path=pages/users');
 }
 
 /**
