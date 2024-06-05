@@ -52,9 +52,15 @@ function checkId($id)
  * @return void
  */
  function getCinema(){
-     require_once('./modele/seanceBD.php');
-    get_cinema();
+  require_once('./modele/seanceBD.php');
+  get_cinema();
  }
+
+ function getSeance(){
+  require_once('./modele/seanceBD.php');
+  get_seance();
+}
+
 
  /**
   * Fonction de récupération des salles

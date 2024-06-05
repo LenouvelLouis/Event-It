@@ -234,4 +234,18 @@ WHERE
     }
 }
 
+function get_seance(){
+    require('./modele/connectSQL.php');
+    $sql = "SELECT * FROM `seance`";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->execute();
+        $result = $commande->fetchAll(PDO::FETCH_ASSOC);
+        echo(json_encode($result));
+    } catch (PDOException $e) {
+        echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
+        die();
+    }
+}
+
 ?>

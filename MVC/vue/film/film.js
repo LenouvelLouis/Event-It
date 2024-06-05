@@ -1,33 +1,163 @@
-const nom_film_nouveaux = ["Barbie", "Bob_Marley", "Dune", "Grand_Turismo", "Madame_Web", "Maison_de_Retraite", "Oppenheimer", "Spider_Man", "Spider_Man", "Spider_Man", "Spider_Man"];
-const nom_film_affiche = ["Barbie", "Bob_Marley", "Dune", "Grand_Turismo", "Madame_Web", "Maison_de_Retraite", "Oppenheimer", "Oppenheimer", "Oppenheimer", "Oppenheimer", "Oppenheimer"];
-const cinemas = ["Cinema1", "Cinema2", "Cinema3", "Cinema4", "Cinema5", "Cinema6", "Cinema7"];
+$().ready(init);
+
+let film_nouveaux = [];
+let film_affiche = [];
+let cinemas = [];
+let seances = [];
+let films = [];
 let currentImageIndex_nouveaux= 0;
 let currentImageIndex_affiche= 0;
 let imagesPerView = 5;
-const totalImages_nouveaux = nom_film_nouveaux.length;
-const totalImages_affiche = nom_film_affiche.length;
+let totalImages_nouveaux = 0;
+let totalImages_affiche = 0;
+let timerId = null;
+let films_seances = [];
+const list_cinema = document.getElementById('list_cinema');
 const carousel_nouveaux = document.getElementById("carousel_nouveaux");
 const carousel_affiche = document.getElementById("carousel_affiche");
+const affiche_recherche_film = document.getElementById("container_recherche_film");
+const affiche_film_nouveaux = document.getElementById("container_film_nouveaux");
+const affiche_film_affiche = document.getElementById("container_film_affiche");
+const recherche = document.getElementById('recherche');
+const resultats = document.getElementById('resultats');
 
 window.onresize = adjustLayout;  // Le délai est de 250 millisecondes
 
 
+function init() {
 
-document.body.onload = function(){
+    get_info();
 
-    var list_cinema = document.getElementById('list_cinema');
+}
+
+get_info = function() {
+
+    $.ajax({
+        url: './?path=seance/getCinema',
+        async: false,
+        method: 'GET',
+        success: function (data) {
+            cinemas = JSON.parse(data);
+        }
+    });
+
+    $.ajax({
+        url: './?path=seance/getSeance',
+        async: false,
+        method: 'GET',
+        success: function (data) {
+            seances = JSON.parse(data);
+        }
+    });
+
+    $.ajax({
+        url: './?path=seance/getFilm',
+        async: false,
+        method: 'GET',
+        success: function (data) {
+            films = JSON.parse(data);
+        }
+    });
 
     for(var i = 0; i < cinemas.length; i++) {
         var option = document.createElement('option');
-        option.text = cinemas[i];
-        option.value = cinemas[i];
+        option.text = cinemas[i].nom;
+        option.value = cinemas[i].nom;
         list_cinema.appendChild(option);
     }
 
+    seances.forEach(seance => {
+        films.filter(film => film.id === seance.id_film).forEach(film => {
+            if (!films_seances.includes(film)) {
+                films_seances.push(film);
+            }
+        });
+    });
+
+    affiche_film_affiche.style.display = "none";
+    affiche_film_nouveaux.style.display = "none";
+
+}
+
+list_cinema.onchange = function() {
+
+    var cinema_choisie = list_cinema.value;
+    film_nouveaux = [];
+    film_affiche = [];
+    affiche_film_affiche.style.display = "flex";
+    affiche_film_nouveaux.style.display = "flex";
+
+    cinemas.filter(cinema => cinema.nom === cinema_choisie).forEach(cinema => {
+        seances.filter(seance => seance.id_cinéma === cinema.id).forEach(seance => {
+            films.filter(film => film.id === seance.id_film).forEach(film => {
+                seances.filter(s => s.id_film === film.id).forEach(s => {
+                    let filmData = {id: film.id, image: film.image};
+                    if (s.type_affichage === "affiche") {
+                        if (!film_nouveaux.some(f => f.id === filmData.id)) {
+                            film_nouveaux.push(filmData);
+                        }
+                    } else {
+                        if (!film_affiche.some(f => f.id === filmData.id)) {
+                            film_affiche.push(filmData);
+                        }
+                    }
+                });
+            });
+        });
+    });
+
+    totalImages_nouveaux= film_nouveaux.length;
+    totalImages_affiche= film_affiche.length;
+    carousel();
+
+}
+
+
+recherche.addEventListener('input', function(e) {
+    clearTimeout(timerId); 
+
+    timerId = setTimeout(() => { 
+
+        let recherchePrecedente = '';
+        let film_rechercher = recherche.value; 
+
+        if (film_rechercher === recherchePrecedente) {
+            return;
+        }
+    
+        recherchePrecedente = film_rechercher;
+
+        let filmsTrouves = films_seances.filter(film => film.titre.toLowerCase().startsWith(film_rechercher.toLowerCase()));
+
+        resultats.innerHTML = ''; 
+        filmsTrouves.forEach(film => {
+
+            let div = document.createElement('div');
+
+            let a = document.createElement('a');
+            a.href = `.?path=pages/voirfilm&id=${film.id}`; 
+
+            let img = document.createElement('img');
+            img.src = "./vue/img/films/"+film.image; 
+            a.appendChild(img);
+            div.appendChild(a);
+
+            let span = document.createElement('span');
+            span.textContent = film.titre;
+            div.appendChild(span);
+
+            resultats.appendChild(div);
+        });
+    }, 500);
+});
+
+function carousel(){
+    carousel_nouveaux.innerHTML = "";
+    carousel_affiche.innerHTML = "";
     for(i=0;i<totalImages_nouveaux;i++)
     {
         a=document.createElement("a");
-        a.href = ".?path=pages/voirfilm&id=37";
+        a.href = `.?path=pages/voirfilm&id=${film_nouveaux[i].id}`;
         div = document.createElement("div");
         div.className="image_container_nouveaux";
 
@@ -38,7 +168,7 @@ document.body.onload = function(){
         }
 
         img = document.createElement("img");
-        img.src = "./vue/img/Nouveautés/" + nom_film_nouveaux[i] + ".png";
+        img.src = "./vue/img/films/" + film_nouveaux[i].image ;
         div.appendChild(img);
         a.appendChild(div);
         carousel_nouveaux.appendChild(a);
@@ -46,6 +176,8 @@ document.body.onload = function(){
 
     for(i=0;i<totalImages_affiche;i++)
     {
+        a=document.createElement("a");
+        a.href = `.?path=pages/voirfilm&id=${film_affiche[i].id}`;
         div = document.createElement("div");
         div.className="image_container_affiche";
 
@@ -56,9 +188,10 @@ document.body.onload = function(){
         }
 
         img = document.createElement("img");
-        img.src = "./vue/img/A_l'affiche/" + nom_film_affiche[i] + ".png";
+        img.src = "./vue/img/films/" + film_affiche[i].image;
         div.appendChild(img); 
-        carousel_affiche.appendChild(div);
+        a.appendChild(div);
+        carousel_affiche.appendChild(a);
     }
 
 }
@@ -118,7 +251,7 @@ function updateSlidePosition() {
 function adjustLayout() {
 
     const taille_fenetre = window.innerWidth; 
-    console.log(taille_fenetre);
+
     if ( 900 < taille_fenetre && taille_fenetre< 1100) {
         imagesPerView = 4;
         updateSlidePosition();
@@ -140,3 +273,18 @@ function adjustLayout() {
         updateSlidePosition();
     }
 }
+
+function showDropdown(element) {
+    var dropdownContent = document.getElementById('resultats');
+    if (element.value !== '') {
+        dropdownContent.style.display = 'block';
+    } else {
+        dropdownContent.style.display = 'none';
+    }
+}
+
+document.addEventListener('click', function(event) {
+    if (!resultats.contains(event.target)) {
+        resultats.style.display = 'none';
+    }
+});
