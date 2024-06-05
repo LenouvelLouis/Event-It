@@ -9,11 +9,11 @@
     get_film();
  }
 
- function getSeance(){
+ function getSeanceByid(){
      $id = isset($_GET['id'])?$_GET['id']:'';
         checkId($id);
      require_once('./modele/seanceBD.php');
-        $seance =get_seance($id);
+        $seance =getseanceid($id);
         if(!$seance){
             $_SESSION['msgErr'] = "Aucune séance sélectionné";
             $_SESSION['msgType'] = "error";

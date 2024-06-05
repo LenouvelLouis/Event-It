@@ -102,7 +102,7 @@ function pageVoireSeance() {
 
 function getInfoSeance() {
     $.ajax({
-        url: './?path=seance/getSeance&id='+id,
+        url: './?path=seance/getSeanceByid&id='+id,
         async: false,
         method: 'POST',
         success: function (data) {

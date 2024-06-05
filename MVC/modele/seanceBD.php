@@ -19,7 +19,7 @@ function get_film()
     }
 }
 
-function get_seance($id){
+function getseanceid($id){
     require('./modele/connectSQL.php');
     $sql = "SELECT 
     seance.id AS id_seance,

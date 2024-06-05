@@ -51,7 +51,6 @@ function deleteUser(){
     if($id == $_SESSION['id']){
         require './controle/logout.php';
         deconnexion();
-        header('Location: ./?path=pages/accueil');
     }
     header('Location: ./?path=pages/users');
 }
