@@ -167,7 +167,12 @@ function getSeanceFilm(){
     checkId($id);
     require './modele/filmBD.php';
     $seance = getSeanceFilmBD($id);
-    echo json_encode($seance);
+    if($seance){
+        echo json_encode($seance);
+    }
+    else{
+        echo json_encode("Aucune séance pour ce film");
+    }
 
 }
 

@@ -37,7 +37,7 @@ FROM
 JOIN
     film ON seance.id_film = film.id
 JOIN
-    cinema ON seance.id_cinéma = cinema.id
+    cinema ON seance.id_cinema = cinema.id
 WHERE
     seance.id = :id";
     try {
@@ -67,7 +67,7 @@ WHERE
 function edit_seance( $id, $iDcinema, $iDfilm, $iDsalle, $typeFilm, $heure, $date)
 {
     require('./modele/connectSQL.php');
-    $sql = "UPDATE `seance` SET `id_cinéma` = :id_cinema, `id_film` = :id_film, `id_salle` = :id_salle, `type_affichage` = :type_affichage, `horairedébut` = :horairedebut, `date` = :date WHERE `id` = :id";
+    $sql = "UPDATE `seance` SET `id_cinema` = :id_cinema, `id_film` = :id_film, `id_salle` = :id_salle, `type_affichage` = :type_affichage, `horairedébut` = :horairedebut, `date` = :date WHERE `id` = :id";
     try {
         $commande = $pdo->prepare($sql);
         $commande->bindParam(':id', $id);
@@ -132,7 +132,7 @@ function get_cinema()
 function seanceAlreadyExist( $iDcinema, $iDfilm, $iDsalle, $heure, $date, $typeFilm)
 {
     require('./modele/connectSQL.php');
-    $sql = "SELECT * FROM `seance` WHERE `id_cinéma` = :id_cinema AND `id_film` = :id_film AND `id_salle` = :id_salle AND `horairedébut` = :horairedebut AND `date` = :date AND `type_affichage` = :type_affichage";
+    $sql = "SELECT * FROM `seance` WHERE `id_cinema` = :id_cinema AND `id_film` = :id_film AND `id_salle` = :id_salle AND `horairedébut` = :horairedebut AND `date` = :date AND `type_affichage` = :type_affichage";
     try {
         $commande = $pdo->prepare($sql);
         $commande->bindParam(':id_cinema', $iDcinema);
@@ -161,7 +161,7 @@ function seanceAlreadyExist( $iDcinema, $iDfilm, $iDsalle, $heure, $date, $typeF
 function get_salle()
 {
     require('./modele/connectSQL.php');
-    $sql = "SELECT id, nom, id_cinéma FROM `salle`";
+    $sql = "SELECT id, nom, id_cinema FROM `salle`";
     try {
         $commande = $pdo->prepare($sql);
         $commande->execute();
@@ -185,7 +185,7 @@ function get_salle()
  */
 function ajout_seance($iDcinema,$iDfilm,$iDsalle,$typeFilm,$heure,$date){
     require('./modele/connectSQL.php');
-    $sql = "INSERT INTO `seance` (`id_cinéma`, `id_film`, `id_salle`, `type_affichage`, `horairedébut`, `date`) VALUES (:id_cinema, :id_film, :id_salle, :type_affichage, :horairedebut, :date)";
+    $sql = "INSERT INTO `seance` (`id_cinema`, `id_film`, `id_salle`, `type_affichage`, `horairedébut`, `date`) VALUES (:id_cinema, :id_film, :id_salle, :type_affichage, :horairedebut, :date)";
     try {
         $commande = $pdo->prepare($sql);
         $commande->bindParam(':id_cinema', $iDcinema);

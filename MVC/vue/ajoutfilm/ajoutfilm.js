@@ -3,6 +3,7 @@ let isUserAdmin;
 let id;
 let link
 let infosFilm;
+let  session;
 function init() {
     const currentUrl = window.location.href;
     link = document.getElementById('links-film');
@@ -27,8 +28,12 @@ function pageVoirFilm() {
         iconDelete.href = './?path=film/deleteFilm&id='+id;
         iconDelete.style.display = 'block';
     }
-    const seance_films = document.querySelector('.seance-films');
-    seance_films.style.display = 'block';
+    console.log(session);
+    if(session.length>0){
+        const seance_films = document.querySelector('.seance-films');
+        seance_films.style.display = 'block';
+    }
+
     link.href = './?path=pages/voirfilm&id='+id;
     link.innerHTML = 'Informations Film';
     const submitButton = document.querySelector('.button-ajout-film');
@@ -81,8 +86,10 @@ function getSeanceFilm() {
     $.ajax({
         url: './?path=film/getSeanceFilm&id='+id,
         type: 'POST',
+        async: false,
         success: function (response) {
-            displaySessions(JSON.parse(response));
+            session=JSON.parse(response);
+            displaySessions(session);
         }
     });
 

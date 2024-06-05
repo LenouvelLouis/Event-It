@@ -88,7 +88,7 @@ list_cinema.onchange = function() {
     affiche_film_nouveaux.style.display = "flex";
 
     cinemas.filter(cinema => cinema.nom === cinema_choisie).forEach(cinema => {
-        seances.filter(seance => seance.id_cinéma === cinema.id).forEach(seance => {
+        seances.filter(seance => seance.id_cinema === cinema.id).forEach(seance => {
             films.filter(film => film.id === seance.id_film).forEach(film => {
                 seances.filter(s => s.id_film === film.id).forEach(s => {
                     let filmData = {id: film.id, image: film.image};

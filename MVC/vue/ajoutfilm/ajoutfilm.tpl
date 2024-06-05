@@ -60,7 +60,6 @@
 }
 ?>
 <div class="display_flex_sceance">
-    <!-- Placeholder for the films and their sessions -->
     <div id="films-container"></div>
 </div>
 </div>

@@ -83,7 +83,7 @@ function getSeanceFilmBD($id){
     $sql = "SELECT seance.horairedébut, seance.id, seance.date, salle.nom as salle_nom, cinema.nom as cinema_nom 
             FROM seance 
             JOIN salle ON seance.id_salle = salle.id 
-            JOIN cinema ON salle.id_cinéma = cinema.id 
+            JOIN cinema ON salle.id_cinema = cinema.id 
             WHERE seance.id_film = :id";
     try {
         $commande = $pdo->prepare($sql);

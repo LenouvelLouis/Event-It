@@ -67,7 +67,7 @@ function pageEditSeance(){
         }
     }
     for (let i = 0; i < salle.length; i++) {
-        if(salle[i].id !== seance[0].id_salle && salle[i].id_cinéma === seance[0].cinema_id) {
+        if(salle[i].id !== seance[0].id_salle && salle[i].id_cinema === seance[0].cinema_id) {
             const option = document.createElement('option');
             option.text = salle[i].nom;
             option.value = JSON.stringify(salle[i]);
@@ -227,7 +227,7 @@ function info_seance(){
         {
             affichage_salle.style.display = "block";
             for(let i = 0; i < salle.length; i++) {
-                if (salle[i].id_cinéma == cinema.id) {
+                if (salle[i].id_cinema == cinema.id) {
                     const option = document.createElement('option');
                     option.text = salle[i].nom;
                     option.value = JSON.stringify(salle[i]);
@@ -241,7 +241,7 @@ function info_seance(){
             element_list[2].textContent = "Salle : -";
             let salleCine;
             for(let i = 0; i < salle.length; i++) {
-                if (salle[i].id_cinéma == cinema.id) {
+                if (salle[i].id_cinema == cinema.id) {
                     salleCine=salleCine=salle[i];
                 }
             }
@@ -285,7 +285,7 @@ list_salle.onchange = function(){
         if(cinema[i].nom === list_cinema.value)
         {
             for(let j = 0; j < salle.length; j++){
-                if (salle[j].id_cinéma === cinema[i].id && salle[j].nom === list_salle.value)
+                if (salle[j].id_cinema === cinema[i].id && salle[j].nom === list_salle.value)
                 {
                     id_salle = salle[j].id;
                 }
