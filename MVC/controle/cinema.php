@@ -15,9 +15,25 @@ function ajoutcinema(){
     $sourd = isset($_POST['Sourd']) ? ($_POST['Sourd'] == 'on' ? 1 : 0) : 0;
     $malvoyant = isset($_POST['Malvoyant']) ? ($_POST['Malvoyant'] == 'on' ? 1 : 0) : 0;
     $nombreSalles = isset($_POST['nombreSalles'])?($_POST['nombreSalles']):'';
+    if($nombreSalles == ''  || $nom == '' || $adresse == '' || $telephone == '' || $email == '' || ($indoor == '' && $outdoor == '')){
+        $msgErr = "Veuillez remplir tous les champs";
+        $_SESSION['msgErr'] = $msgErr;
+        $_SESSION['msgType'] = 'error';
+        $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./?path=pages/accueil";
+        header("Location:" . $url);
+        die();
+    }
 
+    $regex = "/^[a-zA-Z0-9\s,.'-]{3,}$/";
+    if (!preg_match($regex, $adresse)) {
+        $msgErr = "Adresse invalide";
+        $_SESSION['msgErr'] = $msgErr;
+        $_SESSION['msgType'] = 'error';
+        $url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "./?path=pages/accueil";
+        header("Location:" . $url);
+        die();
+    }
     if ($indoor == 'on') {
-        $nombreSalles = $nombreSalles;
         $typeCine = 1;
     } else {
         $nombreSalles = 1;
@@ -44,7 +60,11 @@ function ajoutcinema(){
             die();
         }
         if(move_uploaded_file($tmpName, $directory . $newNomImage)){
-            cinemaToDB($nom, $adresse, $telephone, $email, $nombreSalles, $typeCine, $handicape, $sourd, $malvoyant, $newNomImage);
+            $idcinema = cinemaToDB($nom, $adresse, $telephone, $email, $typeCine, $handicape, $sourd, $malvoyant, $newNomImage);
+            for ($i = 1; $i <= $nombreSalles; $i++) {
+                $nomSalle = "Salle " . $i;
+                salleToDB($nomSalle, $idcinema);
+            }
             $msgAcc = "Cinéma ajouté";
             $_SESSION['msgAcc'] = $msgAcc;
             $_SESSION['msgType'] = 'success';
@@ -63,5 +83,6 @@ function ajoutcinema(){
     }
 
 }
+
 
 ?>

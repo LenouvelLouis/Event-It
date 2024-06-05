@@ -39,7 +39,9 @@
     <div class="milieu">
       <label>Nom du cinéma<span class = "highlight">*</span></label><br>
       <input type="text" id="nom_cinema" name="nom_cinema" placeholder="Entrez le nom du cinéma" required><br>
-      <label class="lieu_cinema" >Adresse du cinéma<span class = "highlight">*</span></label><br>
+      <label class="lieu_cinema" >Adresse du cinéma<span class = "highlight">*</span></label>
+      <small>Format : numéro de rue, nom de rue, code postal, ville</small>
+      <br>
       <input type="text" id="lieu_cinema" name="lieu_cinema" placeholder="Entrez l'adresse du cinéma" required></br>
       <label class="lieu_cinema" >Numéros de téléphone<span class = "highlight">*</span></label><br>
       <input type="tel" id="telephone_cinema" name="telephone_cinema" placeholder="Entrez le numéro de téléphone" required></br>
@@ -48,7 +50,7 @@
     </div>
 
     <div class="droite">
-    <label>Type du cinéma<span class = "highlight">*</span></label><br>
+      <label>Type du cinéma<span class = "highlight">*</span></label><br>
       <div class="checkbox_access">
         <input type="checkbox" id="Indoor" class="block" name="Indoor">
         <label for="Indoor"> Indoor</label>
