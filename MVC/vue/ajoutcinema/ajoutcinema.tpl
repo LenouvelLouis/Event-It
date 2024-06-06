@@ -53,7 +53,7 @@
       <label>Type du cinéma<span class = "highlight">*</span></label><br>
       <div class="checkbox_access">
         <input type="checkbox" id="Indoor" class="block" name="Indoor">
-        <label for="Indoor"> Indoor</label>
+        <label for="Indoor"> Intérieur</label>
       </div>
       <div id="salleCinema" style="display: none;">
         <input type="number" name = "nombreSalles" id="nombreSalles">
@@ -61,7 +61,7 @@
     </div>
     <div class="checkbox_access">
       <input type="checkbox" id="Outdoor" class="block" name="Outdoor">
-      <label for="Outdoor"> Outdoor</label>
+      <label for="Outdoor"> Extérieur</label>
     </div>
     <br>
     <label>Accessibilité<span class = "highlight">*</span></label><br>
