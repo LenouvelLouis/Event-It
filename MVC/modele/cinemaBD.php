@@ -24,6 +24,25 @@ function CinemaAlreadyExist($nom){
 
 }
 
+function getListCinema(){
+    require('./modele/connectSQL.php'); // On inclut la connexion à la base de données
+    $sql = "SELECT * FROM `cinema`";
+    try {
+        $commande = $pdo->prepare($sql);
+        $commande->execute();
+        $result = $commande->fetchAll();
+        if($result){
+            return $result;
+        }else{
+            return false;
+        }
+    }catch (PDOException $e) {
+        echo utf8_encode("Echec de l'insert : " . $e->getMessage() . "\n");
+        die();
+    }
+
+}
+
 function getCinema($id){
     require('./modele/connectSQL.php'); // On inclut la connexion à la base de données
     $sql = "SELECT * FROM `cinema` WHERE id = :id";

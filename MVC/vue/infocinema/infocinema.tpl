@@ -5,6 +5,7 @@
     <head>
         <link rel="stylesheet" href="./vue/infocinema/infocinema.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
     </head>
 
     <body>
@@ -39,14 +40,9 @@
         <center><h3>Informations complémentaires</h3><center>
 
         <div class="display_info">
+            <div id="mapid" style="height: 300px; width: 300px;"></div>
+            <div id="weather"></div>
 
-            <div>
-                <iframe id="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.7616134560744!2d2.2773399753126453!3d48.82460970308475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e670797935962f%3A0xa2a4098b11eb5c09!2s10%20Rue%20de%20Vanves%2C%2092170%20Issy-les-Moulineaux!5e0!3m2!1sfr!2sfr!4v1713004630545!5m2!1sfr!2sfr" width="400" height="300" allowfullscreen=""frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <div>
-                <iframe id="meteo" src="https://api.wo-cloud.com/content/widget/?geoObjectKey=5350008&language=fr&region=FR&timeFormat=HH:mm&windUnit=kmh&systemOfMeasurement=metric&temperatureUnit=celsius" name="CW2" scrolling="no" width="290" height="318" frameborder="0" ></iframe>
-            </div>
         </div>
         
     </body>
@@ -55,4 +51,6 @@
         <?php require("./vue/footer/footer.tpl"); ?>
     </body>
     <script src="./vue/infocinema/infocinema.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     </html>

@@ -118,5 +118,19 @@ function getInfoCinema(){
 
 }
 
+function getCinemaList(){
+    require './modele/cinemaBD.php';
+    $cinemas = getListCinema();
+    if(!$cinemas){
+        $msgErr = "Aucun cinéma trouvé";
+        $_SESSION['msgErr'] = $msgErr;
+        $_SESSION['msgType'] = 'error';
+        http_response_code(401);
+        echo json_encode(array('error' => $msgErr));
+        return;
+    }
+    echo json_encode($cinemas);
+
+}
 
 ?>

@@ -15,6 +15,10 @@
     margin-left: 150px;
 }
 
+ #resultats{
+     display: none;
+ }
+
 .search-image {
   margin-left: 325px;
 }

@@ -28,7 +28,7 @@
     <div class="gauche">
       <center><label>Image du cinéma<span class = "highlight">*</span></label><br></center>
         <div class="image-container">
-            <img src="">
+            <img src="" alt="Image du cinéma">
         </div>
         <span id="delete-img" onclick="deleteimg()"><i class="fa-solid fa-xmark"></i></span>
         <div>

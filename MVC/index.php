@@ -6,15 +6,27 @@ $action = isset($path[1])? $path[1] : NULL;
 switch ($controle) {
     case NULL:
         require("./controle/home.php");
-        ident();
+        home();
         break;
     case 'pages':
-        require("./controle/pages/" . $action . ".php");
-        $action();
+        $filePath = "./controle/pages/" . $action . ".php";
+        if (file_exists($filePath)) {
+            require($filePath);
+            $action();
+        } else {
+            require("./controle/home.php");
+            home();
+        }
         break;
     default:
-        require("./controle/" . $controle . ".php");
-        $action();
+        $filePath = "./controle/" . $controle . ".php";
+        if (file_exists($filePath)) {
+            require($filePath);
+            $action();
+        } else {
+            require("./controle/home.php");
+            home();
+        }
         break;
 }
 ?>

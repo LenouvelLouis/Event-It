@@ -3,9 +3,7 @@
  { 
      session_start(); 
  } 
-   function ident(){
-    $login =  isset($_POST['cologin'])?($_POST['cologin']):'';
-    $mdp =  isset($_POST['comdp'])?($_POST['comdp']):'';
+   function home(){
     $msg = '';
     $msgAcc = isset($_SESSION['msgAcc'])?($_SESSION['msgAcc']):'';
     require ("./vue/home/home.tpl");
