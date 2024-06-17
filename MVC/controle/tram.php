@@ -16,12 +16,16 @@ function tram()
 
     $data_tab = str_split($data,33);
     echo "Tabular Data:<br />";
-    for($i=0, $size=count($data_tab); $i<$size; $i++){
+    for($i=0, $size=count($data_tab); $i<$size-1; $i++){
         $trame = $data_tab[$i];
         list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
             sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
         $t = substr($trame,0,1);
         $o = substr($trame,1,4);
+        if($v !== null) {
+            $v_decimal = hexdec($v);
+            echo "Valeur décimale de $v: $v_decimal<br />";
+        }
         echo "Trame $i: $v<br />";
     }
    // $trame = $data_tab[1];
