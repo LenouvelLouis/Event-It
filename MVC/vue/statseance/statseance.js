@@ -35,10 +35,9 @@ function getStatSeance() {
         async: false,
         dataType: "json",
         success: function (data) {
-            console.log(data);
                 stat=data;
                 for (let key in data.son) {
-                    if (data.son.hasOwnProperty(key) && !isNaN(key) && !idCapteur.includes(data.son[key].id_capteur)) {
+                    if (data.son.hasOwnProperty(key) && !isNaN(key) && !idCapteur.includes(data.son[key].id_capteur) && data.son[key].id_capteur !== null) {
                         idCapteur.push(data.son[key].id_capteur);
                     }
                 }
@@ -113,6 +112,13 @@ function displaySonGraph(sensorDatas) {
                     type: 'time',
                     time: {
                         unit: 'minute'
+                    }
+                },
+                y: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: 'DBm'
                     }
                 }
             }
@@ -194,7 +200,7 @@ function GlobalSon() {
     let colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink']; // Add more colors if you have more sensors
     let groupedData = {};
     for (let key in stat.son) {
-        if (stat.son.hasOwnProperty(key) && !isNaN(key)) {
+        if (stat.son.hasOwnProperty(key) && !isNaN(key) && stat.son[key].id_capteur !== null) {
             let sensorData = stat.son[key];
             if (!groupedData[sensorData.id_capteur]) {
                 groupedData[sensorData.id_capteur] = [];
@@ -237,7 +243,7 @@ function GlobalSon() {
                     display: true,
                     title: {
                         display: true,
-                        text: 'Décibels'
+                        text: 'DBm'
                     }
                 }
             }
@@ -252,7 +258,7 @@ function GlobalTemp() {
     let colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink']; // Add more colors if you have more sensors
     let groupedData = {};
     for (let key in stat.temperature) {
-        if (stat.temperature.hasOwnProperty(key) && !isNaN(key)) {
+        if (stat.temperature.hasOwnProperty(key) && !isNaN(key) && stat.temperature[key].id_capteur !== null) {
             let sensorData = stat.temperature[key];
             if (!groupedData[sensorData.id_capteur]) {
                 groupedData[sensorData.id_capteur] = [];

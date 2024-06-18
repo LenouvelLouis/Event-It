@@ -24,7 +24,4 @@ function openNavTel() {
 
     }
 }
-
-setInterval(function(){
-    fetch('./?path=tram/tram').then();
-}, 5000);
+fetch('./?path=tram/tram').then();
