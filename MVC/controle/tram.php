@@ -17,7 +17,6 @@ function tram()
 
     $id_capteur = 1;
     $data_tab = str_split($data, 33);
-    $dateLimit = DateTime::createFromFormat('H:i', '14:52');
 
     for ($i=count($data_tab)-300; $i<count($data_tab)-1; $i++) {
         $trame = $data_tab[$i];
@@ -32,7 +31,8 @@ function tram()
             $second = $matches[6];
         }
         $dateTrame = DateTime::createFromFormat('Y-m-d H:i:s', "$year-$month-$day $hour:$minute:$second");
-        if ($dateTrame > $dateLimit && $v!==null) {
+        echo "Date: $year-$month-$day $hour:$minute:$second<br />";
+        if ($v!==null) {
             $v_decimal = hexdec($v);
             if ($v_decimal > 30 && $v_decimal < 100) {
                 echo " Temperature $v: $v_decimal<br />";

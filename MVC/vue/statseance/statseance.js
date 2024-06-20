@@ -1,13 +1,3 @@
-const xArray = [0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150]; 
-
-const yArray1 = [10,10,10,10,10,10,20,30,40,50,60,70,80,90,80,70]; 
-const yArray2 = [70,70,70,70,70,70,80,90,80,70,60,50,40,30,20,10]; 
-const yArray3 = [50,50,50,50,50,50,60,50,60,50,60,50,60,50,60,50];
-
-const yArray4 = [10,10,10,10,10,10,20,30,40,50,60,70,80,90,80,70]; 
-const yArray5 = [70,70,70,70,70,70,80,90,80,70,60,50,40,30,20,10]; 
-const yArray6 = [50,50,50,50,50,50,60,50,60,50,60,50,60,50,60,50];
-
 const capteur_son = document.getElementById("quel_capteur_sonore");
 const capteur_temp = document.getElementById("quel_capteur_temp");
 let id;
@@ -51,7 +41,7 @@ function getStatSeance() {
 
         },
         error: function (error) {
-            window.location.href = "./?path=pages/accueil";
+            //window.location.href = "./?path=pages/accueil";
         }
     });
 }
@@ -65,7 +55,6 @@ function displayCapteur() {
     }
     $('#quel_capteur_sonore').append(optionsSon);
     $('#quel_capteur_temp').append(optionsTemp);
-
 }
 
 
@@ -84,7 +73,7 @@ capteur_son.onchange = function updateSonGraph() {
                     sensorDatas.push(stat.son[key]);
                 }}
     }
-        sensorDatas.sort((a, b) => new Date(`1970-01-01T${a.temps}Z`) - new Date(`1970-01-01T${b.temps}Z`));
+        sensorDatas.sort((a, b) => new Date(`1970-01-01T${a.temps}`) - new Date(`1970-01-01T${b.temps}Z`));
         displaySonGraph(sensorDatas); // Déplacez cette ligne ici
 
     }
@@ -96,7 +85,7 @@ function displaySonGraph(sensorDatas) {
     }
     let dataset = {
         label: `Capteur sonore ${sensorDatas[0].id_capteur}`,
-        data: sensorDatas.map(sensorData => ({x: new Date(`1970-01-01T${sensorData.temps}Z`), y: sensorData.valeur})),
+        data: sensorDatas.map(sensorData => ({x: new Date(`1970-01-01T${sensorData.temps}`), y: sensorData.valeur})),
         borderColor: 'red',
         fill: false,
         lineTension: 0.1
@@ -111,7 +100,10 @@ function displaySonGraph(sensorDatas) {
                 x: {
                     type: 'time',
                     time: {
-                        unit: 'minute'
+                        unit: 'minute',
+                        displayFormats: {
+                            minute: 'HH:mm'
+                        }
                     }
                 },
                 y: {
@@ -141,7 +133,7 @@ capteur_temp.onchange = function updateTempGraph() {
                 }
             }
         }
-        sensorDatas.sort((a, b) => new Date(`1970-01-01T${a.temps}Z`) - new Date(`1970-01-01T${b.temps}Z`));
+        sensorDatas.sort((a, b) => new Date(`1970-01-01T${a.temps}`) - new Date(`1970-01-01T${b.temps}Z`));
         displayTempGraph(sensorDatas);
     }
 }
@@ -157,7 +149,7 @@ function displayTempGraph(sensorDatas) {
     }
     let dataset = {
         label: `Capteur température ${sensorDatas[0].id_capteur}`,
-        data: sensorDatas.map(sensorData => ({x: new Date(`1970-01-01T${sensorData.temps}Z`), y: sensorData.valeur})),
+        data: sensorDatas.map(sensorData => ({x: new Date(`1970-01-01T${sensorData.temps}`), y: sensorData.valeur})),
         borderColor: 'red',
         fill: false
     };
@@ -205,7 +197,7 @@ function GlobalSon() {
             if (!groupedData[sensorData.id_capteur]) {
                 groupedData[sensorData.id_capteur] = [];
             }
-            groupedData[sensorData.id_capteur].push({x: new Date(`1970-01-01T${sensorData.temps}Z`), y: sensorData.valeur});
+            groupedData[sensorData.id_capteur].push({x: new Date(`1970-01-01T${sensorData.temps}`), y: sensorData.valeur});
         }
     }
     let i = 0;
@@ -236,7 +228,10 @@ function GlobalSon() {
                 x: {
                     type: 'time',
                     time: {
-                        unit: 'minute'
+                        unit: 'minute',
+                        displayFormats: {
+                            minute: 'HH:mm'
+                        }
                     }
                 },
                 y: {
@@ -263,7 +258,7 @@ function GlobalTemp() {
             if (!groupedData[sensorData.id_capteur]) {
                 groupedData[sensorData.id_capteur] = [];
             }
-            groupedData[sensorData.id_capteur].push({x: new Date(`1970-01-01T${sensorData.temps}Z`), y: sensorData.valeur});
+            groupedData[sensorData.id_capteur].push({x: new Date(`1970-01-01T${sensorData.temps}`), y: sensorData.valeur});
         }
     }
     let i = 0;
@@ -293,7 +288,10 @@ function GlobalTemp() {
                 x: {
                     type: 'time',
                     time: {
-                        unit: 'minute'
+                        unit: 'minute',
+                        displayFormats: {
+                            minute: 'HH:mm'
+                        }
                     }
                 },
                 y: {

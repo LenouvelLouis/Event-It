@@ -2,13 +2,15 @@
 function temperatureToDB($id_capteur, $valeur, $temps)
 {
     require('./modele/connectSQL.php'); // Include the connection to the database
-    $sql = "INSERT INTO `data_capteur_temperature` (id_capteur, valeur, temps) VALUES (:id_capteur, :valeur, :temps)";
+    $sql = "INSERT INTO `data_capteur_temperature` (id_capteur, valeur, temps, date) VALUES (:id_capteur, :valeur, :temps, :date)";
     try {
         $commande = $pdo->prepare($sql);
         $commande->bindParam(':id_capteur', $id_capteur);
         $commande->bindParam(':valeur', $valeur);
-        $temps = $temps->format('Y-m-d H:i:s'); // Convert DateTime object to string
-        $commande->bindParam(':temps', $temps);
+        $formattedTime = $temps->format('H:i:s');
+        $commande->bindParam(':temps', $formattedTime);
+        $formattedDate = $temps->format('Y-m-d');
+        $commande->bindParam(':date', $formattedDate);
         $commande->execute();
     } catch (PDOException $e) {
         echo utf8_encode("Echec de l'insert : " . $e->getMessage() . "\n");
@@ -19,13 +21,15 @@ function temperatureToDB($id_capteur, $valeur, $temps)
 function soundToDB($id_capteur, $valeur, $temps)
 {
     require('./modele/connectSQL.php'); // Include the connection to the database
-    $sql = "INSERT INTO `data_capteur_son` (id_capteur, valeur, temps) VALUES (:id_capteur, :valeur, :temps)";
+    $sql = "INSERT INTO `data_capteur_son` (id_capteur, valeur, temps, date) VALUES (:id_capteur, :valeur, :temps, :date)";
     try {
         $commande = $pdo->prepare($sql);
         $commande->bindParam(':id_capteur', $id_capteur);
         $commande->bindParam(':valeur', $valeur);
-        $temps = $temps->format('Y-m-d H:i:s'); // Convert DateTime object to string
-        $commande->bindParam(':temps', $temps);
+        $formattedTime = $temps->format('H:i:s');
+        $commande->bindParam(':temps', $formattedTime);
+        $formattedDate = $temps->format('Y-m-d');
+        $commande->bindParam(':date', $formattedDate);
         $commande->execute();
     } catch (PDOException $e) {
         echo utf8_encode("Echec de l'insert : " . $e->getMessage() . "\n");
